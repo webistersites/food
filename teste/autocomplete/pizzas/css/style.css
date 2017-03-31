@@ -1,0 +1,52 @@
+/*
+ * Site : http:www.smarttutorials.net
+ * Author :muni
+ * 
+ */
+html, body {height: 100%;width: 100%;}
+body {margin: 0px; padding: 0px;}
+header{
+	background: #339966;
+	height: 70px;
+	margin: 0px;
+	padding: 0px;
+	color:#fff;
+}
+#wrap{min-height: 600px;height: auto !important;}
+footer {
+  height: 60px;
+  background-color: #339966;
+  color : #fff;
+}
+footer p {padding-top: 20px;}
+a, a:hover{text-decoration: none; color: #fff;}
+
+#country_name{margin-bottom: 70px;}
+#baby{margin-bottom: 50px;}
+
+header p, #footer p {padding-top : 20px;}
+.txt-auto{border:1px solid #339966;}
+@font-face{
+font-family: Lobster;
+src: url('Lobster.otf');
+}
+h1{font-family: Lobster; font-size: 70px; margin-bottom: 20px; color :#C77405;}
+h2{font-family: Lobster; font-size: 60px; margin-bottom: 20px; color :#B81900;}
+h3{font-family: Lobster; font-size: 60px; margin-bottom: 20px; color :#C77405;}
+h4{font-family: Lobster; font-size: 60px; margin-bottom: 20px; color :#00BB64;}
+
+
+table, td, th{border:1px solid #00BB64;}
+tr,input{height:30px;border:1px solid #fff;}
+input{text-align:center;}
+input:focus{border:1px solid yellow;} 
+#students {margin-bottom: 50px;}
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../image/loader.gif) 50% 50% no-repeat rgb(249,249,249);
+}

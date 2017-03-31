@@ -1,0 +1,23 @@
+
+                PIZZARIA DO CHICO
+                Rua Planalto,54
+**********************************************
+*                CUPOM FISCAL                *
+**********************************************
+Cod.  Produto				V. UN  Qtd.  Total
+1	ESFIHA CARNE			0.99	1	0.99
+2	ESFIHA QUEIJO			2.20	1	2.20
+12	ESFIHA BACON C/ QUEIJO			2.90	1	2.90
+121	ESFIHA DE FRANGO C/ CHEDDAR			3.20	1	3.20
+______________________________________________
+TOTAL R$                                9.29
+______________________________________________
+ 
+08/02/2017 05:35
+
+
+
+
+
+
+.

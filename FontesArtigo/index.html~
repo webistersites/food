@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+</head>
+<body>
+    <button id="btnAdicionar">Novo</button>
+    <table id="tblCadastro">         
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>
