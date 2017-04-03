@@ -242,6 +242,75 @@ function insereSaboresDelivery() {
 	XMLHttp.send(null);
 }
 
+function relatorioFechamento() {
+	// var sabor1      = document.getElementById("course_sabores").value;
+	// var sabor2      = document.getElementById("course_sabores2").value;
+	var result  = document.getElementById("result");
+	var XMLHttp = generateXMLHttp();
+	XMLHttp.open("get", "ver_fechamento.php", true);
+	XMLHttp.onreadystatechange = function(){
+		if (XMLHttp.readyState == 4)
+			if (XMLHttp.status == 200){
+				result.innerHTML = XMLHttp.responseText;
+			} else {
+				result.innerHTML = "Um erro ocorreu: " + XMLHttp.statusText;
+			}
+	};
+	XMLHttp.send(null);
+}
+
+function relatorioFechamentoDinheiro() {
+	// var sabor1      = document.getElementById("course_sabores").value;
+	// var sabor2      = document.getElementById("course_sabores2").value;
+	var result  = document.getElementById("result");
+	var XMLHttp = generateXMLHttp();
+	XMLHttp.open("get", "ver_fechamento_dinheiro.php", true);
+	XMLHttp.onreadystatechange = function(){
+		if (XMLHttp.readyState == 4)
+			if (XMLHttp.status == 200){
+				result.innerHTML = XMLHttp.responseText;
+			} else {
+				result.innerHTML = "Um erro ocorreu: " + XMLHttp.statusText;
+			}
+	};
+	XMLHttp.send(null);
+}
+
+function relatorioFechamentoDebito() {
+	// var sabor1      = document.getElementById("course_sabores").value;
+	// var sabor2      = document.getElementById("course_sabores2").value;
+	var result  = document.getElementById("result");
+	var XMLHttp = generateXMLHttp();
+	XMLHttp.open("get", "ver_fechamento_debito.php", true);
+	XMLHttp.onreadystatechange = function(){
+		if (XMLHttp.readyState == 4)
+			if (XMLHttp.status == 200){
+				result.innerHTML = XMLHttp.responseText;
+			} else {
+				result.innerHTML = "Um erro ocorreu: " + XMLHttp.statusText;
+			}
+	};
+	XMLHttp.send(null);
+}
+
+function relatorioFechamentoCredito() {
+	// var sabor1      = document.getElementById("course_sabores").value;
+	// var sabor2      = document.getElementById("course_sabores2").value;
+	var result  = document.getElementById("result");
+	var XMLHttp = generateXMLHttp();
+	XMLHttp.open("get", "ver_fechamento_credito.php", true);
+	XMLHttp.onreadystatechange = function(){
+		if (XMLHttp.readyState == 4)
+			if (XMLHttp.status == 200){
+				result.innerHTML = XMLHttp.responseText;
+			} else {
+				result.innerHTML = "Um erro ocorreu: " + XMLHttp.statusText;
+			}
+	};
+	XMLHttp.send(null);
+}
+
+
 function insere3SaboresDelivery() {
 	var sabor1      = document.getElementById("course_sabores").value;
 	var sabor2      = document.getElementById("course_sabores2").value;

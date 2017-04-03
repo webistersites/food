@@ -1,5 +1,5 @@
 <div class="cadastrar sumir">
-<div class="ui secondary pointing green menu">
+<div class="ui secondary pointing menu">
     <a class="item" href="#" onclick="location.reload()">
         Delivery
       </a>

@@ -12,7 +12,7 @@
 </style>
 
 <div class="ui container">
-    <div class="ui secondary pointing green menu">
+    <div class="ui secondary pointing menu">
         <a class="item active" href="#salao" >
             Mesa <?php echo $id_mesa; ?>
         </a>

@@ -1,5 +1,5 @@
 <div class="delivery">
-<div class="ui secondary pointing green menu">
+<div class="ui secondary pointing menu">
     <a class="item active" href="#">
         Delivery
       </a>

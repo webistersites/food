@@ -81,7 +81,7 @@
 </script>
 <div class="ui container">
 
-<div class="ui secondary pointing green menu">
+<div class="ui secondary pointing menu">
     <a class="item" href="delivery.php" onclick="location.reload()">
         Delivery
       </a>

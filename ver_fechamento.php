@@ -1,5 +1,5 @@
 <?php
-include 'cabecalho.php';
+include 'conecta.php';
 
 $valor_inicial = mysql_query("SELECT valor_inicial FROM caixa01 WHERE id = (SELECT max(id) from caixa01)");
 $ver_valor_inicial = mysql_result($valor_inicial,0);
@@ -179,7 +179,7 @@ if (!isset($total_geral))
         $ver_total_geral = mysql_result($total_geral,0);
     }
     
-echo '<br><div class="ui center aligned grid">
+$result = '<br><div class="ui center aligned grid">
             <div class="ui large warning message">
             <i class="close icon"></i>
             <div class="header">
@@ -201,7 +201,7 @@ echo '<br><div class="ui center aligned grid">
                 ';
                 
                 while ($ver_fechamento=mysql_fetch_array($query_fechamento)) {
-                    echo '<tr>
+                    $result .= '<tr>
                         <td>'.$ver_fechamento['data_venda'].'</td>
                         <td>'.$ver_fechamento['num_nota_fiscal'].'</td>
                         <td>'.$ver_fechamento['quantidade'].'</td>
@@ -209,7 +209,7 @@ echo '<br><div class="ui center aligned grid">
                         <td>'.$ver_fechamento['Total'].'</td>
                     </tr>';
                 }
-                echo '
+                $result .= '
                 </tbody>
                 <tfoot>
                   <tr>
@@ -226,3 +226,5 @@ echo '<br><div class="ui center aligned grid">
           </div>
           </div>'
     ;
+    $result .= '<br>';
+echo $result;

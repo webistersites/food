@@ -51,7 +51,7 @@
 
   <style type="text/css">
     body {
-      background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/papel_parede3.jpg) no-repeat center;
+      background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(_img/eat-1237431_1280.jpg) no-repeat center;
       /*background-color: #c1c1c1;*/
       /*background-image: url(images/background2.jpg);*/
       background-size: 100%;
@@ -105,7 +105,7 @@
 
 <div class="ui middle aligned center aligned grid">
   <div class="column">
-    <h2 class="ui green image header">        
+    <h2 class="ui yellow image header">        
       <div class="content">
        Efetuar Login
       </div>
@@ -139,7 +139,7 @@
             
             ?>
         </div>
-        <div class="ui fluid large green submit button">Login</div>
+        <div class="ui fluid large yellow submit button">Login</div>
       </div>
 
       <div class="ui error message"></div>
