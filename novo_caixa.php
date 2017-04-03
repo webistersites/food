@@ -117,7 +117,7 @@
       <p>
         <?php
              // include 'lista_produtos.php';
-            include 'lista_pizzas.php';
+            include 'dois_sabores.php';
         ?>
           </p>
         </div>

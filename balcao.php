@@ -30,7 +30,6 @@
                             $(document).ready(function(){
                              $("#'.$categoria['categoria'].'").click(function(){
                               $("#refresh").load("lista_'.$categoria['categoria'].'.php");
-                              alert("Fui clicado");
                              });
                             });
                             </script>';

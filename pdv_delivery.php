@@ -229,7 +229,7 @@
       <p>
         <?php
              //include __DIR__ . '/2sabores/index.php';
-            include 'lista_pizzas_delivery.php';
+            include 'dois_sabores_delivery.php';
         ?>
           </p>
         </div>

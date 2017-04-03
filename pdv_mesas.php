@@ -168,7 +168,7 @@ echo "<script>"
         <div class="ui bottom attached segment" id="refresh">
       <p>
         <?php
-             include 'lista_pizzas_mesas.php';
+             include 'dois_sabores_mesa.php';
         ?>
           </p>
         </div>
