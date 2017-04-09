@@ -3,7 +3,7 @@ include 'cabecalho.php';
 
 $id = $_GET['id'];
 
-mysql_query("UPDATE usuarios SET ativo = 0 WHERE id = $id");
+mysql_query("UPDATE usuarios SET ativo = 1 WHERE id = $id");
 
 ?>
 

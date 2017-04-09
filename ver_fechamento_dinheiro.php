@@ -4,53 +4,74 @@ include 'conecta.php';
 $valor_inicial = mysql_query("SELECT valor_inicial FROM caixa01 WHERE id = (SELECT max(id) from caixa01)");
 $ver_valor_inicial = mysql_result($valor_inicial,0);
 
-$query_fechamento = mysql_query("SELECT
-    DATE_FORMAT(c.data_venda, '%d/%m/%Y') as data_venda
+$inicial    = $_GET['inicial'];
+$final      = $_GET['final'];
+
+if ($inicial == "" && $final == "") 
+{
+    $query_fechamento = mysql_query("select 
+    a.id
+    ,DATE_FORMAT(a.data_venda, '%M %e, %Y') as data_venda
+    ,DATE_FORMAT(a.data_venda, '%d/%m/%Y %H:%i') as data_venda_v
+    ,a.origem_venda
     ,a.num_nota_fiscal
-    ,a.quantidade
-    ,b.name
-    ,b.cost*a.quantidade as Total
-    ,d.forma_pagamento
-    ,e.valor_inicial
-    
-FROM
-    pde_fato_vendas_produtos a
+    ,a.valor_nota_fiscal
+    ,b.forma_pagamento
+    ,a.status
+from 
+    pde_fato_vendas a
 INNER JOIN
-    tec_products b
+    forma_pagamento b
 ON
-    a.id_produto = b.id
-INNER JOIN
-    pde_fato_vendas c
-ON
-    a.num_nota_fiscal = c.num_nota_fiscal
-INNER JOIN
-    forma_pagamento d
-ON
-    c.id_forma_pagamento = d.id
-INNER JOIN
-    caixa01 e
-ON
-    c.id_abertura = e.id
+    a.id_forma_pagamento = b.id
 WHERE
-    c.id_abertura = (select max(id) from caixa01)
+    b.id = 1
 AND
-    c.status = 'A'
-AND 
-    c.id_forma_pagamento = 1
-ORDER BY 
-    c.data_venda, a.num_nota_fiscal
+    a.status = 'A'
+ORDER BY
+    a.num_nota_fiscal desc
 ;");
 
+} 
+else 
+{
+    $query_fechamento = mysql_query("select 
+    a.id
+    ,DATE_FORMAT(a.data_venda, '%M %e, %Y') as data_venda
+    ,DATE_FORMAT(a.data_venda, '%d/%m/%Y %H:%i') as data_venda_v
+    ,a.origem_venda
+    ,a.num_nota_fiscal
+    ,a.valor_nota_fiscal
+    ,b.forma_pagamento
+    ,a.status
+from 
+    pde_fato_vendas a
+INNER JOIN
+    forma_pagamento b
+ON
+    a.id_forma_pagamento = b.id
+WHERE
+    b.id = 1
+AND
+    a.status = 'A'
+AND
+    a.data_venda between STR_TO_DATE('".$inicial."', '%d/%m/%Y') and STR_TO_DATE('".$final."', '%d/%m/%Y')+1
+ORDER BY
+    a.num_nota_fiscal desc
+;");
+
+}
+
+
 $result = '<br>
-            <table class="ui center aligned table">
+            <h4 class="ui center aligned header">Dinheiro</h4>
+            <table class="ui center aligned blue celled selectable compact small table">
                 <thead>
                   <tr>
                     <th>Data</th>
                     <th>N° Cupom</th>
-                    <th>Qtd</th>
-                    <th>Item</th>
-                    <th>R$ Total</th>
-
+                    <th>Canal de venda</th>
+                    <th>Total do Cupom</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -58,11 +79,10 @@ $result = '<br>
                 
                 while ($ver_fechamento=mysql_fetch_array($query_fechamento)) {
                     $result .= '<tr>
-                        <td>'.$ver_fechamento['data_venda'].'</td>
-                        <td>'.$ver_fechamento['num_nota_fiscal'].'</td>
-                        <td>'.$ver_fechamento['quantidade'].'</td>
-                        <td>'.$ver_fechamento['name'].'</td>
-                        <td>'.$ver_fechamento['Total'].'</td>
+                        <td>'.$ver_fechamento['data_venda_v'].'</td>
+                        <td>NF '.$ver_fechamento['num_nota_fiscal'].'</td>
+                        <td>'.$ver_fechamento['origem_venda'].'</td>
+                        <td>R$ '.number_format($ver_fechamento['valor_nota_fiscal'],2,",",".").'</td>
                     </tr>';
                 }
                 $result .= '
@@ -71,4 +91,5 @@ $result = '<br>
               <br>'
     ;
     $result .= '<br>';
+
 echo $result;

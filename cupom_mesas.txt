@@ -2,21 +2,19 @@
              Rua Planalto, 54 - Jardim Palmares
                 TEL.: 2241-2513 / 2241-3210
         -------------------------------------------
-                   58 - 02/04/2017 18:13
+                   69 - 07/04/2017 21:48
         ********************************************
                       CUPOM NAO FISCAL
         ********************************************
                        Itens - Mesa 4
 Cod.    Produto                       V. UN Qtd  Total       
-102     PIZZA ATUM I                  24.00   1  24.00       
+601     COCA 2L                       10.00   3  30.00       
 -------------------------------------------------------
-                                        TOTAL R$ 24,00
+                                        TOTAL R$ 30,00
 -------------------------------------------------------
 
 
-Forma Pagamento: Dinheiro
-
-Troco: R$ 16,00
+Forma Pagamento: Cartão de Débito
 
 Vendedor: Junior Nascimento
 --

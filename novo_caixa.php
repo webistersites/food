@@ -46,6 +46,8 @@
     $('#result').load("getData.php?id=");
     $('#tabela_aux').css("display", "none");
 });
+
+
   
 </script>
 <!--

@@ -10,10 +10,6 @@
     <a class="item active" href="#">
         Caixa
       </a>
-        <a class="item" href="#cadastrar_item" onclick="location.reload()">
-        Produtos
-      </a>
-
     <a href="fechar_caixa.php" class="right floated item">Fechar Caixa</a>
 </div>
 <div class="ui segment">

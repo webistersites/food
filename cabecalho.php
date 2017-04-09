@@ -80,6 +80,7 @@
     return true;
     }
 
+
 </script>
 
   <!--- Example Javascript -->
@@ -97,10 +98,11 @@
   <a href="mesas.php" id="salao" class="item"><i class="food icon"></i>Mesas</a>
   <a href="delivery.php" id="delivery" class="item"><i class="home icon"></i>Delivery</a>
   <a href="financeiro.php" id="financeiro" class="item"><i class="money icon"></i>Pedidos</a>
+  <a href="produtos.php" id="" class="item"><i class="settings icon"></i>Produtos</a>
   <a href="funcionarios.php" id="func" class="item"><i class="users icon"></i>Funcionários</a>
-  <a href="relatorios.php" id="func" class="item"><i class="dashboard icon"></i>Relatórios</a>
-  <!-- <a href="configuracoes.php" id="config" class="item"><i class="settings icon"></i>Motoboys</a>
-  <a href="ver_fechamento.php" id="fech" class="item"><i class="money icon"></i>Fechamento</a> -->
+  <a href="relatorios.php" id="func" class="item"><i class="bar chart icon"></i>Relatórios</a>
+  
+  <!-- <a href="ver_fechamento.php" id="fech" class="item"><i class="money icon"></i>Fechamento</a> -->
 <!--  <a class="teal item">Alterar</a>-->
 <!--  <div class="ui dropdown item">
     Dropdown
@@ -141,7 +143,7 @@
                 $qtd_notificacoes = mysql_result($notificacao_delivery,0);
                 echo '<div class="ui simple dropdown item">
                         <i class="home large icon"></i>
-                        <div class="ui tiny black left pointing label">'.$qtd_notificacoes.'</div>
+                        <div class="ui mini yellow left pointing label">'.$qtd_notificacoes.'</div>
                         <div class="menu">';
                 while ($lista=mysql_fetch_array($lista_suspensa))
                 {
@@ -176,7 +178,7 @@
                 $qtd_notificacoes2 = mysql_result($notificacao_balcao,0);
                 echo '<div class="ui simple dropdown item">
                         <i class="shopping basket icon"></i>
-                        <div class="ui tiny black left pointing label">'.$qtd_notificacoes2.'</div>
+                        <div class="ui mini yellow left pointing label">'.$qtd_notificacoes2.'</div>
                         <div class="menu">';
                 while ($lista=mysql_fetch_array($lista_suspensa))
                 {

@@ -81,7 +81,42 @@ WHERE
   
   $taxa = mysql_result($buscarTaxa,0);
   
-  mysql_query("INSERT pde_fato_vendas SELECT '','".$date."','Delivery',$nf,'".$forma."',".$max_id_caixa.",'A',".$cliente);
+  mysql_query("INSERT pde_fato_vendas SELECT '','".$date."','Delivery',$nf,0,'".$forma."',".$max_id_caixa.",'A',".$cliente);
+
+    mysql_query("update pde_fato_vendas set valor_nota_fiscal = (
+    select 
+      sum(b.cost) as valor_nota_fiscal
+    from 
+      pde_fato_vendas_produtos a
+    INNER JOIN
+      tec_products b
+    ON
+      a.id_produto = b.id
+    WHERE
+      a.num_nota_fiscal = $nf
+    GROUP BY
+      num_nota_fiscal
+  )
+    WHERE
+      num_nota_fiscal = $nf");
+
+      $estocavel = mysql_query("select 
+                            a.id_produto,
+                              a.quantidade 
+                          from 
+                            pedido_delivery a
+                          inner join
+                            tec_products b
+                          on
+                            a.id_produto = b.id
+                          WHERE
+                            b.type = 1
+                          ;");
+
+  while ($item = mysql_fetch_array($estocavel)) 
+  {
+    mysql_query("UPDATE tec_products SET quantity = quantity-".$item['quantidade']." where id = ".$item['id_produto']);
+  }
   
   mysql_query("INSERT vendas_motoboys VALUES ('',(SELECT distinct id_motoboy FROM pedido_delivery),1,$taxa,$max_id_caixa,'$date',0)");
   

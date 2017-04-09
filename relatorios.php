@@ -1,6 +1,7 @@
 <?php
     include "cabecalho.php";
 ?>
+
 <style type="text/css">
     body {
       background-color: #e3e3e3;
@@ -27,6 +28,7 @@
         $('.gerenciar').addClass('sumir');
         $('.cadastrar').removeClass('sumir');
 }
+
 </script>
 
 <?php

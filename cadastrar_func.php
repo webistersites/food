@@ -11,9 +11,9 @@ $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
 
-$cadastra_func = mysql_query("INSERT usuarios SELECT '','$nomecomp','$usuario','$senha','$avatar_gen',$cargo");
+$cadastra_func = mysql_query("INSERT usuarios SELECT '','$nomecomp','$usuario','$senha','$avatar_gen',$cargo,1");
 
 ?>
 <script>
-    window.location.replace("http://localhost/sao_francisco/funcionarios.php#gerenciar");
+    window.location.replace("funcionarios.php#gerenciar");
 </script>

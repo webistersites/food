@@ -260,11 +260,11 @@ function relatorioFechamento() {
 }
 
 function relatorioFechamentoDinheiro() {
-	// var sabor1      = document.getElementById("course_sabores").value;
-	// var sabor2      = document.getElementById("course_sabores2").value;
+	 var inicio      = document.getElementById("inicial").value;
+	 var fim      = document.getElementById("final").value;
 	var result  = document.getElementById("result");
 	var XMLHttp = generateXMLHttp();
-	XMLHttp.open("get", "ver_fechamento_dinheiro.php", true);
+	XMLHttp.open("get", "ver_fechamento_dinheiro.php?inicial=" + inicio + "&final=" + fim, true);
 	XMLHttp.onreadystatechange = function(){
 		if (XMLHttp.readyState == 4)
 			if (XMLHttp.status == 200){
@@ -277,11 +277,11 @@ function relatorioFechamentoDinheiro() {
 }
 
 function relatorioFechamentoDebito() {
-	// var sabor1      = document.getElementById("course_sabores").value;
-	// var sabor2      = document.getElementById("course_sabores2").value;
+	 var inicio      = document.getElementById("inicial").value;
+	 var fim      = document.getElementById("final").value;
 	var result  = document.getElementById("result");
 	var XMLHttp = generateXMLHttp();
-	XMLHttp.open("get", "ver_fechamento_debito.php", true);
+	XMLHttp.open("get", "ver_fechamento_debito.php?inicial=" + inicio + "&final=" + fim, true);
 	XMLHttp.onreadystatechange = function(){
 		if (XMLHttp.readyState == 4)
 			if (XMLHttp.status == 200){
@@ -294,11 +294,11 @@ function relatorioFechamentoDebito() {
 }
 
 function relatorioFechamentoCredito() {
-	// var sabor1      = document.getElementById("course_sabores").value;
-	// var sabor2      = document.getElementById("course_sabores2").value;
+	 var inicio      = document.getElementById("inicial").value;
+	 var fim      = document.getElementById("final").value;
 	var result  = document.getElementById("result");
 	var XMLHttp = generateXMLHttp();
-	XMLHttp.open("get", "ver_fechamento_credito.php", true);
+	XMLHttp.open("get", "ver_fechamento_credito.php?inicial=" + inicio + "&final=" + fim, true);
 	XMLHttp.onreadystatechange = function(){
 		if (XMLHttp.readyState == 4)
 			if (XMLHttp.status == 200){
@@ -393,5 +393,6 @@ function generateFieldsValues(formInsert){
 	}
 	return strReturn.join("&");
 }
+
 
 
