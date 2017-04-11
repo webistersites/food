@@ -1,6 +1,6 @@
 <?php
     include "cabecalho.php";
-    //include "atualiza_pagina.php";
+    include "atualiza_pagina.php";
     $query = mysql_query("select * from tec_mesas where id < 21");
     
 ?>
