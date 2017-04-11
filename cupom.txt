@@ -2,20 +2,22 @@
              Rua Planalto, 54 - Jardim Palmares
                 TEL.: 2241-2513 / 2241-3210
         -------------------------------------------
-                   70 - 08/04/2017 19:43
+                   74 - 11/04/2017 15:39
         ********************************************
                       CUPOM NAO FISCAL
         ********************************************
                            Itens
 Cod.    Produto                       V. UN Qtd  Total       
-306     TEESTE                         2.00   1   2.00       
-307     TEESTE2                        2.00   1   2.00       
+301     COXINHA DE FRANGO              2.50   1   2.50       
+602     COCA 1,5L                      8.00   1   8.00       
 -------------------------------------------------------
-                                         TOTAL R$ 4,00
+                                        TOTAL R$ 10,50
 -------------------------------------------------------
 
 
-Forma Pagamento: Cartão de Crédito
+Forma Pagamento: Dinheiro
+
+Troco: R$ 4,50
 
 Nome: Patricia
 

@@ -2,19 +2,23 @@
              Rua Planalto, 54 - Jardim Palmares
                 TEL.: 2241-2513 / 2241-3210
         -------------------------------------------
-                   72 - 11/04/2017 03:36
+                   75 - 11/04/2017 16:24
         ********************************************
                       CUPOM NAO FISCAL
         ********************************************
-                       Itens - Mesa 1
+                       Itens - Mesa 3
 Cod.    Produto                       V. UN Qtd  Total       
-103     PIZZA ATUM II                 25.00   1  25.00       
+201     ESFIHA CARNE                   1.30   1   1.30       
+202     ESFIHA ATUM                    1.50   1   1.50       
+203     ESFIHA CALABRESA               1.50   1   1.50       
 -------------------------------------------------------
-                                        TOTAL R$ 25,00
+                                         TOTAL R$ 4,30
 -------------------------------------------------------
 
 
-Forma Pagamento: Cartão de Débito
+Forma Pagamento: Dinheiro
+
+Troco: R$ 5,70
 
 Vendedor: Junior Nascimento
 --

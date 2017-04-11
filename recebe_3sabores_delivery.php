@@ -12,7 +12,7 @@
         $preco1              = mysql_result($ver_preco1,0);
         $preco2              = mysql_result($ver_preco2,0);
         $preco3              = mysql_result($ver_preco3,0);
-        $cliente        = mysql_query("SELECT id_cliente FROM sao_francisco.pedido_delivery WHERE id = 1");
+        $cliente        = mysql_query("SELECT id_cliente FROM pedido_delivery WHERE id = 1");
         $ver_cliente    = mysql_result($cliente,0);
         
         
@@ -34,48 +34,48 @@
                     {
                         $concatenar = "1/3 " . $sabor1 . " 1/3 " . $sabor2 ." 1/3 " . $sabor3 . $preco1;
                         $produto = "1/3 " . $sabor1 . " 1/3 " . $sabor2 . " 1/3 " . $sabor3;
-                        $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM sao_francisco.tec_products WHERE concat(name,cost) = '$concatenar'");
+                        $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM tec_products WHERE concat(name,cost) = '$concatenar'");
                         if (mysql_num_rows($consulta) == 0) 
                             {
-                                mysql_query("INSERT sao_francisco.tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco1,0,10,'','','',5,1;");
-                                mysql_query("INSERT INTO sao_francisco.pedido_delivery VALUES ('',(SELECT id FROM sao_francisco.tec_products WHERE concat(name,cost) = '".$produto.$preco1."'),1,'',$ver_cliente,0)");
+                                mysql_query("INSERT tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco1,0,10,'','','',5,1;");
+                                mysql_query("INSERT INTO pedido_delivery VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco1."'),1,'',$ver_cliente,0)");
                             }
                         else
                         {
                             //$resultado = mysql_fecth_array($consulta);
-                            mysql_query("INSERT INTO sao_francisco.pedido_delivery VALUES ('',(SELECT id FROM sao_francisco.tec_products WHERE concat(name,cost) = '$concatenar'),1,'',$ver_cliente,0)");
+                            mysql_query("INSERT INTO pedido_delivery VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'',$ver_cliente,0)");
                         }
                     }
                 elseif ($preco2 >= $preco1 && $preco2 >= $preco3) 
                     {
                         $concatenar = "1/3 " . $sabor1 . " 1/3 " . $sabor2 ." 1/3 " . $sabor3 . $preco2;
                         $produto = "1/3 " . $sabor1 . " 1/3 " . $sabor2 . " 1/3 " . $sabor3;
-                        $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM sao_francisco.tec_products WHERE concat(name,cost) = '$concatenar'");
+                        $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM tec_products WHERE concat(name,cost) = '$concatenar'");
                         if (mysql_num_rows($consulta) == 0) 
                             {
-                                mysql_query("INSERT sao_francisco.tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco2,0,10,'','','',5,1;");
-                                mysql_query("INSERT INTO sao_francisco.pedido_delivery VALUES ('',(SELECT id FROM sao_francisco.tec_products WHERE concat(name,cost) = '".$produto.$preco2."'),1,'',$ver_cliente,0)");
+                                mysql_query("INSERT tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco2,0,10,'','','',5,1;");
+                                mysql_query("INSERT INTO pedido_delivery VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco2."'),1,'',$ver_cliente,0)");
                             }
                         else
                         {
                             //$resultado = mysql_fecth_array($consulta);
-                            mysql_query("INSERT INTO sao_francisco.pedido_delivery VALUES ('',(SELECT id FROM sao_francisco.tec_products WHERE concat(name,cost) = '$concatenar'),1,'',$ver_cliente,0)");
+                            mysql_query("INSERT INTO pedido_delivery VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'',$ver_cliente,0)");
                         }
                     }
                 elseif ($preco3 >= $preco1 && $preco3 >= $preco2)
                     {
                         $concatenar = "1/3 " . $sabor1 . " 1/3 " . $sabor2 ." 1/3 " . $sabor3 . $preco3;
                         $produto = "1/3 " . $sabor1 . " 1/3 " . $sabor2 . " 1/3 " . $sabor3;
-                        $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM sao_francisco.tec_products WHERE concat(name,cost) = '$concatenar'");
+                        $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM tec_products WHERE concat(name,cost) = '$concatenar'");
                         if (mysql_num_rows($consulta) == 0) 
                             {
-                                mysql_query("INSERT sao_francisco.tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco3,0,10,'','','',5,1;");
-                                mysql_query("INSERT INTO sao_francisco.pedido_delivery VALUES ('',(SELECT id FROM sao_francisco.tec_products WHERE concat(name,cost) = '".$produto.$preco3."'),1,'',$ver_cliente,0)");
+                                mysql_query("INSERT tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco3,0,10,'','','',5,1;");
+                                mysql_query("INSERT INTO pedido_delivery VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco3."'),1,'',$ver_cliente,0)");
                             }
                         else
                         {
                             //$resultado = mysql_fecth_array($consulta);
-                            mysql_query("INSERT INTO sao_francisco.pedido_delivery VALUES ('',(SELECT id FROM sao_francisco.tec_products WHERE concat(name,cost) = '$concatenar'),1,'',$ver_cliente,0)");
+                            mysql_query("INSERT INTO pedido_delivery VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'',$ver_cliente,0)");
                         }
                     }
 //            }
