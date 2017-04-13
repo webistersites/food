@@ -12,7 +12,7 @@
   include  'imprimir2.php'; 
    
   $caixa = $_GET['caixa']; // Recebe o caixa vindo da URL (Pagamento com Cartão);
-  $caixa_din = $_POST['caixa']; // Recebe o caixa vindo do Form (Pagamentos em Dinheiro);
+
   $busca_max_id_caixa = mysql_query("SELECT max(id) FROM caixa01");
   $max_id_caixa = mysql_result($busca_max_id_caixa,0);
   
@@ -38,6 +38,7 @@
     }
     elseif ($forma == 1 && $troco != 0) // Verifica se é Dinheiro;
     {
+        //$caixa_din = $_POST['caixa']; // Recebe o caixa vindo do Form (Pagamentos em Dinheiro);
         $valorEntrada = $_GET['din'];        
         $mov = mysql_query(
                 "INSERT INTO pde_movimentacao "

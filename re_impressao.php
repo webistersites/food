@@ -290,6 +290,7 @@ $nf = $_GET['nf'];
 ?>
 
 <?php
+error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
 $printer = "Balcao";
 if($ph = printer_open($printer))
 {
@@ -302,7 +303,11 @@ if($ph = printer_open($printer))
     printer_close($ph);
    
 }
-
+else
+{
+    echo('<script>alert("Impressora desconectada!");</script>');
+    //exit();
+}
 
 echo '<meta http-equiv="refresh" content="0.1; url=financeiro.php">';
 

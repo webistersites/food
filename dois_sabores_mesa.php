@@ -1,9 +1,9 @@
 <?php $mesa = $_GET['mesa']; ?>
 <script>
-        $('form').keypress(function(e) {
-            if(e.which == 13 || e.keyCode == 13) 
-                $('#meuBotao').click();
-        });
+        // $('form').keypress(function(e) {
+        //     if(e.which == 13 || e.keyCode == 13) 
+        //         $('#meuBotao').click();
+        // });
 </script>
 <html>
     <head>

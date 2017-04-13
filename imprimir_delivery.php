@@ -289,6 +289,7 @@ include 'cabecalho.php';
 ?>
 
 <?php
+error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
 $printer = "Balcao";
 if($ph = printer_open($printer))
 {
@@ -299,11 +300,18 @@ if($ph = printer_open($printer))
    printer_set_option($ph, PRINTER_MODE, "TEXT");
    printer_write($ph, $content);
    printer_close($ph);
+
+}
+else
+{
+    echo('<script>alert("Impressora desconectada!");</script>');
+    //exit();
 }
 
 ?>
 
 <?php
+error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
 $printer = "Balcao";
 if($ph = printer_open($printer))
 {

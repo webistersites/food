@@ -190,6 +190,22 @@ function insertDataDelivery(){
 	XMLHttp.send(fieldsValues);
 }
 
+function selecionaMotoboy() {
+	var motoboy      = document.getElementById("motoboy").value;
+	var moto  = document.getElementById("moto");
+	var XMLHttp = generateXMLHttp();
+	XMLHttp.open("get", "insereMotoboy.php?id=" + motoboy, true);
+	XMLHttp.onreadystatechange = function(){
+		if (XMLHttp.readyState == 4)
+			if (XMLHttp.status == 200){
+				moto.innerHTML = XMLHttp.responseText;
+			} else {
+				moto.innerHTML = "Um erro ocorreu: " + XMLHttp.statusText;
+			}
+	};
+	XMLHttp.send(null);
+}
+
 function insereSabores2() {
 	var sabor1      = document.getElementById("course_sabores").value;
 	var sabor2      = document.getElementById("course_sabores2").value;

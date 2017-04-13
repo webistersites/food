@@ -163,24 +163,24 @@
                 echo '<br>';
                 exit();
             }
-            elseif (mysql_num_rows($consulta_motoboy) == 0)
-            {   
-                $ver_consulta = mysql_fetch_array($consulta_cliente);
-                echo "<h3 class='ui center aligned header'>PDV</h3>";                
-                echo '<h5 class="ui center aligned header">Cliente: '.$ver_consulta['name'].''
-                        . '<br><br>'
-                        . 'Motoboy: -'
-                        . '</h5>';
-            }
+            // elseif (mysql_num_rows($consulta_motoboy) == 0)
+            // {   
+            //     $ver_consulta = mysql_fetch_array($consulta_cliente);
+            //     echo "<h3 class='ui center aligned header'>PDV</h3>";                
+            //     echo '<h5 class="ui center aligned header">Cliente: '.$ver_consulta['name'].''
+            //             . '<br><br>'
+            //             . 'Motoboy: -'
+            //             . '</h5>';
+            // }
             else
             {
                 $ver_consulta = mysql_fetch_array($consulta_cliente);
-                $ver_motoboy = mysql_result($consulta_motoboy,0);
+                // $ver_motoboy = mysql_result($consulta_motoboy,0);
                 echo "<h3 class='ui center aligned header'>PDV</h3>";                
                 echo '<h5 class="ui center aligned header">Cliente: '.$ver_consulta['name'].''
-                        . '<br><br>'
-                        . 'Motoboy: ' . $ver_motoboy
-                        . '</h5>';
+                        . '<br><br>';
+                        include 'testes.php';
+                        echo '</h5>';
             }
         ?>        
     </p>
@@ -190,7 +190,7 @@
         echo "<script>";
         echo '$("result").ready(function(){
                  $("#finalizar").click(function(){
-                  $("#refresh").load("forma_pagamento.php");
+                  $("#refresh").load("forma_pagamento.php");  
                  });
                 });';
         echo "</script>";

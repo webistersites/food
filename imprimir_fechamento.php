@@ -255,6 +255,7 @@ $ver_valor_inicial = mysql_result($valor_inicial,0);
 ?>
 
 <?php
+error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
 $printer = "Balcao";
 if($ph = printer_open($printer))
 {
@@ -265,6 +266,11 @@ if($ph = printer_open($printer))
    printer_set_option($ph, PRINTER_MODE, "TEXT");
    printer_write($ph, $content);
    printer_close($ph);
+}
+else
+{
+    echo('<script>alert("Impressora desconectada!");</script>');
+    //exit();
 }
 
 echo '<meta http-equiv="refresh" content="0.1; url=pdv.php">';

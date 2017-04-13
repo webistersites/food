@@ -11,8 +11,8 @@
 
   include  'imprimir_delivery.php';  
 
-  $caixa        = $_GET['caixa']; // Recebe o caixa vindo da URL (Pagamento com Cartão);
-  $caixa_din    = $_POST['caixa']; // Recebe o caixa vindo do Form (Pagamentos em Dinheiro);
+  //$caixa        = $_GET['caixa']; // Recebe o caixa vindo da URL (Pagamento com Cartão);
+  //$caixa_din    = $_POST['caixa']; // Recebe o caixa vindo do Form (Pagamentos em Dinheiro);
   $busca_max_id_caixa = mysql_query("SELECT max(id) FROM caixa01");
   $max_id_caixa = mysql_result($busca_max_id_caixa,0);
   
@@ -118,7 +118,7 @@ WHERE
     mysql_query("UPDATE tec_products SET quantity = quantity-".$item['quantidade']." where id = ".$item['id_produto']);
   }
   
-  mysql_query("INSERT vendas_motoboys VALUES ('',(SELECT distinct id_motoboy FROM pedido_delivery),1,$taxa,$max_id_caixa,'$date',0)");
+  mysql_query("INSERT vendas_motoboys VALUES ('',(SELECT max(id_motoboy) FROM pedido_delivery),1,$taxa,$max_id_caixa,'$date',0)");
   
   $trucar = mysql_query("TRUNCATE TABLE pedido_delivery");
   

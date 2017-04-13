@@ -2,22 +2,19 @@
              Rua Planalto, 54 - Jardim Palmares
                 TEL.: 2241-2513 / 2241-3210
         -------------------------------------------
-                   74 - 11/04/2017 15:39
+                   87 - 13/04/2017 02:19
         ********************************************
                       CUPOM NAO FISCAL
         ********************************************
                            Itens
 Cod.    Produto                       V. UN Qtd  Total       
-301     COXINHA DE FRANGO              2.50   1   2.50       
-602     COCA 1,5L                      8.00   1   8.00       
+201     ESFIHA CARNE                   1.30   4   5.20       
 -------------------------------------------------------
-                                        TOTAL R$ 10,50
+                                         TOTAL R$ 5,20
 -------------------------------------------------------
 
 
-Forma Pagamento: Dinheiro
-
-Troco: R$ 4,50
+Forma Pagamento: Cartão de Débito
 
 Nome: Patricia
 

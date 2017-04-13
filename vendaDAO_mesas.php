@@ -11,8 +11,8 @@
 
   include  'imprimir_mesas.php';
 
-  $caixa        = $_GET['caixa']; // Recebe o caixa vindo da URL (Pagamento com Cartão);
-  $caixa_din    = $_POST['caixa']; // Recebe o caixa vindo do Form (Pagamentos em Dinheiro);
+  //$caixa        = $_GET['caixa']; // Recebe o caixa vindo da URL (Pagamento com Cartão);
+  //$caixa_din    = $_POST['caixa']; // Recebe o caixa vindo do Form (Pagamentos em Dinheiro);
   $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
   $busca_max_id_caixa = mysql_query("SELECT max(id) FROM caixa01");
   $max_id_caixa = mysql_result($busca_max_id_caixa,0);

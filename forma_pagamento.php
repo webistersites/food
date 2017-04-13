@@ -28,7 +28,7 @@
                 <a href="javascript:void(0);" id="dinheiro" class="ui fluid basic button"><i class="money icon"></i>Dinheiro</a><br>';
                 while ($forma = mysql_fetch_array($buscaFormas))
                     {
-                        echo '<a href="vendaDAO_delivery.php?din='.$subtotal.'&forma='.$forma['id'].'" class="ui fluid basic button"><i class="'.$forma['icone'].'"></i>'.$forma['forma_pagamento'].'</a>';
+                        echo '<a href="vendaDAO_delivery.php?din='.$subtotal.'&forma='.$forma['id'].'" onclick="selecionaMotoboy()" class="ui fluid basic button"><i class="'.$forma['icone'].'"></i>'.$forma['forma_pagamento'].'</a>';
                         echo '<br>';
                     } 
             echo '</div>'

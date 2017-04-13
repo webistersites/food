@@ -2,24 +2,22 @@
              Rua Planalto, 54 - Jardim Palmares
                 TEL.: 2241-2513 / 2241-3210
         -------------------------------------------
-                   55 - 2017-03-25 17:23
+                   85 - 2017-04-13 00:50
         ********************************************
                       CUPOM NAO FISCAL
         ********************************************
                            Itens
 Cod.    Produto                       V. UN Qtd  Total       
-999     Taxa de entrega                2.00   1   2.00       
-0       1/2 ATUM I 1/2 MUSSARELA      24.00   1  24.00       
+999     Taxa de entrega                4.00   1   4.00       
+201     ESFIHA CARNE                   1.30   8  10.40       
 -------------------------------------------------------
-                                        TOTAL R$ 26,00
+                                        TOTAL R$ 14,40
 -------------------------------------------------------
 
 
-Forma Pagamento: Dinheiro
+Forma Pagamento: Cartão de Débito
 
-Troco: R$ 4,00
+Cliente: Patricia
 
-Cliente: Junior
-
-Endereço: Rua teste, 45 - Jardim Tremembé
+Endereço: Rua generica, 199 - Vila zilda
 --
