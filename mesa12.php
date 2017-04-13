@@ -16,7 +16,9 @@
         <a class="item active" href="#salao" >
             Mesa <?php echo $id_mesa; ?>
         </a>
-
+        <?php echo '<a class="item" href="imprimirCozinha.php?mesa='.$id_mesa.'">'; ?>
+            Imprimir Cozinha
+        </a>
     </div>
     <div class="ui segment">
         <h2 class="ui center aligned dividing header">

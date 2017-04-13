@@ -113,6 +113,7 @@
                   <th data-field="id">Produto</th>
                   <th data-field="name">Qtd</th>
                   <th data-field="price">Preço</th>
+                  <th data-field="action">#</th>
               </tr>
             </thead>
 
@@ -125,6 +126,7 @@
                           <td>'     .$produto['name'].        '</td>
                           <td>'     .$produto['quantidade'].  '</td>
                           <td>R$ '  .$produto['cost'].        '</td>
+                          <td><a href="deletaItem.php?id='.$produto['id'].'&mesa='.$mesa.'"><i class="tiny material-icons">delete</i></a></td>
                         </tr> ';
                 }
                ?>
