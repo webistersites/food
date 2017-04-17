@@ -1,10 +1,10 @@
  <script>
-// $(document).ready(function(){
-//  $("#Esfihas").click(function(){
-//   $("#refresh").load("lista_esfihas.php");
-//  });
-// });
-// </script>
+  $(function() {
+    $('#result').load("getData.php?id=");
+    $('#tabela_aux').css("display", "none");
+});
+
+</script>
 <div class="geral sumir">
 <div class="ui secondary pointing menu">
     <a class="item active" href="#">

@@ -25,7 +25,7 @@
   <link rel='icon' href='_img/icon.png' />
 
   <!-- Site Properties -->
-  <title>Login - Pizzaria São Francisco</title>
+  <title>Login - Webister Food</title>
   <link rel="icon" href="_img/icon.png" />
   <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/components/reset.css">
   <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/components/site.css">

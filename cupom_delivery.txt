@@ -2,23 +2,19 @@
              Rua Planalto, 54 - Jardim Palmares
                 TEL.: 2241-2513 / 2241-3210
         --------------------------------------------
-                   86 - 13/04/2017 01:27
+                   88 - 17/04/2017 15:11
         ********************************************
                       CUPOM NAO FISCAL
         ********************************************
                            Itens
 Cod.    Produto                       V. UN Qtd  Total       
 999     Taxa de entrega                4.00   1   4.00       
-0       1/2 MUSSARELA 1/2 AMERICANA   28.00   1  28.00       
-0       1/3 BACON 1/3 ATUM I 1/3 FRANG28.00   1  28.00       
 -------------------------------------------------------
-                                        TOTAL R$ 60,00
+                                         TOTAL R$ 4,00
 -------------------------------------------------------
 
 
-Forma Pagamento: Dinheiro
-
-Troco: R$ 40,00
+Forma Pagamento: Cartão de Débito
 
 Vendedor: Junior Nascimento
 Cliente: Godofredo

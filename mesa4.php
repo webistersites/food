@@ -1,6 +1,7 @@
 <?php
     include "cabecalho.php";
     $id_mesa = 4;
+
 ?>
 <style type="text/css">
     body {

@@ -2,6 +2,12 @@
     include 'cabecalho.php';
     //include 'submenu_delivery_caixa.php';
 ?>
+<script>
+  $(function() {
+    $('#result').load("getDataDelivery.php?id=");
+    //$('#tabela_aux').css("display", "none");
+});
+</script>
 <style type="text/css">
     body {
       background-color: #e3e3e3;
@@ -72,12 +78,7 @@
 
   };
   
-  $(function() {
-    $('#result').load("getDataDelivery.php?id=");
-    //$('#tabela_aux').css("display", "none");
-});
-
-  
+ 
 </script>
 <div class="ui container">
 
@@ -237,118 +238,118 @@
     </div>
   </div>
 </div>
-  <script>
-  var target = window.location.hash;
-  if (target === "#lanches") 
-  {
-    $('.lanches').addClass('active');
-    $('.bebidas').removeClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod2').removeClass('sumir');
-  } 
-  else if (target === "#bebidas") 
-  {
-    $('.lanches').removeClass('active');
-    $('.bebidas').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod1').removeClass('sumir');
-  }
-  else if (target === "#Pizzas")
-  {
-    $('.lanches').removeClass('active');
-    $('.Pizzas').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod1').removeClass('sumir');  
-  }
-  else if (target === "#Esfihas")
-  {
-    $('.lanches').removeClass('active');
-    $('.Esfihas').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod2').removeClass('sumir');  
-  }
-  else if (target === "#Salgados")
-  {
-    $('.lanches').removeClass('active');
-    $('.Salgados').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod3').removeClass('sumir');  
-  }
-  else if (target === "#Beirutes")
-  {
-    $('.lanches').removeClass('active');
-    $('.Beirutes').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod4').removeClass('sumir');  
-  }
-  else if (target === "#Porções")
-  {
-    $('.lanches').removeClass('active');
-    $('.Porções').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod5').removeClass('sumir');  
-  }
-  else if (target === "#Bebidas")
-  {
-    $('.lanches').removeClass('active');
-    $('.Bebidas').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod6').removeClass('sumir');  
-  }
-  else if (target === "#Pastéis")
-  {
-    $('.lanches').removeClass('active');
-    $('.Pastéis').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod7').removeClass('sumir');  
-  }
-  else if (target === "#Lanches")
-  {
-    $('.lanches').removeClass('active');
-    $('.Lanches').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod8').removeClass('sumir');  
-  }
-  else if (target === "#Doces")
-  {
-    $('.lanches').removeClass('active');
-    $('.Doces').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod9').removeClass('sumir');  
-  }
-  else if (target === "#Sorvetes")
-  {
-    $('.lanches').removeClass('active');
-    $('.Sorvetes').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod10').removeClass('sumir');  
-  }
-  else if (target === "#Balas")
-  {
-    $('.lanches').removeClass('active');
-    $('.Balas').addClass('active');
-    $('.geral').removeClass('sumir');
-    $('#pdv').addClass('active');
-    $('.prod11').removeClass('sumir');  
-  }
-</script>
+//   <script>
+//   var target = window.location.hash;
+//   if (target === "#lanches") 
+//   {
+//     $('.lanches').addClass('active');
+//     $('.bebidas').removeClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod2').removeClass('sumir');
+//   } 
+//   else if (target === "#bebidas") 
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.bebidas').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod1').removeClass('sumir');
+//   }
+//   else if (target === "#Pizzas")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Pizzas').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod1').removeClass('sumir');  
+//   }
+//   else if (target === "#Esfihas")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Esfihas').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod2').removeClass('sumir');  
+//   }
+//   else if (target === "#Salgados")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Salgados').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod3').removeClass('sumir');  
+//   }
+//   else if (target === "#Beirutes")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Beirutes').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod4').removeClass('sumir');  
+//   }
+//   else if (target === "#Porções")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Porções').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod5').removeClass('sumir');  
+//   }
+//   else if (target === "#Bebidas")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Bebidas').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod6').removeClass('sumir');  
+//   }
+//   else if (target === "#Pastéis")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Pastéis').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod7').removeClass('sumir');  
+//   }
+//   else if (target === "#Lanches")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Lanches').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod8').removeClass('sumir');  
+//   }
+//   else if (target === "#Doces")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Doces').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod9').removeClass('sumir');  
+//   }
+//   else if (target === "#Sorvetes")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Sorvetes').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod10').removeClass('sumir');  
+//   }
+//   else if (target === "#Balas")
+//   {
+//     $('.lanches').removeClass('active');
+//     $('.Balas').addClass('active');
+//     $('.geral').removeClass('sumir');
+//     $('#pdv').addClass('active');
+//     $('.prod11').removeClass('sumir');  
+//   }
+// </script>
 
 <?php
-  include 'popup_caixa.php';
-  include 'popup_venda_delivery.php';
-  include 'popup_motoboy.php';
+  // include 'popup_caixa.php';
+  // include 'popup_venda_delivery.php';
+  // include 'popup_motoboy.php';
   include 'rodape.php';
     echo '<div class="sumir">';
     include 'teste/autocomplete/789/index.php';

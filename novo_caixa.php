@@ -42,13 +42,7 @@
 
   };
   
-  $(function() {
-    $('#result').load("getData.php?id=");
-    $('#tabela_aux').css("display", "none");
-});
-
-
-  
+ 
 </script>
 <!--
 ################ LISTAGEM DE PRODUTOS E PEDIDOS ##################
@@ -234,8 +228,8 @@
 //   }
  </script>
 <?php
-  include 'popup_caixa.php';
-  include 'popup_venda.php';
+  //include 'popup_caixa.php';
+  //include 'popup_venda.php';
 
 ?>
 
