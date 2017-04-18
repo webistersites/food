@@ -1,12 +1,14 @@
 <?php
-$host="localhost"; // Host name
-$username="root"; // Mysql username
-$password=""; // Mysql password
-$db_name="sao_francisco"; // Database name
+// $host="localhost"; // Host name
+// $username="root"; // Mysql username
+// $password=""; // Mysql password
+// $db_name="sao_francisco"; // Database name
 
 
-	$con = mysql_connect($host,$username,$password)   or die(mysql_error());
-	mysql_select_db($db_name, $con)  or die(mysql_error());
+// 	$con = mysql_connect($host,$username,$password)   or die(mysql_error());
+// 	mysql_select_db($db_name, $con)  or die(mysql_error());
+
+include 'conecta.php';
 
 $q = strtolower($_GET["q"]);
 if (!$q) return;
