@@ -42,8 +42,10 @@ while ($resultado = mysql_fetch_assoc($query)) {
   $email = $resultado['email'];
   $endereco = $resultado['endereco'];
   $bairro = $resultado['bairro'];
+  $cep = $resultado['cep'];
   $num = $resultado['cf1'];
   $id = $resultado['id'];
+  $endereco_mapa = $endereco . ", " . $num . " - " . $cep;
 
   #$link = '/noticia.php?id=' . $resultado['id'];
 
@@ -65,7 +67,7 @@ while ($resultado = mysql_fetch_assoc($query)) {
     echo "{$endereco}" . ", " . "{$num}" . " - " . "{$bairro}";
     echo "</td>";
     echo "<td class='ui center aligned'>";
-    //echo '<a href="testes.php?endereco=' . $endereco . '" target="_blank" class="ui mini basic button"><i class="map icon"></i>Mapa</a>';
+    echo '<a href="rotas.php?endereco=' . $endereco_mapa . '" target="_blank" class="ui mini basic button"><i class="map icon"></i>Mapa</a>';
     echo '<a href="delivery_alterar.php?id='.$id.'" class="ui mini button">Editar</a>';
     echo '<a href="insere_cliente_delivery.php?cliente='.$nome.'&id='.$id.'" class="ui blue mini button">Selecionar</a>';
     echo "</td>";

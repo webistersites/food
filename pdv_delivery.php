@@ -180,7 +180,7 @@
                 echo "<h3 class='ui center aligned header'>PDV</h3>";                
                 echo '<h5 class="ui center aligned header">Cliente: '.$ver_consulta['name'].''
                         . '<br><br>';
-                        include 'testes.php';
+                        include 'motoboy.php';
                         echo '</h5>';
             }
         ?>        
@@ -238,7 +238,7 @@
     </div>
   </div>
 </div>
-//   <script>
+<script>
 //   var target = window.location.hash;
 //   if (target === "#lanches") 
 //   {
@@ -344,7 +344,7 @@
 //     $('#pdv').addClass('active');
 //     $('.prod11').removeClass('sumir');  
 //   }
-// </script>
+ </script>
 
 <?php
   // include 'popup_caixa.php';

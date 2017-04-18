@@ -27,17 +27,17 @@
               </div>
               <div class="field">
                 <label>CEP</label>
-                <input type="text" name="cep" placeholder="00000-000">
+                <input type="text" name="cep" id="cep" placeholder="00000-000">
               </div>
             </div>
             <div class="fields">
                 <div class="twelve wide field">
                     <label>Endereço</label>
-                    <input type="text" name="endereco" placeholder="Rua, Avenida...">
+                    <input type="text" name="endereco" id="endereco" placeholder="Rua, Avenida...">
                 </div>
                 <div class="one wide field">
                     <label>N°</label>
-                    <input type="text" name="cf1" size="1" placeholder="">
+                    <input type="text" name="cf1" size="1" id="cf1" placeholder="">
                 </div>
 
             </div>
@@ -52,6 +52,7 @@
                 </div>
             </div>
         </div>
+        <a href="#" target="_blank" class="ui button" onclick="this.href='consulta_rotas.php?cep='+document.getElementById('cep').value"><i class="map icon"></i>Mapa</a>
         <input type="submit" class="ui submit right floated blue button" value="Cadastrar">
     </form>
     </div> 

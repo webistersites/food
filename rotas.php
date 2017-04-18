@@ -1,6 +1,7 @@
 <?php 
+    include 'cabecalho.php';
 
-include 'cabecalho.php';
+    $end = $_GET['endereco'];
 
 ?>
 <link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -10,7 +11,7 @@ include 'cabecalho.php';
         
             <form method="post" action="#" id="auto_enviar">
                 <fieldset>
-                    <legend>Criar rotas</legend>
+                    <legend>Endereços</legend>
                     
                     <div>
                         <label for="txtEnderecoPartida">Endereço de partida:</label>
@@ -19,7 +20,7 @@ include 'cabecalho.php';
                     
                     <div>
                         <label for="txtEnderecoChegada">Endereço de chegada:</label>
-                        <input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" value="Rua doutor Valentim Bouças, 188" />
+                        <?php echo '<input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" value="'.$end.'" />'; ?>
                     </div>
                     
                     <div>

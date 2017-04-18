@@ -2,23 +2,24 @@
              Rua Planalto, 54 - Jardim Palmares
                 TEL.: 2241-2513 / 2241-3210
         --------------------------------------------
-                   88 - 17/04/2017 15:11
+                   91 - 18/04/2017 00:53
         ********************************************
                       CUPOM NAO FISCAL
         ********************************************
                            Itens
 Cod.    Produto                       V. UN Qtd  Total       
-999     Taxa de entrega                4.00   1   4.00       
+999     Taxa de entrega                2.00   1   2.00       
+101     PIZZA AMERICANA               28.00   1  28.00       
 -------------------------------------------------------
-                                         TOTAL R$ 4,00
+                                        TOTAL R$ 30,00
 -------------------------------------------------------
 
 
 Forma Pagamento: Cartão de Débito
 
 Vendedor: Junior Nascimento
-Cliente: Godofredo
-End.: Rua tenente amador, 167 - Vila Cachoeira
-Telefone: 24360912
-Motoboy: Motoboy Teste
+Cliente: Junior
+End.: Rua doutor valentim bouças, 188 - Jardim Tremembé
+Telefone: 1122625640
+Motoboy: Motoboy 2 
 --

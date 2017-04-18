@@ -2,23 +2,21 @@
              Rua Planalto, 54 - Jardim Palmares
                 TEL.: 2241-2513 / 2241-3210
         -------------------------------------------
-                   75 - 11/04/2017 16:24
+                   89 - 17/04/2017 15:49
         ********************************************
                       CUPOM NAO FISCAL
         ********************************************
-                       Itens - Mesa 3
+                      Itens - Mesa 15
 Cod.    Produto                       V. UN Qtd  Total       
-201     ESFIHA CARNE                   1.30   1   1.30       
-202     ESFIHA ATUM                    1.50   1   1.50       
-203     ESFIHA CALABRESA               1.50   1   1.50       
+401     BEIRUTE ESPECIAL              20.00   5 100.00       
 -------------------------------------------------------
-                                         TOTAL R$ 4,30
+                                       TOTAL R$ 100,00
 -------------------------------------------------------
 
 
 Forma Pagamento: Dinheiro
 
-Troco: R$ 5,70
+Troco: R$ 0,00
 
 Vendedor: Junior Nascimento
 --
