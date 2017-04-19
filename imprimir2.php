@@ -6,7 +6,7 @@ include 'cabecalho.php';
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
 	 */
 
-        $n_colunas = 60; // 40 colunas por linha
+        $n_colunas = 45; // 40 colunas por linha
         
         /**
          * Adiciona a quantidade necessaria de espaços no inicio 
@@ -215,7 +215,7 @@ include 'cabecalho.php';
 	     */
             
             $itens[] = addEspacos($item[0], 8, 'F')
-                    . addEspacos($item[1], 30, 'F')
+                    . addEspacos($item[1], 25, 'F')
                     . addEspacos($item[2], 5, 'I')
                     . addEspacos($item[3], 4, 'I')
                     . addEspacos($item[4], 7, 'I')
@@ -285,18 +285,18 @@ else
 ?>
 
 <?php
-error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
-$printer = "Balcao";
-if($ph = printer_open($printer))
-{
-   $fh = fopen("cupom.txt", "rb");
-   $content = fread($fh, filesize("cupom.txt"));
-   fclose($fh);
+// error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
+// $printer = "Balcao";
+// if($ph = printer_open($printer))
+// {
+//    $fh = fopen("cupom.txt", "rb");
+//    $content = fread($fh, filesize("cupom.txt"));
+//    fclose($fh);
        
-    printer_set_option($ph, PRINTER_MODE, "TEXT");
-    printer_write($ph, $content);
-    printer_close($ph);
+//     printer_set_option($ph, PRINTER_MODE, "TEXT");
+//     printer_write($ph, $content);
+//     printer_close($ph);
    
-}
+// }
 
 ?>
