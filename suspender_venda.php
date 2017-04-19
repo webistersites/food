@@ -13,7 +13,9 @@ $date = date('Y-m-d H:i');
 mysql_query("INSERT vendas_suspensas SELECT '','$nf','$date','$tipo',$total");
 
 if ($tipo == 'balcao') 
-    {
+    {   
+        include 'imprimir_cozinha.php';
+
         $pegar_produtos = mysql_query("SELECT id_produto, quantidade FROM pedido_balcao");
 
         while ($inserir = mysql_fetch_array($pegar_produtos))
@@ -27,6 +29,8 @@ if ($tipo == 'balcao')
     }
     else
     {
+        include 'imprimir_cozinha_delivery.php';
+        
         $pegar_produtos = mysql_query("SELECT id_produto, quantidade, id_motoboy FROM pedido_delivery");
 
         while ($inserir = mysql_fetch_array($pegar_produtos))

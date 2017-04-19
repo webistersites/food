@@ -1,22 +1,12 @@
-            PIZZARIA & ESFIHARIA - SAO FRANCISCO
-             Rua Planalto, 54 - Jardim Palmares
-                TEL.: 2241-2513 / 2241-3210
-        -------------------------------------------
-                   89 - 17/04/2017 15:49
-        ********************************************
-                      CUPOM NAO FISCAL
-        ********************************************
-                      Itens - Mesa 15
-Cod.    Produto                       V. UN Qtd  Total       
-401     BEIRUTE ESPECIAL              20.00   5 100.00       
--------------------------------------------------------
-                                       TOTAL R$ 100,00
--------------------------------------------------------
+              - 19/04/2017 03:18
+********************************************
+                PEDIDO MESAS
+********************************************
+               Itens - Mesa 3
+--------------------------------------------
+Cod.    Produto                      Qtd.                  
+204     ESFIHA QUEIJO MUSSARELA         1                  
 
 
-Forma Pagamento: Dinheiro
 
-Troco: R$ 0,00
-
-Vendedor: Junior Nascimento
 --

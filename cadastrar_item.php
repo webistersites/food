@@ -7,6 +7,7 @@ $valor      	= $_POST['valor'];
 $categoria  	= $_POST['categoria'];
 $qtd       		= $_POST['qtd'];
 $estoque		= $_POST['estoque'];
+$cozinha		= $_POST['cozinha'];
 
 if ($estoque == "") 
 {
@@ -14,6 +15,14 @@ if ($estoque == "")
 } else
 {
 	$type = 1;
+}
+
+if ($cozinha == "") 
+{
+	$coz = 0;
+} else
+{
+	$coz = 1;
 }
 
 $q_code = mysql_query("select 
@@ -27,9 +36,19 @@ $q_code = mysql_query("select
 						where 
 							a.category_id = ".$categoria);
 
-$code	= mysql_result($q_code,0);   
-  
-$cadastra_func = mysql_query("INSERT tec_products SELECT '',$code,'$produto',$categoria,0,'no_image.png',0,$valor,0,$qtd,'',$type,'',5,1");
+$code	= mysql_result($q_code,0);
+
+if (!isset($code)) 
+{
+	$code = $categoria . "01";
+}
+else
+{
+	$code	= mysql_result($q_code,0);
+}  
+
+
+$cadastra_func = mysql_query("INSERT tec_products SELECT '',$code,'$produto',$categoria,0,'no_image.png',0,$valor,0,$qtd,'',$type,'',5,$coz");
 
 ?>
 <script>
