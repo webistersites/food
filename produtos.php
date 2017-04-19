@@ -53,6 +53,11 @@ include 'cabecalho.php';
                       <input type="checkbox" id="check" name="estoque" tabindex="0" class="hidden">
                       <label for="check">Produto de Estoque?</label>
                     </div>
+                    <br><br>
+                    <div class="ui toggle checkbox">
+                      <input type="checkbox" id="check2" name="cozinha" tabindex="0" class="hidden">
+                      <label for="check2">Imprimir em Cozinha?</label>
+                    </div>
                 <br>
                 <input type="submit" class="ui submit right floated blue button" value="Cadastrar">
                 <br><br><br>

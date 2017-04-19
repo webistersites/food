@@ -26,7 +26,7 @@
 
       #produtos {
         color: #222;
-        font-size: 7pt;
+        font-size: 11pt;
         padding: 5px;
         font-weight: bold;
         
@@ -127,7 +127,7 @@
                           <td>'     .$produto['name'].        '</td>
                           <td>'     .$produto['quantidade'].  '</td>
                           <td>R$ '  .$produto['cost'].        '</td>
-                          <td><a href="deletaItem.php?id='.$produto['id'].'&mesa='.$mesa.'"><i class="tiny material-icons">delete</i></a></td>
+                          <td><a href="deletaItem.php?id='.$produto['id'].'&mesa='.$mesa.'"><i class="mini material-icons">delete</i></a></td>
                         </tr> ';
                 }
                ?>

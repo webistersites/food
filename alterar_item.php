@@ -7,6 +7,8 @@ $valor      	= $_POST['valor'];
 $categoria  	= $_POST['categoria'];
 $qtd       		= $_POST['qtd'];
 $id 			= $_POST['id'];
+$estoque		= $_POST['estoque'];
+$cozinha		= $_POST['cozinha'];
 
 // $exec_nome = mysql_query("SELECT name FROM clientes WHERE id = $id2");
 // $ver_nome = mysql_result($exec_nome, 0);
@@ -45,6 +47,24 @@ if ($qtd != "")
 else
 {
 	$qtd = 0;
+}
+
+if ($cozinha != "") 
+{
+	mysql_query("UPDATE tec_products SET cozinha = 1 WHERE id = $id");
+}
+else
+{
+	mysql_query("UPDATE tec_products SET cozinha = 0 WHERE id = $id");
+}
+
+if ($estoque != "") 
+{
+	mysql_query("UPDATE tec_products SET type = 1 WHERE id = $id");
+}
+else
+{
+	mysql_query("UPDATE tec_products SET type = 0 WHERE id = $id");
 }
 
 echo '<meta http-equiv="refresh" content="0.1; url=produtos.php">';

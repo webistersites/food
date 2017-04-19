@@ -11,6 +11,8 @@
 
   include  'imprimir_delivery.php';  
 
+  // include 'imprimir_cozinha_delivery.php';
+
   //$caixa        = $_GET['caixa']; // Recebe o caixa vindo da URL (Pagamento com Cartão);
   //$caixa_din    = $_POST['caixa']; // Recebe o caixa vindo do Form (Pagamentos em Dinheiro);
   $busca_max_id_caixa = mysql_query("SELECT max(id) FROM caixa01");

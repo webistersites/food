@@ -50,7 +50,16 @@ $id   = $_GET['id'];
                         </select>
                     </div>
                     </div>
-                <br>
+                    <div class="ui toggle checkbox">
+                      <input type="checkbox" id="check" name="estoque" tabindex="0" class="hidden">
+                      <label for="check">Produto de Estoque?</label>
+                    </div>
+                    <br><br>
+                    <div class="ui toggle checkbox">
+                      <input type="checkbox" id="check2" name="cozinha" tabindex="0" class="hidden">
+                      <label for="check2">Imprimir em Cozinha?</label>
+                    </div>
+                <br><br>
                 <a href="produtos.php" class="ui button">Voltar</a>
                 <input type="submit" class="ui submit right floated green button" value="Alterar">
                 <br><br><br>
@@ -65,7 +74,7 @@ $id   = $_GET['id'];
          <?php
     //include 'cabecalho.php';
     
-$ver_produtos = mysql_query("SELECT a.id,a.code,a.quantity,a.name,a.cost,b.categoria FROM tec_products a 
+$ver_produtos = mysql_query("SELECT a.id,a.code,a.quantity,a.name,a.cost,b.categoria,a.type,a.cozinha FROM tec_products a 
 inner join categorias b
 on a.category_id = b.id WHERE category_id < 98 AND a.code != 9999 and a.id = ".$id." order by 2,5 desc");
     
@@ -76,6 +85,8 @@ on a.category_id = b.id WHERE category_id < 98 AND a.code != 9999 and a.id = ".$
                 ."<th class='center aligned'>Quantidade</th>"
                 . "<th class='center aligned'>Categoria</th>"
                 ."<th class='center aligned'>Preço</th>"
+                ."<th class='center aligned'>Estoque</th>"
+                ."<th class='center aligned'>Cozinha</th>"
               ."</thead>"
             ;
     
@@ -84,8 +95,10 @@ on a.category_id = b.id WHERE category_id < 98 AND a.code != 9999 and a.id = ".$
             ."<td class='collapsing center aligned'>".$produto['code']."</td>"    
             ."<td class='collapsing'>".$produto['name']."</td>"
             ."<td class='collapsing center aligned'>".$produto['quantity']."</td>"
-            ."<td class='collapsing center aligned'>".$produto['categoria']."</td>"      
-              ."<td class='collapsing center aligned'>R$ ".number_format($produto['cost'],2,",",".")."</td>"              
+            ."<td class='collapsing center aligned'>".$produto['categoria']."</td>"
+              ."<td class='collapsing center aligned'>R$ ".number_format($produto['cost'],2,",",".")."</td>"
+              ."<td class='collapsing center aligned'>"; if($produto['type'] == 0){echo 'Não';} else {echo 'Sim';} echo "</td>"
+              ."<td class='collapsing center aligned'>"; if($produto['cozinha'] == 0){echo 'Não';} else {echo 'Sim';} echo "</td>"
             ."</tr>"
         ;
     }
