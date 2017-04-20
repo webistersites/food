@@ -2,22 +2,21 @@
      Av. Rio Pequeno, 634 - Rio Pequeno
          TEL.: 2241-2513 / 2241-3210
  -------------------------------------------
-            98 - 19/04/2017 22:58
+           100 - 20/04/2017 02:33
 ********************************************
               CUPOM NAO FISCAL
 ********************************************
                     Itens
 Cod.  Produto                  V. UN Qtd  Total       
-0     1/2 MUSSARELA 1/2 CALABRE23.90   1  23.90       
-601   COCA 2L                  10.00   1  10.00       
+102   PIZZA ATUM I             24.00   1  24.00       
 ------------------------------------------------
-                                 TOTAL R$ 33,90
+                                 TOTAL R$ 24,00
 ------------------------------------------------
 
 
-Forma Pagamento: Cartão de Crédito
+Forma Pagamento: Cartão de Débito
 
-Senha: 198
+Senha: 150
 
 Vendedor: Junior Nascimento
 --
