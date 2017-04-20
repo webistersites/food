@@ -273,7 +273,7 @@ if($ph = printer_open($printer))
    $content = fread($fh, filesize("cupom.txt"));
    fclose($fh);
        
-    printer_set_option($ph, PRINTER_MODE, "EMF");
+    printer_set_option($ph, PRINTER_MODE, "TEXT");
     $font = printer_create_font("Arial", 72, 48, 400, false, false, false, 0);
     printer_select_font($handle, $font);
     printer_write($ph, $content);
