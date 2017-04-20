@@ -2,21 +2,21 @@
      Av. Rio Pequeno, 634 - Rio Pequeno
          TEL.: 2241-2513 / 2241-3210
  -------------------------------------------
-           122 - 20/04/2017 17:46
+           123 - 20/04/2017 17:56
 ********************************************
               CUPOM NAO FISCAL
 ********************************************
                     Itens
 Cod.  Produto                  V. UN Qtd  Total       
-101   PIZZA AMERICANA          28.00   1  28.00       
+105   PIZZA BAURU              25.00   1  25.00       
 ------------------------------------------------
-                                 TOTAL R$ 28,00
+                                 TOTAL R$ 25,00
 ------------------------------------------------
 
 
 Forma Pagamento: Cartão de Crédito
 
-Senha: 560
+Senha: 871
 
 Vendedor: Junior Nascimento
 --
