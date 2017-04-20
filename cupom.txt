@@ -1,24 +1,40 @@
+<<<<<<< HEAD
     PIZZARIA & ESFIHARIA - SAO FRANCISCO
      Rua Planalto, 54 - Jardim Palmares
          TEL.: 2241-2513 / 2241-3210
  -------------------------------------------
             95 - 19/04/2017 19:06
+=======
+               PONTO DA ESFIHA
+     Av. Rio Pequeno, 634 - Rio Pequeno
+         TEL.: 2241-2513 / 2241-3210
+ -------------------------------------------
+           103 - 19/04/2017 22:35
+>>>>>>> d23a3a91f3a8bf6d4b8352774eb58773d61300dd
 ********************************************
               CUPOM NAO FISCAL
 ********************************************
                     Itens
+<<<<<<< HEAD
 Cod.    Produto                  V. UN Qtd  Total       
 103     PIZZA ATUM II            25.00   1  25.00       
 -------------------------------------------------------
                          TOTAL R$ 25,00
 -------------------------------------------------------
+=======
+Cod.  Produto                  V. UN Qtd  Total       
+102   PIZZA ATUM I             24.00   1  24.00       
+------------------------------------------------
+                                 TOTAL R$ 24,00
+------------------------------------------------
+>>>>>>> d23a3a91f3a8bf6d4b8352774eb58773d61300dd
 
 
 Forma Pagamento: Dinheiro
 
 Troco: R$ 25,00
 
-Nome: Patricia
+Senha: 897
 
 Vendedor: Junior Nascimento
 --

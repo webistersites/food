@@ -117,7 +117,7 @@
         $trucar = mysql_query("TRUNCATE TABLE pedido_balcao2");
       }
   mysql_query("TRUNCATE TABLE valores_nota");
-    mysql_query("TRUNCATE TABLE nome_nota");
+
 
 ?>
 

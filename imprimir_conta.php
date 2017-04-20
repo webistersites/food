@@ -7,7 +7,7 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
 	 */
 
-        $n_colunas = 60; // 40 colunas por linha
+        $n_colunas = 45; // 40 colunas por linha
         
         /**
          * Adiciona a quantidade necessaria de espaços no inicio 
@@ -104,9 +104,9 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
         $txt_valor_total = '';
         $txt_rodape = array();
         
-        $txt_cabecalho[] = 'PIZZARIA & ESFIHARIA - SAO FRANCISCO'; 
+        $txt_cabecalho[] = 'PONTO DA ESFIHA'; 
         
-        $txt_cabecalho[] = 'Rua Planalto, 54 - Jardim Palmares';
+        $txt_cabecalho[] = 'Av. Rio Pequeno, 634 - Rio Pequeno';
         
         //$txt_cabecalho[] = ' '; // força pular uma linha entre o cabeçalho e os itens
         
@@ -151,7 +151,7 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
         $aux_valor_total = 'TOTAL R$ '.number_format($tot_itens,2,',','.');
         
 	// calcula o total de espaços que deve ser adicionado antes do "Sub-total" para alinhado a esquerda
-        $total_espacos = $n_colunas - strlen($aux_valor_total)-6;
+        $total_espacos = $n_colunas - strlen($aux_valor_total)+2;
         
         $espacos = '';
         
@@ -159,11 +159,11 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
             $espacos .= ' ';
         }
         
-        $txt_valor_total = "-------------------------------------------------------\r\n";
+        $txt_valor_total = "------------------------------------------------\r\n";
         
         $txt_valor_total .= $espacos.$aux_valor_total;
         
-        $txt_valor_total .= "\r\n-------------------------------------------------------\r\n";
+        $txt_valor_total .= "\r\n------------------------------------------------\r\n";
         
         $txt_rodape[] = 'Vendedor: ' . $_SESSION['usuarioNome'];
         
@@ -191,8 +191,8 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 	     * $itens[] = 'Cod. Produto      Env. Qtd  V. UN  Total'
 	     */
             
-            $itens[] = addEspacos($item[0], 8, 'F')
-                    . addEspacos($item[1], 30, 'F')
+            $itens[] = addEspacos($item[0], 6, 'F')
+                    . addEspacos($item[1], 25, 'F')
                     . addEspacos($item[2], 5, 'I')
                     . addEspacos($item[3], 4, 'I')
                     . addEspacos($item[4], 7, 'I')
