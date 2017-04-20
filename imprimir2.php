@@ -6,7 +6,7 @@ include 'cabecalho.php';
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
 	 */
 
-        $n_colunas = 45; // 40 colunas por linha
+        $n_colunas = 30; // 40 colunas por linha
         
         /**
          * Adiciona a quantidade necessaria de espaços no inicio 
@@ -129,11 +129,11 @@ include 'cabecalho.php';
         
         $txt_cabecalho[] = $nf . " - " .$date;
         
-        $txt_cabecalho[] = '********************************************';
+        $txt_cabecalho[] = '****************************';
         
         $txt_cabecalho[] = 'CUPOM NAO FISCAL';
         
-        $txt_cabecalho[] = '********************************************';
+        $txt_cabecalho[] = '****************************';
         
         $txt_cabecalho[] = 'Itens'; // força pular uma linha entre o cabeçalho e os itens
         
@@ -167,11 +167,11 @@ include 'cabecalho.php';
             $espacos .= ' ';
         }
         
-        $txt_valor_total = "------------------------------------------------\r\n";
+        $txt_valor_total = "--------------------------------\r\n";
         
         $txt_valor_total .= $espacos.$aux_valor_total;
         
-        $txt_valor_total .= "\r\n------------------------------------------------\r\n";
+        $txt_valor_total .= "\r\n--------------------------------\r\n";
         
         
         $txt_rodape[] = 'Forma Pagamento: ' . $ver_dados['forma_pagamento'];
@@ -273,7 +273,7 @@ if($ph = printer_open($printer))
    $content = fread($fh, filesize("cupom.txt"));
    fclose($fh);
        
-    printer_set_option($ph, PRINTER_MODE, "TEXT");
+    printer_set_option($ph, PRINTER_MODE, "RAW");
     printer_write($ph, $content);
     printer_close($ph);
    
