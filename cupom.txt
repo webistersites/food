@@ -1,22 +1,22 @@
-               PONTO DA ESFIHA
-     Av. Rio Pequeno, 634 - Rio Pequeno
-         TEL.: 2241-2513 / 2241-3210
- -------------------------------------------
-           123 - 20/04/2017 17:56
-********************************************
-              CUPOM NAO FISCAL
-********************************************
-                    Itens
-Cod.  Produto                  V. UN Qtd  Total       
-105   PIZZA BAURU              25.00   1  25.00       
-------------------------------------------------
-                                 TOTAL R$ 25,00
-------------------------------------------------
+      PONTO DA ESFIHA
+Av. Rio Pequeno, 634 - Rio P
+TEL.: 2241-2513 / 2241-3210
+ -------------------------
+   124 - 20/04/2017 18:09
+ **************************
+      CUPOM NAO FISCAL
+ **************************
+           Itens
+Cod.Produto             V. U Qt Total      
+106 PIZZA BAIANA        24.0  1 24.00      
+------------------------------
+                TOTAL R$ 24,00
+------------------------------
 
 
 Forma Pagamento: Cartão de Crédito
 
-Senha: 871
+Senha: 757
 
 Vendedor: Junior Nascimento
 --
