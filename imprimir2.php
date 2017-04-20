@@ -116,7 +116,7 @@ include 'cabecalho.php';
         
         $txt_cabecalho[] = 'PONTO DA ESFIHA'; 
         
-        $txt_cabecalho[] = 'Av. Rio Pequeno, 634 - Rio Pequeno';
+        $txt_cabecalho[] = 'Av. Rio Pequeno, 634';
         
         //$txt_cabecalho[] = ' '; // força pular uma linha entre o cabeçalho e os itens
         
@@ -131,7 +131,7 @@ include 'cabecalho.php';
         
         $txt_cabecalho[] = '**************************';
         
-        $txt_cabecalho[] = 'CUPOM NAO FISCAL';
+        $txt_cabecalho[] = 'RELATÓRIO GERENCIAL' ;
         
         $txt_cabecalho[] = '**************************';
         
@@ -159,7 +159,7 @@ include 'cabecalho.php';
         $aux_valor_total = 'TOTAL R$ '.number_format($tot_itens,2,',','.');
         
 	// calcula o total de espaços que deve ser adicionado antes do "Sub-total" para alinhado a esquerda
-        $total_espacos = $n_colunas - strlen($aux_valor_total)+2;
+        $total_espacos = $n_colunas - strlen($aux_valor_total);
         
         $espacos = '';
         
@@ -167,11 +167,11 @@ include 'cabecalho.php';
             $espacos .= ' ';
         }
         
-        $txt_valor_total = "------------------------------\r\n";
+        $txt_valor_total = "----------------------------\r\n";
         
         $txt_valor_total .= $espacos.$aux_valor_total;
         
-        $txt_valor_total .= "\r\n------------------------------\r\n";
+        $txt_valor_total .= "\r\n----------------------------\r\n";
         
         
         $txt_rodape[] = 'Forma Pagamento: ' . $ver_dados['forma_pagamento'];
