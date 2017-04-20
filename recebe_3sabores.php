@@ -99,12 +99,12 @@
                         if (mysql_num_rows($consulta) == 0) 
                             {
                                 mysql_query("INSERT tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco1,0,10,'','','',5,1;");
-                                mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco1."'),1,'')");
+                                mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco1."'),1,'',0)");
                             }
                         else
                         {
                             //$resultado = mysql_fecth_array($consulta);
-                            mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'')");
+                            mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'',0)");
                         }
                     }
                 elseif ($preco2 >= $preco1 && $preco2 >= $preco3) 
@@ -115,12 +115,12 @@
                         if (mysql_num_rows($consulta) == 0) 
                             {
                                 mysql_query("INSERT tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco2,0,10,'','','',5,1;");
-                                mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco2."'),1,'')");
+                                mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco2."'),1,'',0)");
                             }
                         else
                         {
                             //$resultado = mysql_fecth_array($consulta);
-                            mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'')");
+                            mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'',0)");
                         }
                     }
                 elseif ($preco3 >= $preco1 && $preco3 >= $preco2)
@@ -131,12 +131,12 @@
                         if (mysql_num_rows($consulta) == 0) 
                             {
                                 mysql_query("INSERT tec_products SELECT '',0000,'$produto',101,0,'no_image.png',0,$preco3,0,10,'','','',5,1;");
-                                mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco3."'),1,'')");
+                                mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '".$produto.$preco3."'),1,'',0)");
                             }
                         else
                         {
                             //$resultado = mysql_fecth_array($consulta);
-                            mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'')");
+                            mysql_query("INSERT INTO pedido_balcao VALUES ('',(SELECT id FROM tec_products WHERE concat(name,cost) = '$concatenar'),1,'',0)");
                         }
                     }
 //            }

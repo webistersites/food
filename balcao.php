@@ -16,8 +16,7 @@
         <h2 class="ui center aligned dividing header">
             Caixa 01
         </h2>
-        <br>
-        <div class="ui pointing grey inverted menu">
+        <div class="ui grey inverted small menu">
             <?php
                 $buscaCategorias = mysql_query("SELECT * FROM categorias");
                 while ($categoria = mysql_fetch_array($buscaCategorias))

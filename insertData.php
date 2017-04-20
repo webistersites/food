@@ -61,12 +61,12 @@ if (mysql_num_rows($consulta) == 0)
                 $return .= "</table>";
                 $return .= "<table class='ui table'>";
                 $return .= "<tr>";
-                $return .= "<td><a href='balcaoDAO.php?truncar=yes' class='ui red fluid button'>Cancelar</a></td>";
-                $return .= "<td><a href='suspender_venda.php?tipo=balcao&total=".$subtotal."' class='ui basic fluid button'>Aguardar</a></td>";
-                $return .= "<td colspan='4' rowspan='2'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
-                $return .= "</tr>";
-                $return .= "<tr>";
-                // $return .= "<td colspan='2'><a href='#venda' id='botao' class='ui green fluid button'>Finalizar</a></td>";
+                $return .= "<td>";
+                $return .= "<a href='suspender_venda.php?tipo=balcao&total=".$subtotal."' class='ui grey fluid tiny button'>Aguardar</a><br>";
+                $return .= "<a href='imprimir_cozinha.php' class='ui grey fluid tiny button'>Imprimir Cozinha</a><br>";
+                $return .= "<a href='balcaoDAO.php?truncar=yes' class='ui red fluid tiny button'>Cancelar</a>";
+                $return .= "</td>";
+                $return .= "<td rowspan='3'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
                 $return .= "</tr>";
                 $return .= "</table>";
                 $return .= "</p>";
@@ -79,7 +79,7 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
     
     if (mysql_num_rows($verifica_duplicidade) <= 0 ) 
     {
-        mysql_query("INSERT INTO pedido_balcao SELECT '',$id,1,''");
+        mysql_query("INSERT INTO pedido_balcao SELECT '',$id,1,'',0");
         $busca = mysql_query("
                                 SELECT
                                 a.id,
@@ -122,12 +122,12 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                 $return .= "</table>";
                 $return .= "<table class='ui table'>";
                 $return .= "<tr>";
-                $return .= "<td><a href='balcaoDAO.php?truncar=yes' class='ui red fluid button'>Cancelar</a></td>";
-                $return .= "<td><a href='suspender_venda.php?tipo=balcao&total=".$subtotal."' class='ui basic fluid button'>Aguardar</a></td>";
-                $return .= "<td colspan='4' rowspan='2'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
-                $return .= "</tr>";
-                $return .= "<tr>";
-                // $return .= "<td colspan='2'><a href='#venda' id='botao' class='ui green fluid button'>Finalizar</a></td>";
+                $return .= "<td>";
+                $return .= "<a href='suspender_venda.php?tipo=balcao&total=".$subtotal."' class='ui grey fluid tiny button'>Aguardar</a><br>";
+                $return .= "<a href='imprimir_cozinha.php' class='ui grey fluid tiny button'>Imprimir Cozinha</a><br>";
+                $return .= "<a href='balcaoDAO.php?truncar=yes' class='ui red fluid tiny button'>Cancelar</a>";
+                $return .= "</td>";
+                $return .= "<td rowspan='3'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
                 $return .= "</tr>";
                 $return .= "</table>";
                 $return .= "</p>";
@@ -177,12 +177,12 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                 $return .= "</table>";
                 $return .= "<table class='ui table'>";
                 $return .= "<tr>";
-                $return .= "<td><a href='balcaoDAO.php?truncar=yes' class='ui red fluid button'>Cancelar</a></td>";
-                $return .= "<td><a href='suspender_venda.php?tipo=balcao&total=".$subtotal."' class='ui basic fluid button'>Aguardar</a></td>";
-                $return .= "<td colspan='4' rowspan='2'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
-                $return .= "</tr>";
-                $return .= "<tr>";
-                // $return .= "<td colspan='2'><a href='#venda' id='botao' class='ui green fluid button'>Finalizar</a></td>";
+                $return .= "<td>";
+                $return .= "<a href='suspender_venda.php?tipo=balcao&total=".$subtotal."' class='ui grey fluid tiny button'>Aguardar</a><br>";
+                $return .= "<a href='imprimir_cozinha.php' class='ui grey fluid tiny button'>Imprimir Cozinha</a><br>";
+                $return .= "<a href='balcaoDAO.php?truncar=yes' class='ui red fluid tiny button'>Cancelar</a>";
+                $return .= "</td>";
+                $return .= "<td rowspan='3'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
                 $return .= "</tr>";
                 $return .= "</table>";
                 $return .= "</p>";

@@ -14,7 +14,7 @@ mysql_query("INSERT vendas_suspensas SELECT '','$nf','$date','$tipo',$total");
 
 if ($tipo == 'balcao') 
     {   
-        include 'imprimir_cozinha.php';
+        //include 'imprimir_cozinha.php';
 
         $pegar_produtos = mysql_query("SELECT id_produto, quantidade FROM pedido_balcao");
 
@@ -29,7 +29,7 @@ if ($tipo == 'balcao')
     }
     else
     {
-        include 'imprimir_delivery.php';
+        //include 'imprimir_delivery.php';
         
         $pegar_produtos = mysql_query("SELECT id_produto, quantidade, id_motoboy FROM pedido_delivery");
 

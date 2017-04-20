@@ -74,21 +74,21 @@
   mysql_query("INSERT pde_fato_vendas SELECT '','".$date."','Caixa 01',$nf,0,'".$forma."',".$max_id_caixa.",'A',0");
 
   mysql_query("update pde_fato_vendas set valor_nota_fiscal = (
-    select 
-      sum(b.cost) as valor_nota_fiscal
-    from 
-      pde_fato_vendas_produtos a
-    INNER JOIN
-      tec_products b
-    ON
-      a.id_produto = b.id
-    WHERE
-      a.num_nota_fiscal = $nf
-    GROUP BY
-      num_nota_fiscal
-  )
-    WHERE
-      num_nota_fiscal = $nf");
+                                                                select 
+                                                                  sum(b.cost) as valor_nota_fiscal
+                                                                from 
+                                                                  pde_fato_vendas_produtos a
+                                                                INNER JOIN
+                                                                  tec_products b
+                                                                ON
+                                                                  a.id_produto = b.id
+                                                                WHERE
+                                                                  a.num_nota_fiscal = $nf
+                                                                GROUP BY
+                                                                  num_nota_fiscal
+                                                              )
+                                                                WHERE
+                                                                  num_nota_fiscal = $nf");
 
   $estocavel = mysql_query("select 
                             a.id_produto,
@@ -116,8 +116,8 @@
       {
         $trucar = mysql_query("TRUNCATE TABLE pedido_balcao2");
       }
+  
   mysql_query("TRUNCATE TABLE valores_nota");
-
 
 ?>
 

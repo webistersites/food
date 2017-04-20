@@ -1,6 +1,6 @@
 <?php
 
-//include 'cabecalho.php';
+include 'cabecalho.php';
         
     /*
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
@@ -78,18 +78,18 @@
                 return $string.$espacos;
             
         }
-        $nome = mysql_query("SELECT nome FROM nome_nota");
-        $ver_nome = mysql_result($nome,0);
-        $dados = mysql_query("select 
-                                    a.troco,
-                                    b.forma_pagamento
-                                FROM
-                                    valores_nota a
-                                INNER JOIN
-                                    forma_pagamento b
-                                ON
-                                    a.forma_pagamento = b.id");
-        $ver_dados = mysql_fetch_array($dados);
+        // $nome = mysql_query("SELECT nome FROM nome_nota");
+        // $ver_nome = mysql_result($nome,0);
+        // $dados = mysql_query("select 
+        //                             a.troco,
+        //                             b.forma_pagamento
+        //                         FROM
+        //                             valores_nota a
+        //                         INNER JOIN
+        //                             forma_pagamento b
+        //                         ON
+        //                             a.forma_pagamento = b.id");
+        // $ver_dados = mysql_fetch_array($dados);
         $query_impressao = mysql_query('
         SELECT
 	       a.id,
@@ -128,7 +128,7 @@
         
         $txt_cabecalho[] = '-------------------------------------------';
         
-        $txt_cabecalho[] = $nf . " - " .$date;
+        $txt_cabecalho[] = $date;
         
         $txt_cabecalho[] = '********************************************';
         
@@ -160,7 +160,7 @@
         //$aux_valor_total = 'TOTAL R$ '.number_format($tot_itens,2,',','.');
         
 	// calcula o total de espaços que deve ser adicionado antes do "Sub-total" para alinhado a esquerda
-        $total_espacos = $n_colunas - strlen($aux_valor_total)-6;
+        $total_espacos = $n_colunas - strlen($aux_valor_total)+2;
         
         $espacos = '';
         
@@ -268,4 +268,4 @@ else
     //exit();
 }
 ?>
-
+ <meta http-equiv="refresh" content="0.1; url=pdv.php">

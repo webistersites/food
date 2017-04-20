@@ -23,7 +23,7 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_mesa".$mesa."
     if (mysql_num_rows($verifica_duplicidade) <= 0 ) 
     {
         // $ver_id_cliente = mysql_query("SELECT id_cliente FROM pedido_mesa".$mesa."");
-        mysql_query("INSERT INTO pedido_mesa".$mesa." SELECT '',$id,1,'',1");
+        mysql_query("INSERT INTO pedido_mesa".$mesa." SELECT '',$id,1,'',1,0");
         $busca = mysql_query("
                                 SELECT
                                 a.id,

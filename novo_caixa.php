@@ -50,7 +50,8 @@
 
 <div class="ui two column doubling stackable grid container">
   <div class="column">
-    <p><h3 class='ui center aligned header'>PDV</h3><br></p> 
+    <br>
+    <!-- <p><h3 class='ui center aligned header'>PDV</h3><br></p>  -->
     <?php
         include 'teste/autocomplete/789/index.php';
         //echo '<br><div class="ui mini input" id="result_nome"><input type="text" id="nome_nota" name="nome_nota" placeholder="Nome na nota" size="35%"></div>';
@@ -66,7 +67,7 @@
               . "<div id='result'>"
               . ""
               . "</div>";
-        echo '<a href="javascript:void(0);" id="finalizar_caixa" class="ui green fluid button">Finalizar</a>';
+        echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" id="finalizar_caixa" class="ui green large button">Finalizar Venda</a>';
             
      ?>
     
@@ -105,7 +106,8 @@
 
      ?>
   <div class="column">
-    <p><h3 class='ui center aligned header'>Produtos</h3><br></p>
+    <br>
+    <!-- <p><h3 class='ui center aligned header'>Produtos</h3><br></p> -->
     <p>
         <a href="javascript:void(0);" id="dois_sabores" class="ui basic button">2 Sabores</a>
         <a href="javascript:void(0);" id="tres_sabores" class="ui basic button">3 Sabores</a>
