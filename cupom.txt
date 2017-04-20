@@ -2,21 +2,22 @@
      Av. Rio Pequeno, 634 - Rio Pequeno
          TEL.: 2241-2513 / 2241-3210
  -------------------------------------------
-           100 - 20/04/2017 02:33
+           105 - 20/04/2017 04:53
 ********************************************
               CUPOM NAO FISCAL
 ********************************************
                     Itens
 Cod.  Produto                  V. UN Qtd  Total       
-102   PIZZA ATUM I             24.00   1  24.00       
+301   COXINHA DE FRANGO         2.50   1   2.50       
+601   COCA 2L                  10.00   1  10.00       
 ------------------------------------------------
-                                 TOTAL R$ 24,00
+                                 TOTAL R$ 12,50
 ------------------------------------------------
 
 
-Forma Pagamento: Cartão de Débito
+Forma Pagamento: Cartão de Crédito
 
-Senha: 150
+Senha: 470
 
 Vendedor: Junior Nascimento
 --
