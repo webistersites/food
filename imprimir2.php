@@ -273,7 +273,7 @@ if($ph = printer_open($printer))
    $content = fread($fh, filesize("cupom.txt"));
    fclose($fh);
        
-    printer_set_option($ph, PRINTER_MODE, "RAW");
+    printer_set_option($ph, PRINTER_MODE, "TEXT");
     printer_write($ph, $content);
     printer_close($ph);
    
