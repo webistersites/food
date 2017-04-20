@@ -6,7 +6,7 @@ include 'cabecalho.php';
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
 	 */
 
-        $n_colunas = 45; // 40 colunas por linha
+        $n_colunas = 28; // 40 colunas por linha
         
         /**
          * Adiciona a quantidade necessaria de espaços no inicio 
@@ -125,15 +125,15 @@ include 'cabecalho.php';
         date_default_timezone_set('America/Sao_Paulo');
         $date = date('d/m/Y H:i');
         
-        $txt_cabecalho[] = '-------------------------------------------';
+        $txt_cabecalho[] = '-------------------------';
         
         $txt_cabecalho[] = $nf . " - " .$date;
         
-        $txt_cabecalho[] = '********************************************';
+        $txt_cabecalho[] = '**************************';
         
         $txt_cabecalho[] = 'CUPOM NAO FISCAL';
         
-        $txt_cabecalho[] = '********************************************';
+        $txt_cabecalho[] = '**************************';
         
         $txt_cabecalho[] = 'Itens'; // força pular uma linha entre o cabeçalho e os itens
         
@@ -167,11 +167,11 @@ include 'cabecalho.php';
             $espacos .= ' ';
         }
         
-        $txt_valor_total = "------------------------------------------------\r\n";
+        $txt_valor_total = "------------------------------\r\n";
         
         $txt_valor_total .= $espacos.$aux_valor_total;
         
-        $txt_valor_total .= "\r\n------------------------------------------------\r\n";
+        $txt_valor_total .= "\r\n------------------------------\r\n";
         
         
         $txt_rodape[] = 'Forma Pagamento: ' . $ver_dados['forma_pagamento'];
@@ -215,12 +215,12 @@ include 'cabecalho.php';
 	     * $itens[] = 'Cod. Produto      Env. Qtd  V. UN  Total'
 	     */
             
-            $itens[] = addEspacos($item[0], 6, 'F')
-                    . addEspacos($item[1], 25, 'F')
-                    . addEspacos($item[2], 5, 'I')
-                    . addEspacos($item[3], 4, 'I')
-                    . addEspacos($item[4], 7, 'I')
-                    . addEspacos($item[5], 7, 'I')
+            $itens[] = addEspacos($item[0], 4, 'F')
+                    . addEspacos($item[1], 20, 'F')
+                    . addEspacos($item[2], 4, 'I')
+                    . addEspacos($item[3], 3, 'I')
+                    . addEspacos($item[4], 6, 'I')
+                    . addEspacos($item[5], 6, 'I')
                 ;
             
         }
@@ -274,8 +274,6 @@ if($ph = printer_open($printer))
    fclose($fh);
        
     printer_set_option($ph, PRINTER_MODE, "TEXT");
-    $font = printer_create_font("Arial", 72, 48, 400, false, false, false, 0);
-    printer_select_font($handle, $font);
     printer_write($ph, $content);
     printer_close($ph);
    
