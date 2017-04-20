@@ -1,12 +1,21 @@
-              - 19/04/2017 03:18
-********************************************
-                PEDIDO MESAS
-********************************************
-               Itens - Mesa 3
---------------------------------------------
-Cod.    Produto                      Qtd.                  
-204     ESFIHA QUEIJO MUSSARELA         1                  
+            PIZZARIA & ESFIHARIA - SAO FRANCISCO
+             Rua Planalto, 54 - Jardim Palmares
+                TEL.: 2241-2513 / 2241-3210
+        -------------------------------------------
+                   96 - 19/04/2017 22:54
+        ********************************************
+                      CUPOM NAO FISCAL
+        ********************************************
+                       Itens - Mesa 3
+Cod.    Produto                       V. UN Qtd  Total       
+201     ESFIHA CARNE                   1.30   6   7.80       
+602     COCA 1,5L                      8.00   1   8.00       
+-------------------------------------------------------
+                                        TOTAL R$ 15,80
+-------------------------------------------------------
 
 
+Forma Pagamento: Cartão de Débito
 
+Vendedor: Junior Nascimento
 --
