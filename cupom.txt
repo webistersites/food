@@ -2,21 +2,21 @@
      Av. Rio Pequeno, 634 - Rio Pequeno
          TEL.: 2241-2513 / 2241-3210
  -------------------------------------------
-           121 - 20/04/2017 17:29
+           122 - 20/04/2017 17:46
 ********************************************
               CUPOM NAO FISCAL
 ********************************************
                     Itens
 Cod.  Produto                  V. UN Qtd  Total       
-201   ESFIHA CARNE              1.30   3   3.90       
+101   PIZZA AMERICANA          28.00   1  28.00       
 ------------------------------------------------
-                                  TOTAL R$ 3,90
+                                 TOTAL R$ 28,00
 ------------------------------------------------
 
 
-Forma Pagamento: Cartão de Débito
+Forma Pagamento: Cartão de Crédito
 
-Senha: 392
+Senha: 560
 
 Vendedor: Junior Nascimento
 --
