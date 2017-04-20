@@ -29,7 +29,7 @@ if ($tipo == 'balcao')
     }
     else
     {
-        include 'imprimir_cozinha_delivery.php';
+        include 'imprimir_delivery.php';
         
         $pegar_produtos = mysql_query("SELECT id_produto, quantidade, id_motoboy FROM pedido_delivery");
 
