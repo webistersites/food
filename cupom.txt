@@ -2,7 +2,7 @@
 Av. Rio Pequeno, 634 - Rio Peq
  TEL.: 2241-2513 / 2241-3210
 ------------------------------
-    109 - 20/04/2017 16:38
+    110 - 20/04/2017 16:41
  ****************************
        CUPOM NAO FISCAL
  ****************************
@@ -17,7 +17,7 @@ Cod.  Produto                  V. UN Qtd  Total
 
 Forma Pagamento: Cartão de Crédito
 
-Senha: 252
+Senha: 435
 
 Vendedor: Junior Nascimento
 --
