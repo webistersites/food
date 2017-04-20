@@ -126,12 +126,14 @@ include 'cabecalho.php';
         $date = date('d/m/Y H:i');
         
         $txt_cabecalho[] = '-------------------------';
+
+        $txt_cabecalho[] = $date;
         
-        $txt_cabecalho[] = $nf . " - " .$date;
+        $txt_cabecalho[] = "N. Cupom: " . $nf;
         
         $txt_cabecalho[] = '**************************';
         
-        $txt_cabecalho[] = 'RELATÓRIO GERENCIAL' ;
+        $txt_cabecalho[] = 'RELATORIO GERENCIAL' ;
         
         $txt_cabecalho[] = '**************************';
         
@@ -171,25 +173,17 @@ include 'cabecalho.php';
         
         $txt_valor_total .= $espacos.$aux_valor_total;
         
-        $txt_valor_total .= "\r\n----------------------------\r\n";
+        $txt_valor_total .= "\r\n----------------------------";
         
         
-        $txt_rodape[] = 'Forma Pagamento: ' . $ver_dados['forma_pagamento'];
-
-        $txt_rodape[] = '';
+        $txt_rodape[] = 'Forma: ' . $ver_dados['forma_pagamento'];
 
         if ($ver_dados['forma_pagamento'] == 'Dinheiro') 
         {
             $txt_rodape[] = 'Troco: R$ ' . number_format($ver_dados['troco'],2,",",".");
-
-            $txt_rodape[] = '';
         }
 
         $txt_rodape[] = 'Senha: ' . $ver_nome;
-
-        $txt_rodape[] = '';
-
-        $txt_rodape[] = 'Vendedor: ' . $_SESSION['usuarioNome'];
         
         $txt_rodape[] = '--';
         
@@ -272,7 +266,6 @@ if($ph = printer_open($printer))
    $fh = fopen("cupom.txt", "rb");
    $content = fread($fh, filesize("cupom.txt"));
    fclose($fh);
-       
     printer_set_option($ph, PRINTER_MODE, "TEXT");
     printer_write($ph, $content);
     printer_close($ph);
