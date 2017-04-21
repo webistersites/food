@@ -2,9 +2,10 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-   125 - 20/04/2017 18:20
+      20/04/2017 18:32
+       N. Cupom: 126
  **************************
-    RELATÓRIO GERENCIAL
+    RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto             V. U Qt Total      
@@ -13,12 +14,7 @@ Cod.Produto             V. U Qt Total
               TOTAL R$ 25,00
 ----------------------------
 
-
-Forma Pagamento: Dinheiro
-
-Troco: R$ 25,00
-
-Senha: 654
-
-Vendedor: Junior Nascimento
+Forma: Dinheiro
+Troco: R$ 5,00
+Senha: 284
 --
