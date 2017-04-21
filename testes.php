@@ -3,47 +3,47 @@
 include 'cabecalho.php';
 
 ?>
-<link rel="stylesheet" type="text/css" href="css/estilo.css">
-<div id="site">
-        
-          <h1>Google Maps API v3: Criando rotas</h1>
-        
-            <form method="post" action="#" id="auto_enviar">
-                <fieldset>
-                    <legend>Criar rotas</legend>
-                    
-                    <div>
-                        <label for="txtEnderecoPartida">Endereço de partida:</label>
-                        <input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida" value="Rua Ataliba Leonel, 52 - São Paulo" />
-                    </div>
-                    
-                    <div>
-                        <label for="txtEnderecoChegada">Endereço de chegada:</label>
-                        <input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" value="Rua doutor Valentim Bouças, 188" />
-                    </div>
-                    
-                    <div>
-                        <input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar" />
-                    </div>
-                </fieldset>
-            </form>
-        
-            <div id="mapa"></div>
-            
-            <div id="trajeto-texto"></div>
-        
-        </div>
-        
-        <script src="js/jquery.min.js"></script>
-    
-        <!-- Maps API Javascript -->
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDCjMe9FJr26brUXzoxKy5KQf6ByfgmJoU&sensor=false"></script>
- 
-        <!-- Arquivo de inicialização do mapa -->
-    <script src="js/mapa.js"></script>
+<div class="ui top attached demo menu">
+  <a class="item">
+    <i class="sidebar icon"></i>
+    Menu
+  </a>
+</div>
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <a class="item">
+      <i class="home icon"></i>
+      Home
+    </a>
+    <a class="item">
+      <i class="block layout icon"></i>
+      Topics
+    </a>
+    <a class="item">
+      <i class="smile icon"></i>
+      Friends
+    </a>
+    <a class="item">
+      <i class="calendar icon"></i>
+      History
+    </a>
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <h3 class="ui header">Application Content</h3>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+</div>
     
 <script>
-  $(document).ready(function() {
-    $('#auto_enviar').submit();
-  });
+$('.context.example .ui.sidebar')
+  .sidebar({
+    context: $('.context.example .bottom.segment')
+  })
+  .sidebar('attach events', '.context.example .menu .item')
+;
 </script>

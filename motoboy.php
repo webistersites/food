@@ -3,7 +3,7 @@
 //include 'conecta.php';
 
 $q_motoboy  = mysql_query("SELECT * FROM usuarios WHERE id_cargo = 5");
-echo '<div class="ui center aligned container" id="moto">
+echo '<div class="ui left aligned container" id="moto">
         <div class="ui form">
           <div class="inline field">
             <select id="motoboy">

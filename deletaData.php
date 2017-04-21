@@ -22,7 +22,8 @@ $id   = $_GET['id_del'];
                                 b.cost as Preço,
                                 a.quantidade*b.cost as Total,
                                 a.obs,
-                                b.category_id
+                                b.category_id,
+                                a.impresso
                                 FROM
                                 pedido_balcao a
                                 INNER JOIN
@@ -42,14 +43,20 @@ $id   = $_GET['id_del'];
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                $return .= "<tr>";
-		$return .= "<td>" . $data['code']       .  "</td>";
-		$return .= "<td>" . $data['Produto']    .  "</td>";
-		$return .= "<td>R$ " . $data['Preço']      .  "</td>";
-                $return .= "<td class='center aligned'><form action='processa_del.php' method='post'><input type='hidden' name='seu_nome2' value='".$data['id']."'><input type='text' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
+                if ($data['impresso'] == 0) 
+                {
+                    $classe = 'warning';
+                } else {
+                    $classe = '';
+                }
+                $return .= "<tr class='".$classe."'>";
+                $return .= "<td>" . $data['code']       .  "</td>";
+                $return .= "<td>" . $data['Produto']    .  "</td>";
+                $return .= "<td>R$ " . $data['Preço']      .  "</td>";
+                $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
                 $return .= "<td>R$ " . $data['Total']      .  "</td>";
-                $return .= "<td class='right aligned'>"."<a href='javascript:void(0);' onclick='deleta(".$data['id'].")'><i class='trash icon'></i></a>";
-		$return .= "</tr>";
+                $return .= "<td class='center aligned'>"."<a href='javascript:void(0);' onclick='deleta(".$data['id'].")'><i class='trash icon'></i></a>";
+                $return .= "</tr>";
                 $subtotal+=$data['Total'];
             }
                 $return .= "</table>";
@@ -57,8 +64,8 @@ $id   = $_GET['id_del'];
                 $return .= "<tr>";
                 $return .= "<td>";
                 $return .= "<a href='suspender_venda.php?tipo=balcao&total=".$subtotal."' class='ui grey fluid tiny button'>Aguardar</a><br>";
-                $return .= "<a href='imprimir_cozinha.php' class='ui grey fluid tiny button'>Imprimir Cozinha</a><br>";
-                $return .= "<a href='balcaoDAO.php?truncar=yes' class='ui red fluid tiny button'>Cancelar</a>";
+                $return .= "<a href='imprimir_cozinha.php' class='ui grey fluid tiny button'>Imprimir Cozinha</a>";
+                //$return .= "<a href='balcaoDAO.php?truncar=yes' class='ui red fluid tiny button'>Cancelar</a>";
                 $return .= "</td>";
                 $return .= "<td rowspan='3'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
                 $return .= "</tr>";

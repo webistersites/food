@@ -23,6 +23,7 @@
       }
   } else {
     $truncate = mysql_query("TRUNCATE TABLE pedido_balcao");
+    mysql_query("TRUNCATE TABLE cpf_nota");
     echo "Cancelando...";
   }
  ?>

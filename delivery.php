@@ -12,28 +12,35 @@
 <div class="ui container">
 
 <?php
+
 include 'submenu_delivery.php';
-include 'submenu_delivery_cadastrar.php';
+//include 'submenu_delivery_cadastrar.php';
 
 ?>
 </div>
 <script>
-    var pasta = window.location.pathname;
-    var ancora = window.location.hash;
-    if (ancora === "#delivery" || ancora === "") {
-        $('.delivery').removeClass('sumir');
-        $('#delivery').addClass('active');
-} else if (ancora === "#cadastrar") {
-        $('.cadastrar').removeClass('sumir');
-        $('.delivery').addClass('sumir');
-        $('.caixa').addClass('sumir');
-        $('#delivery').addClass('active');
-} else if (ancora === "#caixa") {
-        $('.caixa').removeClass('sumir');
-        $('.delivery').addClass('sumir');
-        $('.cadastrar').addClass('sumir');
-        $('#delivery').addClass('active');
-}
+    // var pasta = window.location.pathname;
+    // var ancora = window.location.hash;
+    
+    // if (ancora === "#delivery" || ancora === "") 
+    // {
+    //     $('.delivery').removeClass('sumir');
+    //     $('#delivery').addClass('active');
+    // } 
+    // else if (ancora === "#cadastrar") 
+    // {
+    //         $('.cadastrar').removeClass('sumir');
+    //         $('.delivery').addClass('sumir');
+    //         $('.caixa').addClass('sumir');
+    //         $('#delivery').addClass('active');
+    // } 
+    // else if (ancora === "#caixa") 
+    // {
+    //         $('.caixa').removeClass('sumir');
+    //         $('.delivery').addClass('sumir');
+    //         $('.cadastrar').addClass('sumir');
+    //         $('#delivery').addClass('active');
+    // }
 </script>
 
 <?php

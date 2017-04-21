@@ -82,7 +82,7 @@
 </script>
 <div class="ui container">
 
-<div class="ui secondary pointing menu">
+<!-- <div class="ui secondary pointing menu">
     <a class="item" href="delivery.php" onclick="location.reload()">
         Delivery
       </a>
@@ -92,12 +92,11 @@
         <a class="item active" href="pdv_delivery.php">
         Caixa
       </a>
-</div>
+</div> -->
 <div class="ui segment">
     <h2 class="ui center aligned dividing header">
             Caixa Delivery
-        </h2>
-    <br>
+        </h2> 
 <!--
 ################ LISTAGEM DE PRODUTOS E PEDIDOS ##################
 -->
@@ -176,9 +175,8 @@
             else
             {
                 $ver_consulta = mysql_fetch_array($consulta_cliente);
-                // $ver_motoboy = mysql_result($consulta_motoboy,0);
-                echo "<h3 class='ui center aligned header'>PDV</h3>";                
-                echo '<h5 class="ui center aligned header">Cliente: '.$ver_consulta['name'].''
+                // $ver_motoboy = mysql_result($consulta_motoboy,0);               
+                echo '<h5 class="ui left aligned header">Cliente: '.$ver_consulta['name'].''
                         . '<br><br>';
                         include 'motoboy.php';
                         echo '</h5>';
@@ -199,7 +197,8 @@
               . "<div id='result'>"
               . ""
               . "</div>";
-        echo '<a href="javascript:void(0);" id="finalizar" class="ui green fluid button">Finalizar</a>';
+        echo "<a href='balcaoDAO_delivery.php?truncar=yes' class='ui red button'>Cancelar Venda</a>";
+        echo '<a href="javascript:void(0);" id="finalizar" class="ui green right floated button">Finalizar Venda</a>';
           
      ?>
   </div>
@@ -222,7 +221,7 @@
 
    ?>
   <div class="column">
-    <p><h3 class='ui center aligned header'>Produtos</h3><br></p>
+
     <p>
         <a href="javascript:void(0);" id="dois_sabores" class="ui basic button">2 Sabores</a>
         <a href="javascript:void(0);" id="tres_sabores" class="ui basic button">3 Sabores</a>
@@ -238,113 +237,7 @@
     </div>
   </div>
 </div>
-<script>
-//   var target = window.location.hash;
-//   if (target === "#lanches") 
-//   {
-//     $('.lanches').addClass('active');
-//     $('.bebidas').removeClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod2').removeClass('sumir');
-//   } 
-//   else if (target === "#bebidas") 
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.bebidas').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod1').removeClass('sumir');
-//   }
-//   else if (target === "#Pizzas")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Pizzas').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod1').removeClass('sumir');  
-//   }
-//   else if (target === "#Esfihas")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Esfihas').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod2').removeClass('sumir');  
-//   }
-//   else if (target === "#Salgados")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Salgados').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod3').removeClass('sumir');  
-//   }
-//   else if (target === "#Beirutes")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Beirutes').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod4').removeClass('sumir');  
-//   }
-//   else if (target === "#Porções")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Porções').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod5').removeClass('sumir');  
-//   }
-//   else if (target === "#Bebidas")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Bebidas').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod6').removeClass('sumir');  
-//   }
-//   else if (target === "#Pastéis")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Pastéis').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod7').removeClass('sumir');  
-//   }
-//   else if (target === "#Lanches")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Lanches').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod8').removeClass('sumir');  
-//   }
-//   else if (target === "#Doces")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Doces').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod9').removeClass('sumir');  
-//   }
-//   else if (target === "#Sorvetes")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Sorvetes').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod10').removeClass('sumir');  
-//   }
-//   else if (target === "#Balas")
-//   {
-//     $('.lanches').removeClass('active');
-//     $('.Balas').addClass('active');
-//     $('.geral').removeClass('sumir');
-//     $('#pdv').addClass('active');
-//     $('.prod11').removeClass('sumir');  
-//   }
- </script>
+
 
 <?php
   // include 'popup_caixa.php';
@@ -357,7 +250,12 @@
     echo '</div>';
  
 ?>
-
+<script>
+  var menu = window.location.pathname;
+  if (menu == '/food/pdv_delivery.php') {
+    $('#delivery').addClass('active');
+  };
+</script>
 </div>
 </div>
 <?php

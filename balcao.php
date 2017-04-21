@@ -6,12 +6,13 @@
 
 </script>
 <div class="geral sumir">
-<div class="ui secondary pointing menu">
+<!-- <div class="ui secondary pointing menu">
     <a class="item active" href="#">
         Caixa
       </a>
     <a href="fechar_caixa.php" class="right floated item">Fechar Caixa</a>
-</div>
+</div> -->
+
 <div class="ui segment">
         <h2 class="ui center aligned dividing header">
             Caixa 01

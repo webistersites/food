@@ -1,5 +1,19 @@
+<?php 
+  $q_have_customer  = mysql_query("SELECT count(id_cliente) FROM pedido_delivery");
+  $have_customer    = mysql_result($q_have_customer, 0);
+
+  if ($have_customer == 1) 
+  {
+    echo '<meta http-equiv="refresh" content="0.1; url=pdv_delivery.php">';
+
+  }
+  else
+  {
+
+ ?>
+
 <div class="delivery">
-<div class="ui secondary pointing menu">
+<!-- <div class="ui secondary pointing menu">
     <a class="item active" href="#">
         Delivery
       </a>
@@ -9,7 +23,7 @@
         <a class="item" href="pdv_delivery.php" onclick="location.reload()">
         Caixa
       </a>
-</div>
+</div> -->
 <div class="ui segment">
         <h2 class="ui center aligned dividing header">
             <i class="search icon"></i> Procurar Clientes
@@ -36,3 +50,4 @@
         </div>
     </div>
 </div>
+<?php } ?>

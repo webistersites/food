@@ -108,6 +108,8 @@ include 'cabecalho.php';
             a.id_produto = b.id
         WHERE
             b.cozinha = 1
+        AND
+            a.impresso = 0
           ORDER BY a.id');
         
         $txt_cabecalho = array();
@@ -260,6 +262,8 @@ if($ph = printer_open($printer))
     printer_set_option($ph, PRINTER_MODE, "TEXT");
     printer_write($ph, $content);
     printer_close($ph);
+
+    mysql_query("UPDATE pedido_balcao SET impresso = 1");
    
 }
 else

@@ -1,5 +1,5 @@
-<div class="cadastrar sumir">
-<div class="ui secondary pointing menu">
+<div class="cadastrar">
+<!-- <div class="ui secondary pointing menu">
     <a class="item" href="#" onclick="location.reload()">
         Delivery
       </a>
@@ -9,7 +9,7 @@
         <a class="item" href="pdv_delivery.php" onclick="location.reload()">
         Caixa
       </a>
-</div>
+</div> -->
 <div class="ui segment">
     <h2 class="ui center aligned dividing header"><i class="ui user icon"></i>Cadastro de Clientes</h2>
     <br><br>

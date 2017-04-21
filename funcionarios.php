@@ -17,17 +17,13 @@
 ?>
 
 <script>
-    var pasta = window.location.pathname;
-    var ancora = window.location.hash;
-    if (ancora === "#gerenciar" || ancora === "") {
-        $('.gerenciar').removeClass('sumir');
-        $('.cadastrar').addClass('sumir');
-        $('#func').addClass('active');
-} else if (ancora === "#cadastrar") {
-        $('.gerenciar').addClass('sumir');
-        $('.cadastrar').removeClass('sumir');
-        $('#func').addClass('active');
-}
+    var link = window.location.pathname;
+    if (link === "/food/funcionarios.php") 
+        {
+            $('#config').addClass("active");
+            $('#func').removeClass("active");
+            
+        };
 </script>
 
 <?php

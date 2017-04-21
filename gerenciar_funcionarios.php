@@ -1,10 +1,13 @@
-<div class="gerenciar sumir">
+<div class="gerenciar">
 <div class="ui secondary pointing menu">
-    <a class="item active" href="#">
-        Gerenciar
+    <a class="item" href="config.php">
+        Produtos
       </a>
-        <a class="item" href="#cadastrar" onclick="location.reload()">
-        Cadastrar
+        <a class="item" href="clientes.php">
+        Clientes
+      </a>
+        <a class="item active" href="#">
+        Funcionários
       </a>
 </div>
 <div class="ui segment">

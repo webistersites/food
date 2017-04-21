@@ -27,4 +27,4 @@
   }
  ?>
 
-<meta http-equiv="refresh" content="0.1; url=pdv_delivery.php">
+<meta http-equiv="refresh" content="0.1; url=delivery.php">

@@ -326,6 +326,22 @@ function relatorioFechamentoCredito() {
 	XMLHttp.send(null);
 }
 
+function insereCpf() {
+	var cpf  = document.getElementById("cpf").value;
+	var refresh  = document.getElementById("refresh");
+	var XMLHttp = generateXMLHttp();
+	XMLHttp.open("get", "insereCpf.php?cpf=" + cpf, true);
+	XMLHttp.onreadystatechange = function(){
+		if (XMLHttp.readyState == 4)
+			if (XMLHttp.status == 200){
+				refresh.innerHTML = XMLHttp.responseText;
+			} else {
+				refresh.innerHTML = "Um erro ocorreu: " + XMLHttp.statusText;
+			}
+	};
+	XMLHttp.send(null);
+}
+
 
 function insere3SaboresDelivery() {
 	var sabor1      = document.getElementById("course_sabores").value;

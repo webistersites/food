@@ -1,15 +1,15 @@
 <?php 
 
-include 'cabecalho.php';
+//include 'cabecalho.php';
 
 ?>
 <style type="text/css">
-    body {
+/*    body {
       background-color: #e3e3e3;
     }
     .sumir {
         display: none;
-    }
+    }*/
 </style>
 
 <div class="ui container">

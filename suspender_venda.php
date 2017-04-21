@@ -16,11 +16,11 @@ if ($tipo == 'balcao')
     {   
         //include 'imprimir_cozinha.php';
 
-        $pegar_produtos = mysql_query("SELECT id_produto, quantidade FROM pedido_balcao");
+        $pegar_produtos = mysql_query("SELECT id_produto, quantidade, impresso FROM pedido_balcao");
 
         while ($inserir = mysql_fetch_array($pegar_produtos))
         {
-            mysql_query("INSERT produtos_suspensos SELECT '','$nf',".$inserir['id_produto'].",".$inserir['quantidade'].",0");
+            mysql_query("INSERT produtos_suspensos SELECT '','$nf',".$inserir['id_produto'].",".$inserir['quantidade'].",0,".$inserir['impresso']);
         }
 
         mysql_query("TRUNCATE TABLE pedido_balcao");

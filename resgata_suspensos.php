@@ -10,7 +10,7 @@
         {
             mysql_query("TRUNCATE TABLE pedido_balcao");
     
-            mysql_query("INSERT INTO pedido_balcao SELECT '',id_produto,quantidade,'' FROM produtos_suspensos WHERE id_suspensao = '$nf';");
+            mysql_query("INSERT INTO pedido_balcao SELECT '',id_produto,quantidade,'',impresso FROM produtos_suspensos WHERE id_suspensao = '$nf';");
     
             mysql_query("DELETE FROM produtos_suspensos WHERE id_suspensao = '$nf'");
     
