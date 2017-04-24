@@ -2,19 +2,23 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      24/04/2017 05:22
-       N. Cupom: 111
+      24/04/2017 17:25
+       N. Cupom: 117
  **************************
     RELATORIO GERENCIAL
  **************************
-       Itens - Mesa 5
+       Itens - Mesa 1
 Cod.Produto             V. U Qt Total      
-301 COXINHA DE FRANGO   2.50  1  2.50      
-601 COCA 2L             10.0  1 10.00      
+403 BEIRUTE FRANGO      18.0  1 18.00      
+605 ITUBAINA 2L         6.00  1  6.00      
 ----------------------------
-              TOTAL R$ 12,50
+SUBTOTAL R$ 24,00
+*Taxa de servico R$ 2,40
+TOTAL R$ 26,40
 ----------------------------
 
-Forma: Cartão de Débito
+Forma: Dinheiro
+
+Troco: R$ 1,00
 
 --

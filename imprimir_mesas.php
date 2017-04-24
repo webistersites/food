@@ -175,7 +175,13 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 //    	$txt_itens[] = array(553, 'Prod. linha 3', '014', 10, '1.50', '15.00');
 //	$tot_itens += 15.00;
         
-        $aux_valor_total = 'TOTAL R$ '.number_format($tot_itens,2,',','.');
+        $aux_valor_total = 'SUBTOTAL R$ '.number_format($tot_itens,2,',','.');
+
+        $dez_porcento = $tot_itens + $tot_itens*0.1;
+
+        $aux_valor_total .= "\r\n*Taxa de servico R$ ".number_format($tot_itens*0.1,2,',','.');
+
+        $aux_valor_total .= "\r\nTOTAL R$ ".number_format($dez_porcento,2,',','.');        
         
 	// calcula o total de espaços que deve ser adicionado antes do "Sub-total" para alinhado a esquerda
         $total_espacos = $n_colunas - strlen($aux_valor_total);
