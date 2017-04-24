@@ -279,6 +279,8 @@ if($ph = printer_open($printer))
    printer_set_option($ph, PRINTER_MODE, "TEXT");
    printer_write($ph, $content);
    printer_close($ph);
+
+   mysql_query("UPDATE pedido_mesa".$mesa." SET impresso = 1");
 }
 else
 {
@@ -286,7 +288,7 @@ else
     //exit();
 }
 
-echo '<meta http-equiv="refresh" content="0.2;URL=mesas.php">';
+echo '<meta http-equiv="refresh" content="0.2;URL=mesa'.$mesa.'.php">';
 
 ?>
 

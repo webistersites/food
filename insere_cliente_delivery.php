@@ -27,7 +27,7 @@ $ver_taxa = mysql_fetch_array($busca_taxa);
 
 if (mysql_num_rows($consulta_cliente) == 0) 
     {
-        mysql_query("INSERT pedido_delivery (id_produto,id_cliente,quantidade,id_motoboy) VALUE (".$ver_taxa['id'].",$id_cliente,1,0)");
+        mysql_query("INSERT pedido_delivery (id_produto,id_cliente,quantidade,id_motoboy,impresso) VALUE (".$ver_taxa['id'].",$id_cliente,1,0,1)");
     }
     elseif (mysql_result($consulta_cliente,0) != $id_cliente)
     {

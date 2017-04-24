@@ -1,6 +1,6 @@
 <?php
 
-//include 'cabecalho.php';
+include 'cabecalho.php';
         
     /*
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
@@ -78,8 +78,8 @@
                 return $string.$espacos;
             
         }
-        $nome = mysql_query("SELECT nome FROM nome_nota");
-        $ver_nome = mysql_result($nome,0);
+        // $nome = mysql_query("SELECT nome FROM nome_nota");
+        // $ver_nome = mysql_result($nome,0);
         $dados = mysql_query("select 
                                     a.troco,
                                     b.forma_pagamento
@@ -262,7 +262,7 @@ if($ph = printer_open($printer))
     printer_set_option($ph, PRINTER_MODE, "TEXT");
     printer_write($ph, $content);
     printer_close($ph);
-   
+   mysql_query("UPDATE pedido_delivery SET impresso = 1");
 }
 else
 {
@@ -270,4 +270,4 @@ else
     //exit();
 }
 ?>
-
+ <meta http-equiv="refresh" content="0.1; url=pdv_delivery.php">

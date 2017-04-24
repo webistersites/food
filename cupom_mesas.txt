@@ -1,21 +1,20 @@
-            PIZZARIA & ESFIHARIA - SAO FRANCISCO
-             Rua Planalto, 54 - Jardim Palmares
-                TEL.: 2241-2513 / 2241-3210
-        -------------------------------------------
-                   96 - 19/04/2017 22:54
-        ********************************************
-                      CUPOM NAO FISCAL
-        ********************************************
-                       Itens - Mesa 3
-Cod.    Produto                       V. UN Qtd  Total       
-201     ESFIHA CARNE                   1.30   6   7.80       
-602     COCA 1,5L                      8.00   1   8.00       
--------------------------------------------------------
-                                        TOTAL R$ 15,80
--------------------------------------------------------
+      PONTO DA ESFIHA
+    Av. Rio Pequeno, 634
+TEL.: 2241-2513 / 2241-3210
+ -------------------------
+      24/04/2017 05:22
+       N. Cupom: 111
+ **************************
+    RELATORIO GERENCIAL
+ **************************
+       Itens - Mesa 5
+Cod.Produto             V. U Qt Total      
+301 COXINHA DE FRANGO   2.50  1  2.50      
+601 COCA 2L             10.0  1 10.00      
+----------------------------
+              TOTAL R$ 12,50
+----------------------------
 
+Forma: Cartão de Débito
 
-Forma Pagamento: Cartão de Débito
-
-Vendedor: Junior Nascimento
 --

@@ -326,11 +326,11 @@ function relatorioFechamentoCredito() {
 	XMLHttp.send(null);
 }
 
-function insereCpf() {
+function insereCpf(origem) {
 	var cpf  = document.getElementById("cpf").value;
 	var refresh  = document.getElementById("refresh");
 	var XMLHttp = generateXMLHttp();
-	XMLHttp.open("get", "insereCpf.php?cpf=" + cpf, true);
+	XMLHttp.open("get", "insereCpf.php?origem=" + origem + "&cpf=" + cpf, true);
 	XMLHttp.onreadystatechange = function(){
 		if (XMLHttp.readyState == 4)
 			if (XMLHttp.status == 200){

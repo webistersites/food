@@ -29,7 +29,8 @@ if (mysql_num_rows($consulta) == 0)
                                 a.quantidade*b.cost as Total,
                                 a.obs,
                                 b.category_id,
-                                a.impresso
+                                a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_balcao a
                                 INNER JOIN
@@ -49,14 +50,16 @@ if (mysql_num_rows($consulta) == 0)
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                if ($data['impresso'] == 0) 
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
                 {
-                    $classe = 'warning';
+                    $classe = 'negative';
+                    $icone = 'warning icon';
                 } else {
                     $classe = '';
+                    $icone = 'checkmark icon';
                 }
                 $return .= "<tr class='".$classe."'>";
-                $return .= "<td>" . $data['code']       .  "</td>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
@@ -82,7 +85,7 @@ if (mysql_num_rows($consulta) == 0)
 else {
 $id = mysql_result($consulta,0);
 
-$verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE id_produto = $id");
+$verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE id_produto = $id and impresso = 0");
     
     if (mysql_num_rows($verifica_duplicidade) <= 0 ) 
     {
@@ -97,7 +100,8 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                                 a.quantidade*b.cost as Total,
                                 a.obs,
                                 b.category_id,
-                                a.impresso
+                                a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_balcao a
                                 INNER JOIN
@@ -117,14 +121,16 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                if ($data['impresso'] == 0) 
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
                 {
-                    $classe = 'warning';
+                    $classe = 'negative';
+                    $icone = 'warning icon';
                 } else {
                     $classe = '';
+                    $icone = 'checkmark icon';
                 }
                 $return .= "<tr class='".$classe."'>";
-                $return .= "<td>" . $data['code']       .  "</td>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
@@ -147,8 +153,8 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                 $return .= "</p>";
     }
     else
-    {   $adicionar = mysql_query("SELECT quantidade+1 FROM pedido_balcao WHERE id_produto = $id");
-        $sql = mysql_query("UPDATE pedido_balcao SET quantidade = ".mysql_result($adicionar,0)." where id_produto = $id");
+    {   $adicionar = mysql_query("SELECT quantidade+1 FROM pedido_balcao WHERE id_produto = $id and impresso = 0");
+        $sql = mysql_query("UPDATE pedido_balcao SET quantidade = ".mysql_result($adicionar,0)." where id_produto = $id and impresso = 0");
         $busca = mysql_query("
                                 SELECT
                                 a.id,
@@ -159,7 +165,8 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                                 a.quantidade*b.cost as Total,
                                 a.obs,
                                 b.category_id,
-                                a.impresso
+                                a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_balcao a
                                 INNER JOIN
@@ -179,14 +186,16 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                if ($data['impresso'] == 0) 
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
                 {
-                    $classe = 'warning';
+                    $classe = 'negative';
+                    $icone = 'warning icon';
                 } else {
                     $classe = '';
+                    $icone = 'checkmark icon';
                 }
                 $return .= "<tr class='".$classe."'>";
-                $return .= "<td>" . $data['code']       .  "</td>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";

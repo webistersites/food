@@ -31,11 +31,11 @@ if ($tipo == 'balcao')
     {
         //include 'imprimir_delivery.php';
         
-        $pegar_produtos = mysql_query("SELECT id_produto, quantidade, id_motoboy FROM pedido_delivery");
+        $pegar_produtos = mysql_query("SELECT id_produto, quantidade, id_motoboy, impresso FROM pedido_delivery");
 
         while ($inserir = mysql_fetch_array($pegar_produtos))
         {
-            mysql_query("INSERT produtos_suspensos SELECT '','$nf',".$inserir['id_produto'].",".$inserir['quantidade'].",".$inserir['id_motoboy']);
+            mysql_query("INSERT produtos_suspensos SELECT '','$nf',".$inserir['id_produto'].",".$inserir['quantidade'].",".$inserir['id_motoboy'].",".$inserir['impresso']);
         }
 
         mysql_query("TRUNCATE TABLE pedido_delivery");

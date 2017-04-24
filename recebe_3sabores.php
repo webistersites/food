@@ -22,7 +22,8 @@
                                 a.quantidade*b.cost as Total,
                                 a.obs,
                                 b.category_id,
-                                a.impresso
+                                a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_balcao a
                                 INNER JOIN
@@ -42,14 +43,16 @@
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                if ($data['impresso'] == 0) 
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
                 {
-                    $classe = 'warning';
+                    $classe = 'negative';
+                    $icone = 'warning icon';
                 } else {
                     $classe = '';
+                    $icone = 'checkmark icon';
                 }
                 $return .= "<tr class='".$classe."'>";
-                $return .= "<td>" . $data['code']       .  "</td>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
@@ -158,7 +161,8 @@ $busca = mysql_query("
                                 a.quantidade*b.cost as Total,
                                 a.obs,
                                 b.category_id,
-                                a.impresso
+                                a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_balcao a
                                 INNER JOIN
@@ -178,14 +182,16 @@ $busca = mysql_query("
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                if ($data['impresso'] == 0) 
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
                 {
-                    $classe = 'warning';
+                    $classe = 'negative';
+                    $icone = 'warning icon';
                 } else {
                     $classe = '';
+                    $icone = 'checkmark icon';
                 }
                 $return .= "<tr class='".$classe."'>";
-                $return .= "<td>" . $data['code']       .  "</td>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
