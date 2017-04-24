@@ -2,19 +2,23 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      24/04/2017 15:43
-       N. Cupom: 128
+      24/04/2017 17:55
+       N. Cupom: 133
+      CPF: 40408129808
  **************************
     RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto             V. U Qt Total      
-101 PIZZA AMERICANA     28.0  1 28.00      
+301 COXINHA DE FRANGO   2.50  4 10.00      
+302 COXINHA FRANGO C/ CA3.00  3  9.00      
+201 ESFIHA CARNE        1.30  3  3.90      
 202 ESFIHA ATUM         1.50  1  1.50      
 ----------------------------
-              TOTAL R$ 29,50
+              TOTAL R$ 24,40
 ----------------------------
 
-Forma: Cartão de Débito
-Senha: 103
+Forma: Dinheiro
+Troco: R$ 25,60
+Senha: 785
 --

@@ -2,23 +2,21 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      24/04/2017 17:25
-       N. Cupom: 117
+      24/04/2017 17:32
+       N. Cupom: 130
  **************************
     RELATORIO GERENCIAL
  **************************
-       Itens - Mesa 1
+       Itens - Mesa 2
 Cod.Produto             V. U Qt Total      
-403 BEIRUTE FRANGO      18.0  1 18.00      
-605 ITUBAINA 2L         6.00  1  6.00      
+401 BEIRUTE ESPECIAL    20.0  1 20.00      
+602 COCA 1,5L           8.00  1  8.00      
 ----------------------------
-SUBTOTAL R$ 24,00
-*Taxa de servico R$ 2,40
-TOTAL R$ 26,40
+SUBTOTAL R$ 28,00
+*Taxa de servico R$ 2,80
+TOTAL R$ 30,80
 ----------------------------
 
-Forma: Dinheiro
-
-Troco: R$ 1,00
+Forma: Cartao de Debito
 
 --
