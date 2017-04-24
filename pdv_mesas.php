@@ -156,6 +156,13 @@ echo "<script>"
                  });
                 });';
         echo "</script>";
+        echo "<script>";
+        echo '$("result").ready(function(){
+                 $("#cpf_nota").click(function(){
+                  $("#refresh").load("cpf_nota_mesas.php?mesa='.$id_mesa.'");
+                 });
+                });';
+        echo "</script>";
 
    ?>
   <div class="column">
@@ -164,6 +171,7 @@ echo "<script>"
         <?php 
           echo '<a href="javascript:void(0);" id="dois_sabores" class="ui basic button">2 Sabores</a>';
           echo '<a href="javascript:void(0);" id="tres_sabores" class="ui basic button">3 Sabores</a>'; 
+          echo '<a href="javascript:void(0);" id="cpf_nota" class="ui basic button">CPF na nota</a>';
         ?>
         <div class="ui bottom attached segment" id="refresh">
       <p>

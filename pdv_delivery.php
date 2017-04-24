@@ -177,9 +177,10 @@
                 $ver_consulta = mysql_fetch_array($consulta_cliente);
                 // $ver_motoboy = mysql_result($consulta_motoboy,0);               
                 echo '<h5 class="ui left aligned header">Cliente: '.$ver_consulta['name'].''
-                        . '<br><br>';
-                        include 'motoboy.php';
+                        . '';
+                        //include 'motoboy.php';
                         echo '</h5>';
+
             }
         ?>        
     </p>
@@ -218,13 +219,21 @@
                    });
                   });';
           echo "</script>";
+        echo "<script>";
+        echo '$("result").ready(function(){
+                 $("#cpf_nota").click(function(){
+                  $("#refresh").load("cpf_nota_delivery.php");
+                 });
+                });';
+        echo "</script>";
 
    ?>
   <div class="column">
-
-    <p>
+    <br><?php include 'motoboy.php'; ?><br>
+        <p>
         <a href="javascript:void(0);" id="dois_sabores" class="ui basic button">2 Sabores</a>
         <a href="javascript:void(0);" id="tres_sabores" class="ui basic button">3 Sabores</a>
+        <a href="javascript:void(0);" id="cpf_nota" class="ui basic button">CPF na nota</a>
         <div class="ui bottom attached segment" id="refresh">
       <p>
         <?php

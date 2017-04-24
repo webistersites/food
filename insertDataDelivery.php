@@ -37,7 +37,9 @@ if (mysql_num_rows($consulta) == 0)
                                 b.cost as Preço,
                                 a.quantidade*b.cost as Total,
                                 a.obs,
-                                b.category_id
+                                b.category_id,
+                                a,impresso,
+                                b.cozinha
                                 FROM
                                 pedido_delivery a
                                 INNER JOIN
@@ -57,8 +59,16 @@ if (mysql_num_rows($consulta) == 0)
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                $return .= "<tr>";
-        $return .= "<td>" . $data['code']       .  "</td>";
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
+                {
+                    $classe = 'negative';
+                    $icone = 'warning icon';
+                } else {
+                    $classe = '';
+                    $icone = 'checkmark icon';
+                }
+                $return .= "<tr class='".$classe."'>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
         $return .= "<td>" . $data['Produto']    .  "</td>";
         $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa_del.php' method='post'><input type='hidden' name='seu_nome2' value='".$data['id']."'><input type='text' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
@@ -82,7 +92,7 @@ if (mysql_num_rows($consulta) == 0)
 
 $id = mysql_result($consulta,0);
 
-$verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_delivery WHERE id_produto = $id");
+$verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_delivery WHERE id_produto = $id and impresso = 0");
     
     if (mysql_num_rows($verifica_duplicidade) <= 0 ) 
     {
@@ -98,6 +108,8 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_delivery WHER
                                 a.quantidade*b.cost as Total,
                                 a.obs,
                                 b.category_id
+                                ,a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_delivery a
                                 INNER JOIN
@@ -117,8 +129,16 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_delivery WHER
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                $return .= "<tr>";
-		$return .= "<td>" . $data['code']       .  "</td>";
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
+                {
+                    $classe = 'negative';
+                    $icone = 'warning icon';
+                } else {
+                    $classe = '';
+                    $icone = 'checkmark icon';
+                }
+                $return .= "<tr class='".$classe."'>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
 		$return .= "<td>" . $data['Produto']    .  "</td>";
 		$return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa_del.php' method='post'><input type='hidden' name='seu_nome2' value='".$data['id']."'><input type='text' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
@@ -138,8 +158,8 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_delivery WHER
                 $return .= "</p>";
     }
     else
-    {   $adicionar = mysql_query("SELECT quantidade+1 FROM pedido_delivery WHERE id_produto = $id");
-        $sql = mysql_query("UPDATE pedido_delivery SET quantidade = ".mysql_result($adicionar,0)." where id_produto = $id");
+    {   $adicionar = mysql_query("SELECT quantidade+1 FROM pedido_delivery WHERE id_produto = $id and impresso = 0");
+        $sql = mysql_query("UPDATE pedido_delivery SET quantidade = ".mysql_result($adicionar,0)." where id_produto = $id and impresso = 0");
         $busca = mysql_query("
                                 SELECT
                                 a.id,
@@ -149,7 +169,9 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_delivery WHER
                                 b.cost as Preço,
                                 a.quantidade*b.cost as Total,
                                 a.obs,
-                                b.category_id
+                                b.category_id,
+                                a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_delivery a
                                 INNER JOIN
@@ -169,8 +191,16 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_delivery WHER
             . "</thead>";
         while ($data = mysql_fetch_array($busca)) 
             {
-                $return .= "<tr>";
-		$return .= "<td>" . $data['code']       .  "</td>";
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
+                {
+                    $classe = 'negative';
+                    $icone = 'warning icon';
+                } else {
+                    $classe = '';
+                    $icone = 'checkmark icon';
+                }
+                $return .= "<tr class='".$classe."'>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
 		$return .= "<td>" . $data['Produto']    .  "</td>";
 		$return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa_del.php' method='post'><input type='hidden' name='seu_nome2' value='".$data['id']."'><input type='text' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";

@@ -1,7 +1,7 @@
 <?php 
 	include 'conecta.php';
 
-	$q_busca_cpf 	= mysql_query("SELECT count(cpf), cpf FROM cpf_nota WHERE origem = 'balcao'");
+	$q_busca_cpf 	= mysql_query("SELECT count(cpf), cpf FROM cpf_nota WHERE origem = 'delivery'");
 	$busca_cpf 		= mysql_result($q_busca_cpf, 0);
 
 	if ($busca_cpf == 1) 
@@ -40,7 +40,7 @@
 					 <div class="ui center aligned grid">
 						 <div class="ui action input">
 						  <input type="text" id="cpf" name="cpf" placeholder="cpf na nota..." maxlength="11">
-						  <button class="ui blue button" onclick="insereCpf(`balcao`)">Incluir</button>
+						  <button class="ui blue button" onclick="insereCpf(`delivery`)">Incluir</button>
 						</div>
 					</div>
 					<br><br>';

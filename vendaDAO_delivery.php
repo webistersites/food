@@ -126,6 +126,8 @@ WHERE
   
     mysql_query("TRUNCATE TABLE valores_nota");
 
+    mysql_query("DELETE FROM cpf_nota WHERE origem = 'delivery'");
+
 ?>
 
 <meta http-equiv="refresh" content="0.1; url=delivery.php">

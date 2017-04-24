@@ -1,24 +1,27 @@
-            PIZZARIA & ESFIHARIA - SAO FRANCISCO
-             Rua Planalto, 54 - Jardim Palmares
-                TEL.: 2241-2513 / 2241-3210
-        --------------------------------------------
-                   96 - 19/04/2017 03:29
-        ********************************************
-                      CUPOM NAO FISCAL
-        ********************************************
-                           Itens
-Cod.    Produto                       V. UN Qtd  Total       
-999     Taxa de entrega                2.00   1   2.00       
--------------------------------------------------------
-                                         TOTAL R$ 2,00
--------------------------------------------------------
+      PONTO DA ESFIHA
+    Av. Rio Pequeno, 634
+TEL.: 2241-2513 / 2241-3210
+ -------------------------
+      24/04/2017 05:17
+       N. Cupom: 109
+      CPF: 33333333333
+ **************************
+    RELATORIO GERENCIAL
+ **************************
+           Itens
+Cod.Produto             V. U Qt Total      
+999 Taxa de entrega     4.00  1  4.00      
+202 ESFIHA ATUM         1.50  5  7.50      
+----------------------------
+              TOTAL R$ 11,50
+----------------------------
 
+Forma: Dinheiro
 
-Forma Pagamento: Cartão de Crédito
+Troco: R$ 3,50
 
-Vendedor: Junior Nascimento
-Cliente: Junior
-End.: Rua doutor valentim bouças, 188 - Jardim Tremembé
-Telefone: 1122625640
+Cliente: Patricia
+End.: Rua generica, 199 - Vila zilda
+Telefone: 22222222
 Motoboy: Motoboy Teste
 --

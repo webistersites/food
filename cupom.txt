@@ -2,21 +2,20 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      21/04/2017 20:50
-       N. Cupom: 127
+      24/04/2017 05:11
+       N. Cupom: 108
+      CPF: 11111111111
  **************************
     RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto             V. U Qt Total      
-0   1/2 MUSSARELA 1/2 CA23.9  1 23.90      
-201 ESFIHA CARNE        1.30  1  1.30      
-602 COCA 1,5L           8.00  1  8.00      
+201 ESFIHA CARNE        1.30  2  2.60      
+610 DOLLY PROMOCAO      0.00  1  0.00      
 ----------------------------
-              TOTAL R$ 33,20
+               TOTAL R$ 2,60
 ----------------------------
 
-Forma: Dinheiro
-Troco: R$ 6,80
-Senha: 245
+Forma: Cartão de Débito
+Senha: 155
 --

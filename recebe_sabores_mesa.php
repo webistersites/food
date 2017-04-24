@@ -21,7 +21,9 @@
                                 b.cost as Preço,
                                 a.quantidade*b.cost as Total,
                                 a.obs,
-                                b.category_id
+                                b.category_id,
+                                a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_mesa".$mesa." a
                                 INNER JOIN
@@ -40,8 +42,16 @@
                         . "<th class='right aligned'>Ação</th>"
                     . "</thead>";
     while($data = mysql_fetch_array($busca)){
-                $return .= "<tr>";
-                  $return .= "<td>" . $data['code']       .  "</td>";
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
+                {
+                    $classe = 'negative';
+                    $icone = 'warning icon';
+                } else {
+                    $classe = '';
+                    $icone = 'checkmark icon';
+                }
+                $return .= "<tr class='".$classe."'>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                   $return .= "<td>" . $data['Produto']    .  "</td>";
                   $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa_mesa.php' method='post'><input type='hidden' value='".$id_mesa."' name='mesa'><input type='hidden' name='seu_nome2' value='".$data['id']."'><input type='text' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
@@ -53,7 +63,7 @@
                 $return .= "</table>";
                 $return .= "<table class='ui table'>";
                 $return .= "<tr>";
-                $return .= "<td><a href='#' class='ui grey fluid tiny button'>Imprimir Cozinha</a></td>";
+                $return .= "<td><a href='imprimir_cozinha_mesas.php?mesa=".$mesa."' class='ui grey fluid tiny button'>Imprimir Cozinha</a></td>";
                 $return .= "<td colspan='3' rowspan='2'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
                 $return .= "</tr>";
                 $return .= "<tr>";
@@ -123,7 +133,9 @@ $busca = mysql_query("
                                 b.cost as Preço,
                                 a.quantidade*b.cost as Total,
                                 a.obs,
-                                b.category_id
+                                b.category_id,
+                                a.impresso,
+                                b.cozinha
                                 FROM
                                 pedido_mesa".$mesa." a
                                 INNER JOIN
@@ -142,8 +154,16 @@ $busca = mysql_query("
                         . "<th class='right aligned'>Ação</th>"
                     . "</thead>";
     while($data = mysql_fetch_array($busca)){
-                $return .= "<tr>";
-                  $return .= "<td>" . $data['code']       .  "</td>";
+                if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
+                {
+                    $classe = 'negative';
+                    $icone = 'warning icon';
+                } else {
+                    $classe = '';
+                    $icone = 'checkmark icon';
+                }
+                $return .= "<tr class='".$classe."'>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                   $return .= "<td>" . $data['Produto']    .  "</td>";
                   $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa_mesa.php' method='post'><input type='hidden' value='".$id_mesa."' name='mesa'><input type='hidden' name='seu_nome2' value='".$data['id']."'><input type='text' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
@@ -155,7 +175,7 @@ $busca = mysql_query("
                 $return .= "</table>";
                 $return .= "<table class='ui table'>";
                 $return .= "<tr>";
-                $return .= "<td><a href='#' class='ui grey fluid tiny button'>Imprimir Cozinha</a></td>";
+                $return .= "<td><a href='imprimir_cozinha_mesas.php?mesa=".$mesa."' class='ui grey fluid tiny button'>Imprimir Cozinha</a></td>";
                 $return .= "<td colspan='3' rowspan='2'><div class='subtotal'><span>subtotal </span>R$ ".number_format($subtotal, 2,',','.')."</div></td>";
                 $return .= "</tr>";
                 $return .= "<tr>";

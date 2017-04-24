@@ -108,6 +108,10 @@ include 'cabecalho.php';
          ON
             a.id_produto = b.id
           ORDER BY a.id');
+
+        $q_cpf  = mysql_query("SELECT count(id),cpf FROM cpf_nota WHERE origem = 'balcao'");
+        $cpf    = mysql_result($q_cpf, 0);
+        $n_cpf    = mysql_result($q_cpf, 0,1);
         
         $txt_cabecalho = array();
         $txt_itens = array();
@@ -130,6 +134,15 @@ include 'cabecalho.php';
         $txt_cabecalho[] = $date;
         
         $txt_cabecalho[] = "N. Cupom: " . $nf;
+
+        if ($cpf == 0) 
+        {
+          
+        }
+        else
+        {
+          $txt_cabecalho[] = "CPF: " . $n_cpf;
+        }
         
         $txt_cabecalho[] = '**************************';
         
