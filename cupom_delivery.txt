@@ -2,26 +2,23 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      24/04/2017 05:17
-       N. Cupom: 109
-      CPF: 33333333333
+      24/04/2017 15:44
+       N. Cupom: 129
  **************************
     RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto             V. U Qt Total      
-999 Taxa de entrega     4.00  1  4.00      
-202 ESFIHA ATUM         1.50  5  7.50      
+999 Taxa de entrega     2.00  1  2.00      
+201 ESFIHA CARNE        1.30  6  7.80      
 ----------------------------
-              TOTAL R$ 11,50
+               TOTAL R$ 9,80
 ----------------------------
 
-Forma: Dinheiro
+Forma: Cartão de Crédito
 
-Troco: R$ 3,50
-
-Cliente: Patricia
-End.: Rua generica, 199 - Vila zilda
-Telefone: 22222222
+Cliente: Junior
+End.: Rua doutor valentim bouças, 188 - Jardim Tremembé
+Telefone: 1122625640
 Motoboy: Motoboy Teste
 --

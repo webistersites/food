@@ -2,20 +2,19 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      24/04/2017 05:11
-       N. Cupom: 108
-      CPF: 11111111111
+      24/04/2017 15:43
+       N. Cupom: 128
  **************************
     RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto             V. U Qt Total      
-201 ESFIHA CARNE        1.30  2  2.60      
-610 DOLLY PROMOCAO      0.00  1  0.00      
+101 PIZZA AMERICANA     28.0  1 28.00      
+202 ESFIHA ATUM         1.50  1  1.50      
 ----------------------------
-               TOTAL R$ 2,60
+              TOTAL R$ 29,50
 ----------------------------
 
 Forma: Cartão de Débito
-Senha: 155
+Senha: 103
 --
