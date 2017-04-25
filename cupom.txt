@@ -2,21 +2,29 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      24/04/2017 22:24
-       N. Cupom: 124
+      25/04/2017 02:18
+       N. Cupom: 136
+      CPF: 40408129808
+     *Sem valor fiscal*
  **************************
     RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto              Tot Qt V. UN      
-0   1/2 MUSSARELA 1/2 CA23.9  1 23.90      
-0   1/3 ATUM I 1/3 CALAB24.0  1 24.00      
-0   1/2 BAIANA 1/2 AMERI28.0  1 28.00      
-0   1/3 PEPERONI 1/3 LOM36.0  1 36.00      
+301 COXINHA DE FRANGO   2.50  1  2.50      
+302 COXINHA FRANGO C/ CA3.00  1  3.00      
+602 COCA 1,5L           8.00  1  8.00      
+601 COCA 2L             10.0  1 10.00      
+402 BEIRUTE ROSBIFE     18.0  1 18.00      
+401 BEIRUTE ESPECIAL    20.0  1 20.00      
+102 PIZZA ATUM I        24.0  1 24.00      
+101 PIZZA AMERICANA     28.0  1 28.00      
+607 REFRIGERANTES LATA  4.00  1  4.00      
 ----------------------------
-             TOTAL R$ 111,90
+             TOTAL R$ 117,50
 ----------------------------
 
-Forma: Cartao de Debito
-Senha: 660
+Forma: Dinheiro
+Troco: R$ 2,50
+Senha: 760
 --
