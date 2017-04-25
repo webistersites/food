@@ -103,8 +103,8 @@
 //            {
                 if ($preco1 >= $preco2 && $preco1 >= $preco3) 
                     {
-                        $concatenar = "1/3 " . $sabor1 . " 1/3 " . $sabor2 ." 1/3 " . $sabor3 . $preco1;
-                        $produto = "1/3 " . $sabor1 . " 1/3 " . $sabor2 . " 1/3 " . $sabor3;
+                        $concatenar = "1/3-" . $sabor1 . "/" . $sabor2 ."/" . $sabor3 . $preco1;
+                        $produto = "1/3-" . $sabor1 . "/" . $sabor2 . "/" . $sabor3;
                         $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM tec_products WHERE concat(name,cost) = '$concatenar'");
                         if (mysql_num_rows($consulta) == 0) 
                             {
@@ -119,8 +119,8 @@
                     }
                 elseif ($preco2 >= $preco1 && $preco2 >= $preco3) 
                     {
-                        $concatenar = "1/3 " . $sabor1 . " 1/3 " . $sabor2 ." 1/3 " . $sabor3 . $preco2;
-                        $produto = "1/3 " . $sabor1 . " 1/3 " . $sabor2 . " 1/3 " . $sabor3;
+                        $concatenar = "1/3-" . $sabor1 . "/" . $sabor2 ."/" . $sabor3 . $preco2;
+                        $produto = "1/3-" . $sabor1 . "/" . $sabor2 . "/" . $sabor3;
                         $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM tec_products WHERE concat(name,cost) = '$concatenar'");
                         if (mysql_num_rows($consulta) == 0) 
                             {
@@ -135,8 +135,8 @@
                     }
                 elseif ($preco3 >= $preco1 && $preco3 >= $preco2)
                     {
-                        $concatenar = "1/3 " . $sabor1 . " 1/3 " . $sabor2 ." 1/3 " . $sabor3 . $preco3;
-                        $produto = "1/3 " . $sabor1 . " 1/3 " . $sabor2 . " 1/3 " . $sabor3;
+                        $concatenar = "1/3-" . $sabor1 . "/" . $sabor2 ."/" . $sabor3 . $preco3;
+                        $produto = "1/3-" . $sabor1 . "/" . $sabor2 . "/" . $sabor3;
                         $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM tec_products WHERE concat(name,cost) = '$concatenar'");
                         if (mysql_num_rows($consulta) == 0) 
                             {

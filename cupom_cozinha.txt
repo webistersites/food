@@ -1,11 +1,11 @@
  -------------------------------------------
-              25/04/2017 07:36
+              25/04/2017 09:25
 ********************************************
                 PEDIDO BALCAO
 ********************************************
                     Itens
-Cod.    Produto                      Qtd.                  
-0       1/2 FRANGO C/ CATUPIRY 1/2 P    1                  
+Produto                                                 Qt
+1/3-FRANGO C/ CATUPIRY/AMERICANA/CALABRESA II          1  
 
 
 Balcao

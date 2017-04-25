@@ -140,14 +140,16 @@ include 'cabecalho.php';
         
         $txt_cabecalho[] = 'Itens'; // força pular uma linha entre o cabeçalho e os itens
         
-        $txt_itens[] = array('Cod.', 'Produto', ' Qtd.');
+        $txt_itens[] = array('Produto', ' Qtd.');
         
 	$tot_itens = 0;
         
         while($ler = mysql_fetch_array($query_impressao))
             {
-                $txt_itens[] = array($ler['code'],$ler['Produto'],$ler['quantidade']);
+                $txt_itens[] = array($ler['Produto'],$ler['quantidade']);
                 $tot_itens += $ler['Total'];
+                $txt_valor_total .= $ler2['Produto'] . $ler2['quantidade'];
+                $tot_itens += $ler2['Total'];
             }
         
 //    	$txt_itens[] = array(251, 'Prod. linha 1', '002', 3, '0.50', '1.50');
@@ -169,6 +171,11 @@ include 'cabecalho.php';
         for($i = 0; $i < $total_espacos; $i++){
             $espacos .= ' ';
         }
+        while($ler2 = mysql_fetch_array($query_impressao))
+            {
+                $txt_valor_total .= $ler2['Produto'] . $ler2['quantidade'];
+                $tot_itens += $ler2['Total'];
+            }
         
 /*        $txt_valor_total = "-------------------------------------------------------\r\n";
         
@@ -203,12 +210,12 @@ include 'cabecalho.php';
 	     * $itens[] = 'Cod. Produto      Env. Qtd  V. UN  Total'
 	     */
             
-            $itens[] = addEspacos($item[0], 8, 'F')
-                    . addEspacos($item[1], 28, 'F')
-                    . addEspacos($item[2], 5, 'I')
-                    . addEspacos($item[3], 4, 'I')
-                    . addEspacos($item[4], 7, 'I')
-                    . addEspacos($item[5], 7, 'I')
+            $itens[] = addEspacos($item[0], 55, 'F')
+                    . addEspacos($item[1], 3, 'F')
+                    // . addEspacos($item[2], 3, 'I')
+                    // . addEspacos($item[3], 4, 'I')
+                    // . addEspacos($item[4], 7, 'I')
+                    // . addEspacos($item[5], 7, 'I')
                 ;
             
         }
@@ -259,7 +266,7 @@ if($ph = printer_open($printer))
    $content = fread($fh, filesize("cupom_cozinha.txt"));
    fclose($fh);
        
-    printer_set_option($ph, PRINTER_MODE, "RAW");
+    printer_set_option($ph, PRINTER_MODE, "TEXT");
     printer_write($ph, $content);
     printer_close($ph);
 

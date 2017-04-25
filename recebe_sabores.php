@@ -90,8 +90,8 @@
 
                 if ($preco1 >= $preco2) 
                     {
-                        $concatenar = "1/2 " . $sabor1 . " 1/2 " . $sabor2 . $preco1;
-                        $produto = "1/2 " . $sabor1 . " 1/2 " . $sabor2;
+                        $concatenar = "1/2-" . $sabor1 . "/" . $sabor2 . $preco1;
+                        $produto = "1/2-" . $sabor1 . "/" . $sabor2;
                         $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM tec_products WHERE concat(name,cost) = '$concatenar'");
                         if (mysql_num_rows($consulta) == 0) 
                             {
@@ -109,8 +109,8 @@
                     }
                 else
                     {
-                        $concatenar = "1/2 " . $sabor1 . " 1/2 " . $sabor2 . $preco2;
-                        $produto = "1/2 " . $sabor1 . " 1/2 " . $sabor2;
+                        $concatenar = "1/2-" . $sabor1 . "/" . $sabor2 . $preco2;
+                        $produto = "1/2-" . $sabor1 . "/" . $sabor2;
                         $consulta = mysql_query("SELECT id, concat(name,cost) as chave FROM tec_products WHERE concat(name,cost) = '$concatenar'");
                         if (mysql_num_rows($consulta) == 0) 
                             {
