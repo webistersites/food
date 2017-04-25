@@ -1,6 +1,6 @@
 <?php
 
-include 'cabecalho.php';
+include 'conectaMobile.php';
 $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
         
     /*
@@ -288,7 +288,7 @@ else
     //exit();
 }
 
-echo '<meta http-equiv="refresh" content="0.2;URL=mesa'.$mesa.'.php">';
+echo '<meta http-equiv="refresh" content="0.2;URL=mob_mesa'.$mesa.'.php">';
 
 ?>
 
