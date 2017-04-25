@@ -16,7 +16,7 @@
         </style>
         
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
-        <script type='text/javascript' src="js/jquery.autocomplete.js"></script>
+        <script src="js/jquery.autocomplete.js"></script>
         <link rel="stylesheet" type="text/css" href="js/jquery.autocomplete.css" />
         <script type="text/javascript">
             $().ready(function() {

@@ -2,6 +2,9 @@
 <script src="funcoes.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+        <script src="js/jquery.autocomplete.js"></script>
+
 <br><br>
 <div class="ui center aligned grid">
     <div class="ui compact message">
