@@ -86,12 +86,21 @@
    
   echo '<div id="confirmar?nf='.$ver_hist['num_nota_fiscal'].'" class="overlay">
   	<div class="popup_cancelar">
-            <h2 class="ui center aligned header">Deseja cancelar essa nota?</h2>
+            <h2 class="ui center aligned header">INSIRA A SENHA</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
             <br>
-                <a class="ui tiny basic button" href="#">Não, voltar</a>
-                <a class="ui tiny basic right floated red button" href="cancelar_nota.php?nota='.$ver_hist['num_nota_fiscal'].'">Sim, desejo cancelar</a>
+            <form method="post" action="cancelar_nota.php">
+                <div class="ui fluid input">
+                  <input type="password" name="senha" placeholder="senha">
+                  <input type="hidden" name="nota" value="'.$ver_hist['num_nota_fiscal'].'">
+                  <br>
+                </div>
+              <br><br>
+                  <a class="ui small button" href="#">Voltar</a>
+                  <input type="submit" class="ui small right floated red button" value="Avançar">
+                  <!-- <a class="ui small right floated red button" href="cancelar_nota.php?nota='.$ver_hist['num_nota_fiscal'].'">Avançar</a>-->
+            </form>
             </div>'
        .'</div>'
      .'</div>';

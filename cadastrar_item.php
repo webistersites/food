@@ -9,6 +9,26 @@ $qtd       		= $_POST['qtd'];
 $estoque		= $_POST['estoque'];
 $cozinha		= $_POST['cozinha'];
 
+if ($produto == "") 
+{
+	echo "
+			<script>
+				alert('Favor inserir o nome do produto!');
+				window.location.replace('config.php');
+			</script>";
+			exit();
+}
+
+if ($categoria == "Categoria") 
+{
+	echo "
+			<script>
+				alert('Favor selecionar uma categoria!');
+				window.location.replace('config.php');
+			</script>";
+			exit();
+}
+
 if ($estoque == "") 
 {
 	$type = 0;
@@ -23,6 +43,16 @@ if ($cozinha == "")
 } else
 {
 	$coz = 1;
+}
+
+if ($qtd == "") 
+{
+	$qtd = 0;
+}
+
+if ($valor == "") 
+{
+	$valor = 0;
 }
 
 $q_code = mysql_query("select 
@@ -52,7 +82,7 @@ $cadastra_func = mysql_query("INSERT tec_products SELECT '',$code,'$produto',$ca
 
 ?>
 <script>
-    window.location.replace("produtos.php");
+    window.location.replace("config.php");
 </script>
 
 

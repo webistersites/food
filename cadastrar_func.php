@@ -15,5 +15,5 @@ $cadastra_func = mysql_query("INSERT usuarios SELECT '','$nomecomp','$usuario','
 
 ?>
 <script>
-    window.location.replace("funcionarios.php#gerenciar");
+    window.location.replace("funcionarios.php");
 </script>

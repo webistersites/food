@@ -190,7 +190,8 @@
         echo "<script>";
         echo '$("result").ready(function(){
                  $("#finalizar").click(function(){
-                  $("#refresh").load("forma_pagamento.php");  
+                  $("#refresh").load("forma_pagamento.php"); 
+                  selecionaMotoboy(); 
                  });
                 });';
         echo "</script>";

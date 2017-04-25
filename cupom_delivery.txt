@@ -2,23 +2,25 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      24/04/2017 15:44
-       N. Cupom: 129
+      24/04/2017 21:47
+       N. Cupom: 123
+      CPF: 44444444444
+     *Sem valor fiscal*
  **************************
     RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto             V. U Qt Total      
 999 Taxa de entrega     2.00  1  2.00      
-201 ESFIHA CARNE        1.30  6  7.80      
+101 PIZZA AMERICANA     28.0  1 28.00      
 ----------------------------
-               TOTAL R$ 9,80
+              TOTAL R$ 30,00
 ----------------------------
 
-Forma: Cartão de Crédito
+Forma: Cartao de Credito
 
-Cliente: Junior
-End.: Rua doutor valentim bouças, 188 - Jardim Tremembé
-Telefone: 1122625640
-Motoboy: Motoboy Teste
+Cliente: Carol
+End.: Rua Lucas Alaman, 120 - Jardim Tremembe
+Telefone: 213123123
+Motoboy: Celso
 --

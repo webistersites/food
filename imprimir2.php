@@ -142,6 +142,7 @@ include 'cabecalho.php';
         else
         {
           $txt_cabecalho[] = "CPF: " . $n_cpf;
+          $txt_cabecalho[] = "*Sem valor fiscal*";
         }
         
         $txt_cabecalho[] = '**************************';
@@ -152,13 +153,13 @@ include 'cabecalho.php';
         
         $txt_cabecalho[] = 'Itens'; // força pular uma linha entre o cabeçalho e os itens
         
-        $txt_itens[] = array('Cod.', 'Produto', 'V. UN', ' Qtd.', ' Total');
+        $txt_itens[] = array('Cod.', 'Produto', ' Total', ' Qtd.', ' V. UN');
         
 	$tot_itens = 0;
         
         while($ler = mysql_fetch_array($query_impressao))
             {
-                $txt_itens[] = array($ler['code'],$ler['Produto'],$ler['Preço'],$ler['quantidade'],$ler['Total']);
+                $txt_itens[] = array($ler['code'],$ler['Produto'],$ler['Total'],$ler['quantidade'],$ler['Preço']);
                 $tot_itens += $ler['Total'];
             }
         

@@ -144,6 +144,7 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
         else
         {
           $txt_cabecalho[] = "CPF: " . $n_cpf;
+            $txt_cabecalho[] = "*Sem valor fiscal*";
         }
         
         $txt_cabecalho[] = '**************************';

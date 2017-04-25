@@ -1,7 +1,7 @@
 <script>
     $('.dropdown').dropdown();
 </script>
-<div class="cadastrar sumir">
+<div class="cadastrar">
 <div class="ui secondary pointing menu">
     <a class="item" href="#" onclick="location.reload()">
         Gerenciar

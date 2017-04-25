@@ -1,23 +1,22 @@
-            PIZZARIA & ESFIHARIA - SAO FRANCISCO
-             Rua Planalto, 54 - Jardim Palmares
-                TEL.: 2241-2513 / 2241-3210
-        -------------------------------------------
-                   85 - 2017-04-13 00:50
-        ********************************************
-                      CUPOM NAO FISCAL
-        ********************************************
-                           Itens
-Cod.    Produto                       V. UN Qtd  Total       
-999     Taxa de entrega                4.00   1   4.00       
-201     ESFIHA CARNE                   1.30   8  10.40       
--------------------------------------------------------
-                                        TOTAL R$ 14,40
--------------------------------------------------------
+      PONTO DA ESFIHA
+    Av. Rio Pequeno, 634
+TEL.: 2241-2513 / 2241-3210
+ -------------------------
+      2017-04-24 21:47
+       N. Cupom: 122
+ **************************
+    RELATORIO GERENCIAL
+ **************************
+           Itens
+Cod.Produto              Tot Qt V. UN      
+999 Taxa de entrega     3.00  1  3.00      
+101 PIZZA AMERICANA     28.0  1 28.00      
+----------------------------
+              TOTAL R$ 31,00
+----------------------------
 
+Forma: Cartao de Debito
+Cliente: Felipe
 
-Forma Pagamento: Cartão de Débito
-
-Cliente: Patricia
-
-Endereço: Rua generica, 199 - Vila zilda
+Endereco: Rua planalto, 54 - jardim palmares
 --

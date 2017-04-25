@@ -13,7 +13,7 @@
 
 <?php 
     include 'gerenciar_funcionarios.php';
-    include 'submenu_funcionarios_cadastrar.php';
+    //include 'submenu_funcionarios_cadastrar.php';
 ?>
 
 <script>
