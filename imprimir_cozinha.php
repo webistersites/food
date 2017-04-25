@@ -148,7 +148,7 @@ include 'cabecalho.php';
             {
                 $txt_itens[] = array($ler['Produto'],$ler['quantidade']);
                 $tot_itens += $ler['Total'];
-                $txt_valor_total .= $ler2['Produto'] . $ler2['quantidade'];
+                $txt_valor_total .= $ler2['Produto'] . " , " . $ler2['quantidade'];
                 $tot_itens += $ler2['Total'];
             }
         
@@ -173,7 +173,7 @@ include 'cabecalho.php';
         }
         while($ler2 = mysql_fetch_array($query_impressao))
             {
-                $txt_valor_total .= $ler2['Produto'] . $ler2['quantidade'];
+                $txt_valor_total .= $ler2['Produto'] . " , " . $ler2['quantidade'];
                 $tot_itens += $ler2['Total'];
             }
         
