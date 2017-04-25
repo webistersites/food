@@ -1,11 +1,11 @@
  -------------------------------------------
-              25/04/2017 09:25
+              25/04/2017 09:29
 ********************************************
                 PEDIDO BALCAO
 ********************************************
                     Itens
 Produto                                                 Qt
-1/3-FRANGO C/ CATUPIRY/AMERICANA/CALABRESA II          1  
+1/3-FRANGO C/ CATUPIRY/PORTUGUESA ESPECIAL/MODA DA CASA1  
 
 
 Balcao

@@ -2,18 +2,20 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      25/04/2017 07:36
-       N. Cupom: 140
+      25/04/2017 09:30
+       N. Cupom: 141
+     *Sem valor fiscal*
  **************************
     RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto              Tot Qt V. UN      
-0   1/2 FRANGO C/ CATUPI28.0  1 28.00      
+0   1/3-FRANGO C/ CATUPI28.0  1 28.00      
+0   1/3-FRANGO C/ CATUPI32.0  1 32.00      
 ----------------------------
-              TOTAL R$ 28,00
+              TOTAL R$ 60,00
 ----------------------------
 
-Forma: Cartao de Credito
-Senha: 464
+Forma: Cartao de Debito
+Senha: 614
 --
