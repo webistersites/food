@@ -131,7 +131,7 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
         
         /*$txt_cabecalho[] = '-------------------------------------------';*/
         
-        $txt_cabecalho[] = $nf . " - " .$date;
+        $txt_cabecalho[] = $date;
         
         $txt_cabecalho[] = '********************************************';
         
@@ -143,13 +143,13 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 
         $txt_cabecalho[] = '--------------------------------------------';
         
-        $txt_itens[] = array('Cod.', 'Produto', ' Qtd.');
+        $txt_itens[] = array('Produto', ' Qtd.');
         
 	$tot_itens = 0;
         
         while($ler = mysql_fetch_array($query_impressao))
             {
-                $txt_itens[] = array($ler['code'],$ler['Produto'],$ler['quantidade']);
+                $txt_itens[] = array($ler['Produto'],$ler['quantidade']);
                 $tot_itens += $ler['Total'];
                 $n_cliente = $ler['name'];
                 $end_cliente = $ler['endereco'];
@@ -167,7 +167,7 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
         // $aux_valor_total = 'TOTAL R$ '.number_format($tot_itens,2,',','.');
         
 	// calcula o total de espaços que deve ser adicionado antes do "Sub-total" para alinhado a esquerda
-        $total_espacos = $n_colunas - strlen($aux_valor_total)-6;
+        $total_espacos = $n_colunas - strlen($aux_valor_total)+2;
         
         $espacos = '';
         
@@ -218,12 +218,12 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 	     * $itens[] = 'Cod. Produto      Env. Qtd  V. UN  Total'
 	     */
             
-            $itens[] = addEspacos($item[0], 8, 'F')
-                    . addEspacos($item[1], 28, 'F')
-                    . addEspacos($item[2], 5, 'I')
-                    . addEspacos($item[3], 4, 'I')
-                    . addEspacos($item[4], 7, 'I')
-                    . addEspacos($item[5], 7, 'I')
+            $itens[] = addEspacos($item[0], 55, 'F')
+                    . addEspacos($item[1], 3, 'F')
+                    // . addEspacos($item[2], 3, 'I')
+                    // . addEspacos($item[3], 4, 'I')
+                    // . addEspacos($item[4], 7, 'I')
+                    // . addEspacos($item[5], 7, 'I')
                 ;
             
         }
