@@ -176,7 +176,7 @@ echo "<script>"
         <div class="ui bottom attached segment" id="refresh">
       <p>
         <?php
-             include 'dois_sabores_mesa.php';
+             include 'lista_Esfihas.php';
         ?>
           </p>
         </div>
@@ -184,20 +184,8 @@ echo "<script>"
     </div>
   </div>
 
-
-<?php
-  //include 'popup_caixa.php';
-  //include 'popup_venda_mesas.php';
-  //include 'popup_motoboy.php';
-
-   echo '<div class="sumir">';
-    include 'teste/autocomplete/mesas/index.php';
-   echo '</div>';
- 
-?>
-
-</div>
-</div>
+<!-- </div>
+</div> -->
 <?php
 }
 ?>

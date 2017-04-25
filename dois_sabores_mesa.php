@@ -5,15 +5,16 @@
         //         $('#meuBotao').click();
         // });
 </script>
-<html>
+<!-- <html>
     <head>
 
-        <title>jQuery Autocomplete Plugin</title>
+        <title>jQuery Autocomplete Plugin</title> -->
         <style>
             #meuBotao {
                 display: none;
             }
         </style>
+        
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
         <script type='text/javascript' src="js/jquery.autocomplete.js"></script>
         <link rel="stylesheet" type="text/css" href="js/jquery.autocomplete.css" />
@@ -46,8 +47,8 @@
         </script>
         <script type="text/javascript" src="ajax2.js"></script>
 
-    </head>
-    <body>
+<!--     </head>
+    <body> -->
         <div id="content" class="ui form">
             <form autocomplete="off" onsubmit="return false;">
                 <div class="ui fluid icon input">
@@ -66,6 +67,6 @@
             </form>
         </div>
         
-</body>
-</html>
+<!-- </body>
+</html> -->
         
