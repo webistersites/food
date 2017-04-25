@@ -2,9 +2,9 @@
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
  -------------------------
-      24/04/2017 21:47
-       N. Cupom: 123
-      CPF: 44444444444
+      24/04/2017 22:08
+       N. Cupom: 134
+      CPF: 12345678900
      *Sem valor fiscal*
  **************************
     RELATORIO GERENCIAL
@@ -12,15 +12,15 @@ TEL.: 2241-2513 / 2241-3210
            Itens
 Cod.Produto             V. U Qt Total      
 999 Taxa de entrega     2.00  1  2.00      
-101 PIZZA AMERICANA     28.0  1 28.00      
+105 PIZZA BAURU         25.0  1 25.00      
 ----------------------------
-              TOTAL R$ 30,00
+              TOTAL R$ 27,00
 ----------------------------
 
-Forma: Cartao de Credito
+Forma: Cartao de Debito
 
-Cliente: Carol
-End.: Rua Lucas Alaman, 120 - Jardim Tremembe
-Telefone: 213123123
+Cliente: Junior
+End.: Rua doutor valentim bouças, 188 - Jardim Tremembé
+Telefone: 1122625640
 Motoboy: Celso
 --
