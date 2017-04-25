@@ -165,8 +165,14 @@
                   ';
                   while ($products = mysql_fetch_array($q_produtos)) 
                   {
-                    
-                    echo '<div class="card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].')" id="produtos">'.$products['name'].'</a></div>';
+                    if ($products['category_id'] != 98) 
+                    {
+                      echo '<div class="card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].','.$products['category_id'].')" id="produtos">'.$products['name'].'</a></div>';
+                    }
+                    else
+                    {
+                      echo '<div class="card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].','.$products['category_id'].')" id="produtos">'.$products['name'].'</a></div>';
+                    }
 
                   }
                   echo '</div>
