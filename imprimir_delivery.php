@@ -220,9 +220,9 @@ include 'cabecalho.php';
             $txt_rodape[] = '';
         }
                 
-        $txt_rodape[] = 'Cliente: ' . $n_cliente;
+        $txt_rodape[] = 'Cliente: ' . utf8_decode($n_cliente);
         
-        $txt_rodape[] = 'End.: ' . $end_cliente . ', ' . $num . ' - ' . $bairro; 
+        $txt_rodape[] = 'End.: ' . utf8_decode($end_cliente) . ', ' . $num . ' - ' . utf8_decode($bairro); 
         
         $txt_rodape[] = 'Telefone: ' . $fone; 
 

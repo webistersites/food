@@ -159,12 +159,14 @@ $busca = mysql_query("
             {
                 if ($data['impresso'] == 0 && $data['cozinha'] == 1) 
                 {
-                    $classe = 'warning';
+                    $classe = 'negative';
+                    $icone = 'warning icon';
                 } else {
                     $classe = '';
+                    $icone = 'checkmark icon';
                 }
-                $return .= "<tr>";
-                $return .= "<td>" . $data['code']       .  "</td>";
+                $return .= "<tr class='".$classe."'>";
+                $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td class='".$classe."'>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
                 $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
