@@ -14,6 +14,8 @@
       <link type="text/css" rel="stylesheet" href="bower_components/semantic/dist/components/container.min.css"/>
       <link type="text/css" rel="stylesheet" href="bower_components/semantic/dist/components/image.min.css"/>
       <link type="text/css" rel="stylesheet" href="bower_components/semantic/dist/components/card.min.css"/>
+      <link type="text/css" rel="stylesheet" href="bower_components/semantic/dist/components/dropdown.min.css"/>
+      <link type="text/css" rel="stylesheet" href="bower_components/semantic/dist/components/form.min.css"/>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -46,6 +48,7 @@
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
+      <script type="text/javascript" src="bower_components/semantic/dist/components/dropdown.min.js"></script>
       <script type="text/javascript" src="ajaxMobile.js"></script>
 
 
@@ -55,7 +58,7 @@
       <a href="#!" class="brand-logo"><i class="material-icons">stay_primary_portrait</i>Mesa <?php echo $mesa; ?></a>
       <ul class="right">
         <?php 
-          $q_itens  = mysql_query("select sum(quantidade) as pedidos from pedido_aux_mesa$mesa"); 
+          $q_itens  = mysql_query("select sum(quantidade) as pedidos from pedido_mesa$mesa"); 
           $itens    = mysql_result($q_itens, 0);
         ?>
         <li><span class="badge" id="gambi"><div id="result"><?php echo $itens; ?></div></span><a href="#modal1" ><i class="material-icons">shopping_cart</i></a></li>
@@ -97,7 +100,7 @@
                                     ,a.quantidade
                                     ,b.cost
                                   FROM
-                                    pedido_aux_mesa".$mesa." a
+                                    pedido_mesa".$mesa." a
                                   INNER JOIN
                                     tec_products b
                                   ON
@@ -115,7 +118,7 @@
               <tr>
                   <th data-field="id">Produto</th>
                   <th data-field="name">Qtd</th>
-                  <th data-field="price">Preço</th>
+                  <th data-field="price">Preco</th>
                   <th data-field="action">#</th>
               </tr>
             </thead>
@@ -163,16 +166,10 @@
               <p class="white-text">
                   <div class="ui four cards grid container">
                   ';
-                  while ($products = mysql_fetch_array($q_produtos)) 
+                  while ($products = mysql_fetch_array($q_produtos))
                   {
-                    if ($products['category_id'] != 98) 
-                    {
-                      echo '<div class="card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].','.$products['category_id'].')" id="produtos">'.$products['name'].'</a></div>';
-                    }
-                    else
-                    {
-                      echo '<div class="card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].','.$products['category_id'].')" id="produtos">'.$products['name'].'</a></div>';
-                    }
+
+                      echo '<div class="card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].')" id="produtos">'.$products['name'].'</a></div>';
 
                   }
                   echo '</div>
@@ -180,6 +177,42 @@
             </div>';
       }
      ?>
+     <div class="carousel-item black-text" id="98">
+      <h2>Sabores</h2>
+      <div class="ui form">
+        <div class="field">
+          <form method="post" action="recebeSabores.php">
+          <select name="sabor1">
+            <option value="">Sabor 1</option>
+            <?php 
+              $q_busca  = mysql_query("SELECT id,name FROM tec_products WHERE category_id = 98");
+              while ($sabores = mysql_fetch_array($q_busca)) 
+              {
+                echo '<option value="'.$sabores['name'].'">'.$sabores['name'].'</option>';
+              }
+             ?>
+          </select>
+          <br><br>
+          <select name="sabor2">
+            <option value="">Sabor 2</option>
+            <?php 
+              $q_busca  = mysql_query("SELECT id,name FROM tec_products WHERE category_id = 98");
+              while ($sabores = mysql_fetch_array($q_busca)) 
+              {
+                echo '<option value="'.$sabores['name'].'">'.$sabores['name'].'</option>';
+              }
+             ?>
+          </select>
+          <?php echo '<input type="hidden" name="mesa" value="'.$mesa.'">'; ?>
+          <br>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Selecionar
+              <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
+      </div>
+      </p>
+     </div>
   </div>
     </div>        
 
@@ -193,7 +226,7 @@
     <ul>
       <?php echo '<li><a href="cancelarTudo.php?mesa='.$mesa.'" class="btn-floating red"><i class="material-icons">delete</i></a></li>'; ?>
       <!-- <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li> -->
-      <?php echo '<li><a href="finalizaPedido.php?mesa='.$mesa.'" class="btn-floating green"><i class="material-icons">done_all</i></a></li>'; ?>
+      <?php echo '<li><a href="mob_imprimirCozinhaMesas.php?mesa='.$mesa.'" class="btn-floating blue"><i class="material-icons">print</i></a></li>'; ?>
     </ul>
   <!-- </div> -->
 

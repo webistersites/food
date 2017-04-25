@@ -10,7 +10,7 @@ $q_produtos   = mysql_query("SELECT
                                 ,a.quantidade
                                 ,b.cost
                               FROM
-                                pedido_aux_mesa".$mesa." a
+                                pedido_mesa".$mesa." a
                               INNER JOIN
                                 tec_products b
                               ON

@@ -139,12 +139,11 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 
         if ($cpf == 0) 
         {
-          
+          $txt_cabecalho[] = "*Sem valor fiscal*";
         }
         else
         {
-          $txt_cabecalho[] = "CPF: " . $n_cpf;
-            $txt_cabecalho[] = "*Sem valor fiscal*";
+          $txt_cabecalho[] = "CPF: " . $n_cpf;            
         }
         
         $txt_cabecalho[] = '**************************';

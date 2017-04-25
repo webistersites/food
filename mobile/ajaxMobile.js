@@ -54,12 +54,12 @@ function insertData(){
 	XMLHttp.send(fieldsValues);
 }
 
-function insereMobile(id,categoria) {
+function insereMobile(id) {
 	var mesa      = document.getElementById("mesa").value;
 	var result  = document.getElementById("result");
 	var prods  = document.getElementById("prods");
 	var XMLHttp = generateXMLHttp();	
-	XMLHttp.open("get", "insereMobile.php?id=" + id + "&categoria=" + categoria + "&mesa=" + mesa, true);	
+	XMLHttp.open("get", "insereMobile.php?id=" + id + "&mesa=" + mesa, true);	
 	XMLHttp.onreadystatechange = function(){
 		if (XMLHttp.readyState == 4)
 			if (XMLHttp.status == 200){
