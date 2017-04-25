@@ -80,6 +80,12 @@ else
 
 $cadastra_func = mysql_query("INSERT tec_products SELECT '',$code,'$produto',$categoria,0,'no_image.png',0,$valor,0,$qtd,'',$type,'',5,$coz");
 
+if ($categoria == 1) 
+{
+	mysql_query("INSERT tec_products SELECT '',$code,'$produto',98,0,'no_image.png',0,$valor,0,$qtd,'',$type,'',5,$coz");
+	mysql_query("INSERT tec_products SELECT '',$code,'$produto',99,0,'no_image.png',0,$valor,0,$qtd,'',$type,'',5,$coz");
+}
+
 ?>
 <script>
     window.location.replace("config.php");

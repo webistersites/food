@@ -21,8 +21,8 @@
       #subtitulo {
         color: #222;
         text-align: center;
-        margin-left: 6px;
-        font-size: 9pt;
+        margin-left: 9px;
+        font-size: 14pt;
       }
       </style>
     </head>

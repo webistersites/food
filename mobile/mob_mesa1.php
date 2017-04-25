@@ -48,6 +48,7 @@
       <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
       <script type="text/javascript" src="ajaxMobile.js"></script>
 
+
         <nav>
     <div class="nav-wrapper black">
 
@@ -88,6 +89,7 @@
     </div>
 
   </nav>
+
   <?php 
     $q_produtos   = mysql_query("SELECT
                                     a.id
