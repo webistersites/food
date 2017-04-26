@@ -2,6 +2,7 @@
         $('form').keypress(function(e) {
             if(e.which == 13 || e.keyCode == 13) 
                 $('#meuBotao').click();
+                
         });
 </script>
 <html>
@@ -36,11 +37,25 @@
     <body>
         <div id="content" class="ui form">
             <form autocomplete="off" onsubmit="return false;">
-                <div class="ui fluid icon input">
+                <div class="inline fields">
+                    <div class="four wide field">
+                    <div class="ui fluid icon input">
                     <i class="search icon"></i>
-                    <input type="text" name="course" id="course" placeholder="busque por cód. ou nome..." autofocus="" />                    
+                    <input type="text" name="course-id" id="course-id" placeholder="cód" autofocus="" onfocus="this.value='';"/>
                 </div>
-                <input value="Ok" id="meuBotao" onclick="insertData()" type="hidden" />
+                </div>
+                <div class="ten wide field">
+                    <div class="ui fluid icon input">
+                    <i class="search icon"></i>
+                    <input type="text" name="course" id="course" placeholder="busque por cód. ou nome..." onfocus="this.value='';"/>
+                </div>
+                </div>
+                <input value="Inserir" class="ui basic button" onclick="insertData()" type="submit" />
+                <input value="Ok" id="meuBotao" onclick="insertDataCod()" type="hidden" />
+            </div>
+                
+                
+                
             </form>
         </div>
         

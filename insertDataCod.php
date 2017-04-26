@@ -5,21 +5,10 @@ include 'conecta.php';
 //$nome     = $_POST['nome'];
 //$email    = $_POST['email'];
 //$telefone = $_POST['telefone'];
-$pesquisa    = $_POST['course'];
-$pesquisa2    = $_POST['course-id'];
+$pesquisa    = $_POST['course-id'];
 
-if ($pesquisa2 == "") 
-{
-    $consulta = mysql_query("SELECT id FROM tec_products WHERE CONCAT(CODE, ' - ',NAME) = '$pesquisa'");
-}
-elseif ($pesquisa == "") 
-{
-    $consulta = mysql_query("SELECT id FROM tec_products WHERE code = '$pesquisa2'");
-}
-elseif ($pesquisa != "" && $pesquisa2 != "") 
-{
-    $consulta = mysql_query("SELECT id FROM tec_products WHERE code = '$pesquisa2'");
-}
+$consulta = mysql_query("SELECT id FROM tec_products WHERE code = '$pesquisa'");
+
 if (mysql_num_rows($consulta) == 0) 
 {
     $return = "

@@ -71,6 +71,24 @@ function insertData(){
 	XMLHttp.send(fieldsValues);
 }
 
+function insertDataCod(){
+	var formInsert   = document.forms[0];
+	var fieldsValues = generateFieldsValues(formInsert);
+	var result       = document.getElementById("result");
+ 
+	var XMLHttp = generateXMLHttp();
+	XMLHttp.open("post", 'insertDataCod.php', true);
+	XMLHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+ 
+	XMLHttp.onreadystatechange = function (){
+		if(XMLHttp.readyState == 4)
+			result.innerHTML = XMLHttp.responseText;
+		else
+			result.innerHTML = "Um erro ocorreu: " + XMLHttp.statusText;
+	};
+	XMLHttp.send(fieldsValues);
+}
+
 function insertDataDelivery(){
 	var formInsert   = document.forms[0];
 	var fieldsValues = generateFieldsValues(formInsert);

@@ -121,8 +121,6 @@ $nf = $_GET['nf'];
         
         //$txt_cabecalho[] = ' '; // força pular uma linha entre o cabeçalho e os itens
         
-        $txt_cabecalho[] = 'TEL.: 2241-2513 / 2241-3210';
-        
         $cab = mysql_fetch_array($query_data);
         
         $txt_cabecalho[] = '-------------------------';
