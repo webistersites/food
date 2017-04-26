@@ -124,8 +124,6 @@ include 'cabecalho.php';
         
         //$txt_cabecalho[] = ' '; // força pular uma linha entre o cabeçalho e os itens
         
-        $txt_cabecalho[] = 'TEL.: 2241-2513 / 2241-3210';
-        
         date_default_timezone_set('America/Sao_Paulo');
         $date = date('d/m/Y H:i');
         
