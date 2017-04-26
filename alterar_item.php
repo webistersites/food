@@ -67,6 +67,6 @@ else
 	mysql_query("UPDATE tec_products SET type = 0 WHERE id = $id");
 }
 
-echo '<meta http-equiv="refresh" content="0.1; url=produtos.php">';
+echo '<meta http-equiv="refresh" content="0.1; url=config.php">';
 
 ?>
