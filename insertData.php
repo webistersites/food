@@ -162,6 +162,7 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                 $return .= "</tr>";
                 $return .= "</table>";
                 $return .= "</p>";
+
     }
     else
     {   $adicionar = mysql_query("SELECT quantidade+1 FROM pedido_balcao WHERE id_produto = $id and impresso = 0");
@@ -227,6 +228,7 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                 $return .= "</tr>";
                 $return .= "</table>";
                 $return .= "</p>";
+
     }
 
 echo $return;

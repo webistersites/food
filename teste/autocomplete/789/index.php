@@ -1,10 +1,3 @@
-<script>
-        $('form').keypress(function(e) {
-            if(e.which == 13 || e.keyCode == 13) 
-                $('#meuBotao').click();
-                
-        });
-</script>
 <html>
     <head>
 
@@ -36,7 +29,7 @@
     </head>
     <body>
         <div id="content" class="ui form">
-            <form autocomplete="off" onsubmit="return false;">
+            <form autocomplete="off" onsubmit="return false;" name="form_cod" id="form_cod" >
                 <div class="inline fields">
                     <div class="four wide field">
                     <div class="ui fluid icon input">
@@ -50,7 +43,7 @@
                     <input type="text" name="course" id="course" placeholder="busque por cód. ou nome..." onfocus="this.value='';"/>
                 </div>
                 </div>
-                <input value="Inserir" class="ui basic button" onclick="insertData()" type="submit" />
+                <input value="Inserir" id="meuBotao" class="ui basic button" onclick="insertData();reset();" type="submit" />
                 <input value="Ok" id="meuBotao" onclick="insertDataCod()" type="hidden" />
             </div>
                 
@@ -61,4 +54,3 @@
         
 </body>
 </html>
-        

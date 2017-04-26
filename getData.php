@@ -77,6 +77,7 @@ if($type == "all"){
                 $return .= "</tr>";
                 $return .= "</table>";
                 $return .= "</p>";
+                
 
 }
 else{
