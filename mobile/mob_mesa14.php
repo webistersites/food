@@ -169,7 +169,7 @@
                   while ($products = mysql_fetch_array($q_produtos))
                   {
 
-                      echo '<div class="card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].')" id="produtos">'.$products['name'].'</a></div>';
+                      echo '<div class="waves-effect card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].')" id="produtos">'.$products['name'].'</a></div>';
 
                   }
                   echo '</div>
