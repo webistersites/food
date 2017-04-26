@@ -56,7 +56,7 @@ $mesa   = $_GET['mesa'];
                 $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                   $return .= "<td>" . $data['Produto']    .  "</td>";
                   $return .= "<td>R$ " . $data['Preço']      .  "</td>";
-                $return .= "<td class='center aligned'><form action='processa_mesa.php' method='post'><input type='hidden' value='".$id_mesa."' name='mesa'><input type='hidden' name='seu_nome2' value='".$data['id']."'><input type='text' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
+                $return .= "<td class='center aligned'><form action='processa_mesa.php' method='post'><input type='hidden' value='".$mesa."' name='mesa'><input type='hidden' name='seu_nome2' value='".$data['id']."'><input type='text' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</form></td>";
                 $return .= "<td>R$ " . $data['Total']      .  "</td>";
                 $return .= "<td class='right aligned'>"."<a href='javascript:void(0);' onclick='deletaMesas(".$data['id'].",".$mesa.")'><i class='trash icon'></i></a>";
         $return .= "</tr>";

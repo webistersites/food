@@ -10,6 +10,7 @@ $mesa 		= $_GET['mesa'];
 
 	if ($verificaDuplos == 0) {
 		mysql_query("INSERT pedido_mesa".$mesa." SELECT '',$id,1,'',1,0");
+		mysql_query("UPDATE tec_mesas set estado = 'busy' WHERE id = $mesa");
 	}
 	else {
 		mysql_query("UPDATE pedido_mesa".$mesa." SET quantidade = quantidade+1 WHERE id_produto = $id");

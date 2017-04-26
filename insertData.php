@@ -73,7 +73,7 @@ if (mysql_num_rows($consulta) == 0)
                 $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
-                $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
+                $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</form></td>";
                 $return .= "<td>R$ " . $data['Total']      .  "</td>";
                 $return .= "<td class='center aligned'>"."<a href='javascript:void(0);' onclick='deleta(".$data['id'].")'><i class='trash icon'></i></a>";
                 $return .= "</tr>";
@@ -144,7 +144,7 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                 $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
-                $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
+                $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</form></td>";
                 $return .= "<td>R$ " . $data['Total']      .  "</td>";
                 $return .= "<td class='center aligned'>"."<a href='javascript:void(0);' onclick='deleta(".$data['id'].")'><i class='trash icon'></i></a>";
                 $return .= "</tr>";
@@ -210,7 +210,7 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
                 $return .= "<td><i class='".$icone."'></i>" . $data['code']       .  "</td>";
                 $return .= "<td>" . $data['Produto']    .  "</td>";
                 $return .= "<td>R$ " . $data['Preço']      .  "</td>";
-                $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</td>";
+                $return .= "<td class='center aligned'><form action='processa.php' method='post'><input type='hidden' name='seu_nome2' id='seu_nome2' value='".$data['id']."'><input type='text' id='seu_nome' name='seu_nome' placeholder='".$data['quantidade']."' size='2'>x</form></td>";
                 $return .= "<td>R$ " . $data['Total']      .  "</td>";
                 $return .= "<td class='center aligned'>"."<a href='javascript:void(0);' onclick='deleta(".$data['id'].")'><i class='trash icon'></i></a>";
                 $return .= "</tr>";
