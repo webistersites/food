@@ -76,13 +76,13 @@
     <!-- <li><a href="#!">Second Link</a></li> -->
     <li><div class="divider"></div></li>
     <li><a class="subheader">Categorias</a></li>
-    <li><a class="waves-effect waves-light btn grey" href="#1">Pizzas</a></li>
+ <li><a class="waves-effect waves-light btn grey" href="#1">Pizzas</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#2">Esfihas</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#3">Salgados</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#4">Beirutes</a></li>
-    <li><a class="waves-effect waves-light btn grey" href="#5">Porções</a></li>
+    <li><a class="waves-effect waves-light btn grey" href="#5">Porcoes</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#6">Bebidas</a></li>
-    <li><a class="waves-effect waves-light btn grey" href="#7">Pastéis</a></li>
+    <li><a class="waves-effect waves-light btn grey" href="#7">Pasteis</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#8">Lanches</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#9">Doces</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#10">Sorvetes</a></li>
@@ -144,7 +144,7 @@
     </div>
 
     <div class="modal-footer">
-      <?php echo '<a href="finalizaPedido.php?mesa='.$mesa.'"" class="modal-action modal-close waves-effect waves-green btn-flat">Finalizar</a>'; ?>
+      <?php //echo '<a href="finalizaPedido.php?mesa='.$mesa.'"" class="modal-action modal-close waves-effect waves-green btn-flat">Finalizar</a>'; ?>
     </div>
     
   </div>
