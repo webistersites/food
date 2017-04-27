@@ -61,7 +61,7 @@
           $q_itens  = mysql_query("select sum(quantidade) as pedidos from pedido_mesa$mesa"); 
           $itens    = mysql_result($q_itens, 0);
         ?>
-        <li><span class="badge" id="gambi"><div id="result"><?php echo $itens; ?></div></span><a href="#modal1" ><i class="material-icons">shopping_cart</i></a></li>
+        <li><span class="badge" id="gambi"><div id="result"><?php echo $itens; ?></div></span><a href="#modal1"><i class="material-icons">shopping_cart</i></a></li>
       </ul>
       <ul id="slide-out" class="side-nav">
     <!-- <li><div class="userView">
@@ -76,7 +76,7 @@
     <!-- <li><a href="#!">Second Link</a></li> -->
     <li><div class="divider"></div></li>
     <li><a class="subheader">Categorias</a></li>
-<li><a class="waves-effect waves-light btn grey" href="#1">Pizzas</a></li>
+    <li><a class="waves-effect waves-light btn grey" href="#1">Pizzas</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#2">Esfihas</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#3">Salgados</a></li>
     <li><a class="waves-effect waves-light btn grey" href="#4">Beirutes</a></li>
@@ -99,6 +99,7 @@
                                     ,b.name
                                     ,a.quantidade
                                     ,b.cost
+                                    ,a.impresso
                                   FROM
                                     pedido_mesa".$mesa." a
                                   INNER JOIN
@@ -113,38 +114,13 @@
       <h4>Pedido</h4>
       <p>
         <div id="prods">
-        <table class="centered">
-            <thead>
-              <tr>
-                  <th data-field="id">Produto</th>
-                  <th data-field="name">Qtd</th>
-                  <th data-field="price">Preco</th>
-                  <th data-field="action">#</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              
-              <?php 
-                while ($produto = mysql_fetch_array($q_produtos)) 
-                {
-                  echo '<tr>
-                          <td>'     .$produto['name'].        '</td>
-                          <td>'     .$produto['quantidade'].  '</td>
-                          <td>R$ '  .$produto['cost'].        '</td>
-                          <td><a href="deletaItem.php?id='.$produto['id'].'&mesa='.$mesa.'"><i class="mini material-icons">delete</i></a></td>
-                        </tr> ';
-                }
-               ?>
-              
-            </tbody>
-          </table>
+       
           </div>
       </p>
     </div>
 
     <div class="modal-footer">
-      <?php// echo '<a href="finalizaPedido.php?mesa='.$mesa.'"" class="modal-action modal-close waves-effect waves-green btn-flat">Finalizar</a>'; ?>
+      <?php //echo '<a href="finalizaPedido.php?mesa='.$mesa.'"" class="modal-action modal-close waves-effect waves-green btn-flat">Finalizar</a>'; ?>
     </div>
     
   </div>
@@ -169,7 +145,7 @@
                   while ($products = mysql_fetch_array($q_produtos))
                   {
 
-                      echo '<div class="waves-effect card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].')" id="produtos">'.$products['name'].'</a></div>';
+                      echo '<div class="waves-effect card"><a href="javascript:void(0);" onclick="insereMobile('.$products['id'].');busca();" id="produtos">'.$products['name'].'</a></div>';
 
                   }
                   echo '</div>
@@ -254,7 +230,15 @@
 
    $('.carousel.carousel-slider').carousel({fullWidth: true});
         
-       
+
   </script>
+   <?php 
+    echo '<script>
+      $(function busca() {
+        $("#prods").load("visualizaMobile.php?mesa='.$mesa.'");
+      });
+  </script>';
+   ?>
   </body>
   </html>
+ 

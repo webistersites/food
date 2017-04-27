@@ -86,6 +86,22 @@ function insereMobile(id) {
 	XMLHttp.send(null);
 }
 
+function visualizaMobile(mesa) {
+	//var id      = document.getElementById("id").value;
+	var result  = document.getElementById("prods");
+	var XMLHttp = generateXMLHttp();
+	XMLHttp.open("get", "visualizaMobile.php?mesa=" + mesa, true);
+	XMLHttp.onreadystatechange = function(){
+		if (XMLHttp.readyState == 4)
+			if (XMLHttp.status == 200){
+				prods.innerHTML = XMLHttp.responseText;
+			} else {
+				prods.innerHTML = "Um erro ocorreu: " + XMLHttp.statusText;
+			}
+	};
+	XMLHttp.send(null);
+}
+
 
 function generateFieldsValues(formInsert){
 	var strReturn = new Array();

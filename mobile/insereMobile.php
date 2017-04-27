@@ -23,5 +23,4 @@ $mesa 		= $_GET['mesa'];
 	$result = $itens;
 	echo $result;
 
-
  ?>
