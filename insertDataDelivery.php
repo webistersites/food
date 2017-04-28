@@ -15,9 +15,20 @@ $ver_consulta = mysql_fetch_array($pega_cliente);
 //$email    = $_POST['email'];
 //$telefone = $_POST['telefone'];
 $pesquisa    = $_POST['course'];
+$pesquisa2    = $_POST['course-id'];
 
-$consulta = mysql_query("SELECT id FROM tec_products WHERE CONCAT(CODE, ' - ',NAME) = '$pesquisa'");
-
+if ($pesquisa2 == "") 
+{
+    $consulta = mysql_query("SELECT id FROM tec_products WHERE CONCAT(CODE, ' - ',NAME) = '$pesquisa'");
+}
+elseif ($pesquisa == "") 
+{
+    $consulta = mysql_query("SELECT id FROM tec_products WHERE code = '$pesquisa2'");
+}
+elseif ($pesquisa != "" && $pesquisa2 != "") 
+{
+    $consulta = mysql_query("SELECT id FROM tec_products WHERE code = '$pesquisa2'");
+}
 if (mysql_num_rows($consulta) == 0) 
 {
     $return = "
@@ -38,7 +49,7 @@ if (mysql_num_rows($consulta) == 0)
                                 a.quantidade*b.cost as Total,
                                 a.obs,
                                 b.category_id,
-                                a,impresso,
+                                a.impresso,
                                 b.cozinha
                                 FROM
                                 pedido_delivery a

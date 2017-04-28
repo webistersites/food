@@ -2,9 +2,20 @@
 
 include 'cabecalho.php';
 
-$total  = $_GET['total'];
-$tipo   = $_GET['tipo'];
-$nf = "ID".mt_rand(100, 999); // Gera um valor aleatório de Nota Fiscal;
+$total      = $_GET['total'];
+$tipo       = $_GET['tipo'];
+$q_senha    = mysql_query("SELECT sum(senha),senha from pedido_balcao");
+$senha      = mysql_result($q_senha,0);
+
+if ($senha == 0) 
+{
+    $nf = mt_rand(100, 999); // Gera um valor aleatório de Nota Fiscal;
+    mysql_query("UPDATE pedido_balcao SET senha = $nf");
+}
+else
+{
+    $nf = mysql_result($q_senha,0,1);
+}
 
 // Pegar o horário atual
 date_default_timezone_set('America/Sao_Paulo');

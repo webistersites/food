@@ -1,6 +1,18 @@
 <?php
 
 include 'cabecalho.php';
+$q_senha    = mysql_query("SELECT sum(senha),senha from pedido_balcao");
+$senha      = mysql_result($q_senha,0);
+
+if ($senha == 0) 
+{
+    $s = mt_rand(100, 999); // Gera um valor aleatório de Nota Fiscal;
+    mysql_query("UPDATE pedido_balcao SET senha = $s");
+}
+else
+{
+    $s = mysql_result($q_senha,0,1);
+}
         
     /*
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
@@ -80,7 +92,7 @@ include 'cabecalho.php';
         }
         //$nome = mysql_query("SELECT nome FROM nome_nota");
         //$ver_nome = mysql_result($nome,0);
-        $ver_nome = mt_rand(100, 999);
+        //$ver_nome = mt_rand(100, 999);
         $dados = mysql_query("select 
                                     a.troco,
                                     b.forma_pagamento
@@ -194,7 +206,7 @@ include 'cabecalho.php';
             $txt_rodape[] = 'Troco: R$ ' . number_format($ver_dados['troco'],2,",",".");
         }
 
-        $txt_rodape[] = 'Senha: ' . $ver_nome;
+        $txt_rodape[] = 'Senha: ' . $s;
         
         $txt_rodape[] = '--';
         
