@@ -1,21 +1,21 @@
       PONTO DA ESFIHA
     Av. Rio Pequeno, 634
+TEL.: 2241-2513 / 2241-3210
  -------------------------
-      28/04/2017 00:18
-       N. Cupom: 128
+      25/04/2017 09:30
+       N. Cupom: 141
      *Sem valor fiscal*
  **************************
     RELATORIO GERENCIAL
  **************************
            Itens
 Cod.Produto              Tot Qt V. UN      
-201 ESFIHA CARNE        13.0 10  1.30      
-202 ESFIHA ATUM         7.50  5  1.50      
+0   1/3-FRANGO C/ CATUPI28.0  1 28.00      
+0   1/3-FRANGO C/ CATUPI32.0  1 32.00      
 ----------------------------
-              TOTAL R$ 20,50
+              TOTAL R$ 60,00
 ----------------------------
 
-Forma: Dinheiro
-Troco: R$ 4,50
-Senha: 708
+Forma: Cartao de Debito
+Senha: 614
 --

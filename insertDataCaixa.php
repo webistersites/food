@@ -14,7 +14,7 @@ $verifica_duplicidade = mysql_query("SELECT id_produto FROM pedido_balcao WHERE 
     
     if (mysql_num_rows($verifica_duplicidade) <= 0 ) 
     {
-        mysql_query("INSERT INTO pedido_balcao SELECT '',$id,1,'',0,0");
+        mysql_query("INSERT INTO pedido_balcao SELECT '',$id,1,'',0");
         $busca = mysql_query("
                                 SELECT
                                 a.id,

@@ -1,18 +1,6 @@
 <?php
 
 include 'cabecalho.php';
-$q_senha    = mysql_query("SELECT sum(senha),senha from pedido_balcao");
-$senha      = mysql_result($q_senha,0);
-
-if ($senha == 0) 
-{
-    $nf = mt_rand(100, 999); // Gera um valor aleatório de Nota Fiscal;
-    mysql_query("UPDATE pedido_balcao SET senha = $nf");
-}
-else
-{
-    $nf = mysql_result($q_senha,0,1);
-}
         
     /*
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
@@ -111,8 +99,7 @@ else
          b.cost as Preço,
          a.quantidade*b.cost as Total,
          a.obs,
-         b.category_id,
-         a.senha
+         b.category_id
        FROM
 	        pedido_balcao a
         INNER JOIN
@@ -197,7 +184,7 @@ else
         $txt_valor_total .= "\r\n-------------------------------------------------------\r\n";*/
         
 
-        $txt_rodape[] = 'SENHA: ' . $nf;
+        $txt_rodape[] = 'Balcao';
         
         $txt_rodape[] = '--';
         
