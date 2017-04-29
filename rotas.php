@@ -15,7 +15,7 @@
                     
                     <div>
                         <label for="txtEnderecoPartida">Endereço de partida:</label>
-                        <input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida" value="Rua Ataliba Leonel, 52 - São Paulo" />
+                        <input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida" value="Rua Planalto, 54 - São Paulo" />
                     </div>
                     
                     <div>

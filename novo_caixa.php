@@ -54,8 +54,8 @@
     <!-- <p><h3 class='ui center aligned header'>PDV</h3><br></p>  -->
     <?php
         include 'teste/autocomplete/789/index.php';
-        //echo '<br><div class="ui mini input" id="result_nome"><input type="text" id="nome_nota" name="nome_nota" placeholder="Nome na nota" size="35%"></div>';
-        //echo '&nbsp;&nbsp;&nbsp;<a href="#" onclick="insereNome()" class="ui tiny button">Selecionar</a>';
+        echo '<br><div class="ui mini input" id="result_nome"><input type="text" id="nome_nota" name="nome_nota" placeholder="Nome na nota" size="35%"></div>';
+        echo '&nbsp;&nbsp;&nbsp;<a href="#" onclick="insereNome()" class="ui tiny button">Selecionar</a>';
         echo "<script>";
         echo '$("result").ready(function(){
                  $("#finalizar_caixa").click(function(){

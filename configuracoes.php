@@ -71,7 +71,7 @@ GROUP BY
     var menu = window.location.pathname;
     if (menu === '/sao_francisco/configuracoes.php') 
         {
-            $('#config').addClass('active');
+            $('#motoboys').addClass('active');
         }    
 </script>
 

@@ -7,7 +7,7 @@ $nf = $_GET['nf'];
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
 	 */
 
-        $n_colunas = 28; // 40 colunas por linha
+        $n_colunas = 60; // 40 colunas por linha
         
         /**
          * Adiciona a quantidade necessaria de espaços no inicio 
@@ -115,35 +115,35 @@ $nf = $_GET['nf'];
         $txt_valor_total = '';
         $txt_rodape = array();
         
-        $txt_cabecalho[] = 'PONTO DA ESFIHA'; 
+        $txt_cabecalho[] = 'PIZZARIA & ESFIHARIA - SAO FRANCISCO'; 
         
-        $txt_cabecalho[] = 'Av. Rio Pequeno, 634';
+        $txt_cabecalho[] = 'Rua Planalto, 54 - Jardim Palmares';
         
         //$txt_cabecalho[] = ' '; // força pular uma linha entre o cabeçalho e os itens
         
+        $txt_cabecalho[] = 'TEL.: 2241-2513 / 2241-3210';
+        
         $cab = mysql_fetch_array($query_data);
         
-        $txt_cabecalho[] = '-------------------------';
+        $txt_cabecalho[] = '-------------------------------------------';
         
-        $txt_cabecalho[] = $cab['data_venda'];
-
-        $txt_cabecalho[] = "N. Cupom: " . $cab['num_nota_fiscal'];
+        $txt_cabecalho[] = $cab['num_nota_fiscal'] . " - " .$cab['data_venda'];
         
-        $txt_cabecalho[] = '**************************';
+        $txt_cabecalho[] = '********************************************';
         
-        $txt_cabecalho[] = 'RELATORIO GERENCIAL' ;
+        $txt_cabecalho[] = 'CUPOM NAO FISCAL';
         
-        $txt_cabecalho[] = '**************************';
+        $txt_cabecalho[] = '********************************************';
         
         $txt_cabecalho[] = 'Itens'; // força pular uma linha entre o cabeçalho e os itens
         
-        $txt_itens[] = array('Cod.', 'Produto', ' Total', ' Qtd.', ' V. UN');
+        $txt_itens[] = array('Cod.', 'Produto', 'V. UN', ' Qtd.', ' Total');
         
 	$tot_itens = 0;
         
         while($ler = mysql_fetch_array($query_impressao))
             {
-                $txt_itens[] = array($ler['code'],$ler['Produto'],$ler['Total'],$ler['quantidade'],$ler['Preço']);
+                $txt_itens[] = array($ler['code'],$ler['Produto'],$ler['Preço'],$ler['quantidade'],$ler['Total']);
                 $tot_itens += $ler['Total'];
             }
         
@@ -159,7 +159,7 @@ $nf = $_GET['nf'];
         $aux_valor_total = 'TOTAL R$ '.number_format($tot_itens,2,',','.');
         
 	// calcula o total de espaços que deve ser adicionado antes do "Sub-total" para alinhado a esquerda
-        $total_espacos = $n_colunas - strlen($aux_valor_total);
+        $total_espacos = $n_colunas - strlen($aux_valor_total)-6;
         
         $espacos = '';
         
@@ -167,15 +167,16 @@ $nf = $_GET['nf'];
             $espacos .= ' ';
         }
         
-        $txt_valor_total = "----------------------------\r\n";
+        $txt_valor_total = "-------------------------------------------------------\r\n";
         
         $txt_valor_total .= $espacos.$aux_valor_total;
         
-        $txt_valor_total .= "\r\n----------------------------";
+        $txt_valor_total .= "\r\n-------------------------------------------------------\r\n";
         
         
-        $txt_rodape[] = 'Forma: ' . $cab['forma_pagamento'];
+        $txt_rodape[] = 'Forma Pagamento: ' . $cab['forma_pagamento'];
 
+        $txt_rodape[] = '';
 
         if ($cab['forma_pagamento'] == 'Dinheiro') 
         {
@@ -211,7 +212,7 @@ $nf = $_GET['nf'];
 
             $txt_rodape[] = '';
 
-            $txt_rodape[] = 'Endereco: ' . $ver_cliente['endereco'] . ', ' . $ver_cliente['cf1'] . ' - ' . $ver_cliente['bairro'];
+            $txt_rodape[] = 'Endereço: ' . $ver_cliente['endereco'] . ', ' . $ver_cliente['cf1'] . ' - ' . $ver_cliente['bairro'];
 
         }
         
@@ -239,12 +240,12 @@ $nf = $_GET['nf'];
 	     * $itens[] = 'Cod. Produto      Env. Qtd  V. UN  Total'
 	     */
             
-            $itens[] = addEspacos($item[0], 4, 'F')
-                    . addEspacos($item[1], 20, 'F')
-                    . addEspacos($item[2], 4, 'I')
-                    . addEspacos($item[3], 3, 'I')
-                    . addEspacos($item[4], 6, 'I')
-                    . addEspacos($item[5], 6, 'I')
+            $itens[] = addEspacos($item[0], 8, 'F')
+                    . addEspacos($item[1], 30, 'F')
+                    . addEspacos($item[2], 5, 'I')
+                    . addEspacos($item[3], 4, 'I')
+                    . addEspacos($item[4], 7, 'I')
+                    . addEspacos($item[5], 7, 'I')
                 ;
             
         }
@@ -289,7 +290,6 @@ $nf = $_GET['nf'];
 ?>
 
 <?php
-error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
 $printer = "Balcao";
 if($ph = printer_open($printer))
 {
@@ -302,11 +302,7 @@ if($ph = printer_open($printer))
     printer_close($ph);
    
 }
-else
-{
-    echo('<script>alert("Impressora desconectada!");</script>');
-    //exit();
-}
+
 
 echo '<meta http-equiv="refresh" content="0.1; url=financeiro.php">';
 

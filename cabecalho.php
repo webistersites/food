@@ -102,6 +102,7 @@
   <!-- <a href="produtos.php" id="" class="item"><i class="settings icon"></i>Produtos</a> -->
   <!-- <a href="funcionarios.php" id="func" class="item"><i class="users icon"></i>Funcionários</a> -->
   <a href="relatorios.php" id="func" class="item"><i class="bar chart icon"></i>Relatórios</a>
+  <a href="configuracoes.php" id="motoboys" class="item"><i class="settings icon"></i>Motoboys</a>
   <a href="fechar_caixa.php" id="" class="item"><i class="calculator icon"></i>Fechar Caixa</a>
   
   <!-- <a href="ver_fechamento.php" id="fech" class="item"><i class="money icon"></i>Fechamento</a> -->

@@ -8,7 +8,7 @@ $id_boy     = $_GET['id'];
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
 	 */
 
-        $n_colunas = 45; // 40 colunas por linha
+        $n_colunas = 60; // 40 colunas por linha
         
         /**
          * Adiciona a quantidade necessaria de espaços no inicio 
@@ -108,9 +108,9 @@ GROUP BY
         $txt_valor_total = '';
         $txt_rodape = array();
         
-        $txt_cabecalho[] = 'PONTO DA ESFIHA'; 
+        $txt_cabecalho[] = 'PIZZARIA & ESFIHARIA - SAO FRANCISCO'; 
         
-        $txt_cabecalho[] = 'Av. Rio Pequeno, 634 - Rio Pequeno';
+        $txt_cabecalho[] = 'Rua Planalto, 54 - Jardim Palmares';
         
         //$txt_cabecalho[] = ' '; // força pular uma linha entre o cabeçalho e os itens
         
@@ -163,7 +163,7 @@ GROUP BY
             $espacos .= ' ';
         }
         
-        $txt_valor_total = "------------------------------------------------\r\n";
+        $txt_valor_total = "-------------------------------------------------------\r\n";
 //        
 //        $txt_valor_total .= $espacos.$aux_valor_total;
 //        
@@ -195,8 +195,8 @@ GROUP BY
 	     * $itens[] = 'Cod. Produto      Env. Qtd  V. UN  Total'
 	     */
             
-            $itens[] = addEspacos($item[0], 40, 'F')
-                    . addEspacos($item[1], 8, 'F')
+            $itens[] = addEspacos($item[0], 45, 'F')
+                    . addEspacos($item[1], 10, 'F')
 //                    . addEspacos($item[2], 5, 'I')
 //                    . addEspacos($item[3], 4, 'I')
 //                    . addEspacos($item[4], 7, 'I')
@@ -245,7 +245,6 @@ GROUP BY
 ?>
 
 <?php
-error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
 $printer = "Balcao";
 if($ph = printer_open($printer))
 {
@@ -256,11 +255,6 @@ if($ph = printer_open($printer))
    printer_set_option($ph, PRINTER_MODE, "TEXT");
    printer_write($ph, $content);
    printer_close($ph);
-}
-else
-{
-    echo('<script>alert("Impressora desconectada!");</script>');
-    //exit();
 }
 
 echo '<meta http-equiv="refresh" content="0.1; url=configuracoes.php">';
