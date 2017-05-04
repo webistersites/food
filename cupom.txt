@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       PONTO DA ESFIHA
     Av. Rio Pequeno, 634
 TEL.: 2241-2513 / 2241-3210
@@ -18,4 +19,30 @@ Cod.Produto              Tot Qt V. UN
 
 Forma: Cartao de Debito
 Senha: 614
+=======
+            PIZZARIA & ESFIHARIA - SAO FRANCISCO
+             Rua Planalto, 54 - Jardim Palmares
+                TEL.: 2241-2513 / 2241-3210
+        -------------------------------------------
+                  2093 - 29/04/2017 00:17
+        ********************************************
+                      CUPOM NAO FISCAL
+        ********************************************
+                           Itens
+Cod.    Produto                       V. UN Qtd  Total       
+235     ESFIHAS 1.00                   1.00  30  30.00       
+604     REFRIGERANTES 2L               8.00   1   8.00       
+-------------------------------------------------------
+                                        TOTAL R$ 38,00
+-------------------------------------------------------
+
+
+Forma Pagamento: Dinheiro
+
+Troco: R$ 2,00
+
+Nome: 
+
+Vendedor: Gerente 
+>>>>>>> ce2477d9c1df1725a3c2fdcde62eabe5ba96d3c1
 --
