@@ -7,7 +7,7 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 	 * Gerar um arquivo .txt para imprimir na impressora Bematech MP-20 MI
 	 */
 
-        $n_colunas = 28; // 40 colunas por linha
+        $n_colunas = 60; // 40 colunas por linha
         
         /**
          * Adiciona a quantidade necessaria de espaços no inicio 
@@ -104,24 +104,26 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
         $txt_valor_total = '';
         $txt_rodape = array();
         
-        $txt_cabecalho[] = 'PONTO DA ESFIHA'; 
+        $txt_cabecalho[] = 'PIZZARIA & ESFIHARIA - SAO FRANCISCO'; 
         
-        $txt_cabecalho[] = 'Av. Rio Pequeno, 634';
+        $txt_cabecalho[] = 'Rua Planalto, 54 - Jardim Palmares';
         
         //$txt_cabecalho[] = ' '; // força pular uma linha entre o cabeçalho e os itens
+        
+        $txt_cabecalho[] = 'TEL.: 2241-2513 / 2241-3210';
         
         date_default_timezone_set('America/Sao_Paulo');
         $date = date('d/m/Y H:i');
         
-        $txt_cabecalho[] = '-------------------------';
+        $txt_cabecalho[] = '-------------------------------------------';
         
         $txt_cabecalho[] = $date;
         
-        $txt_cabecalho[] = '**************************';
+        $txt_cabecalho[] = '********************************************';
         
         $txt_cabecalho[] = 'MESA ' . $mesa;
         
-        $txt_cabecalho[] = '**************************';
+        $txt_cabecalho[] = '********************************************';
         
         $txt_cabecalho[] = 'Itens'; // força pular uma linha entre o cabeçalho e os itens
         
@@ -149,7 +151,7 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
         $aux_valor_total = 'TOTAL R$ '.number_format($tot_itens,2,',','.');
         
 	// calcula o total de espaços que deve ser adicionado antes do "Sub-total" para alinhado a esquerda
-        $total_espacos = $n_colunas - strlen($aux_valor_total);
+        $total_espacos = $n_colunas - strlen($aux_valor_total)-6;
         
         $espacos = '';
         
@@ -157,12 +159,13 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
             $espacos .= ' ';
         }
         
-        $txt_valor_total = "----------------------------\r\n";
+        $txt_valor_total = "-------------------------------------------------------\r\n";
         
         $txt_valor_total .= $espacos.$aux_valor_total;
         
-        $txt_valor_total = "----------------------------\r\n";
+        $txt_valor_total .= "\r\n-------------------------------------------------------\r\n";
         
+        $txt_rodape[] = 'Vendedor: ' . $_SESSION['usuarioNome'];
         
         $txt_rodape[] = '--';
         
@@ -188,12 +191,12 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 	     * $itens[] = 'Cod. Produto      Env. Qtd  V. UN  Total'
 	     */
             
-            $itens[] = addEspacos($item[0], 4, 'F')
-                    . addEspacos($item[1], 20, 'F')
-                    . addEspacos($item[2], 4, 'I')
-                    . addEspacos($item[3], 3, 'I')
-                    . addEspacos($item[4], 6, 'I')
-                    . addEspacos($item[5], 6, 'I')
+            $itens[] = addEspacos($item[0], 8, 'F')
+                    . addEspacos($item[1], 30, 'F')
+                    . addEspacos($item[2], 5, 'I')
+                    . addEspacos($item[3], 4, 'I')
+                    . addEspacos($item[4], 7, 'I')
+                    . addEspacos($item[5], 7, 'I')
                 ;
             
         }
@@ -238,7 +241,6 @@ $mesa         = $_GET['mesa']; // Recebe o número da Mesa;
 ?>
 
 <?php
-error_reporting (E_ALL & ~ E_WARNING & ~ E_DEPRECATED);
 $printer = "Balcao";
 if($ph = printer_open($printer))
 {
@@ -249,12 +251,6 @@ if($ph = printer_open($printer))
    printer_set_option($ph, PRINTER_MODE, "TEXT");
    printer_write($ph, $content);
    printer_close($ph);
-
-}
-else
-{
-    echo('<script>alert("Impressora desconectada!");</script>');
-    //exit();
 }
 
 echo '<meta http-equiv="refresh" content="0.1; url=mesa'.$mesa.'.php">';

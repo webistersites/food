@@ -1,5 +1,5 @@
 <?php
-
+  include 'conecta.php';
 ?>
 <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/semantic.css">
 
@@ -102,7 +102,9 @@
   </script>
 </head>
 <body>
-
+<?php 
+  $consulta_pagamento = mysql_query("SELECT * FROM ")
+ ?>
 <div class="ui middle aligned center aligned grid">
   <div class="column">
     <h2 class="ui yellow image header">        

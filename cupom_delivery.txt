@@ -1,25 +1,30 @@
-      PONTO DA ESFIHA
-    Av. Rio Pequeno, 634
-TEL.: 2241-2513 / 2241-3210
- -------------------------
-      25/04/2017 07:30
-       N. Cupom: 139
- **************************
-    RELATORIO GERENCIAL
- **************************
-           Itens
-Cod.Produto             V. U Qt Total      
-999 Taxa de entrega     3.00  1  3.00      
-601 COCA 2L             10.0  1 10.00      
-102 PIZZA ATUM I        24.0  1 24.00      
-----------------------------
-              TOTAL R$ 37,00
-----------------------------
+            PIZZARIA & ESFIHARIA - SAO FRANCISCO
+             Rua Planalto, 54 - Jardim Palmares
+                TEL.: 2241-2513 / 2241-3210
+        --------------------------------------------
+                  2089 - 28/04/2017 23:48
+        ********************************************
+                      CUPOM NAO FISCAL
+        ********************************************
+                           Itens
+Cod.    Produto                       V. UN Qtd  Total       
+999     Taxa de entrega                2.00   1   2.00       
+138     PIZZA QUATRO QUEIJOS          30.00   1  30.00       
+136     PIZZA PORTUGUESA              28.00   1  28.00       
+604     REFRIGERANTES 2L               8.00   1   8.00       
+220     ESFIHA BRIGADEIRO              3.00   1   3.00       
+-------------------------------------------------------
+                                        TOTAL R$ 71,00
+-------------------------------------------------------
 
-Forma: Cartao de Credito
 
-Cliente: Felipe
-End.: Rua planalto, 54 - jardim palmares
-Telefone: 123123123
-Motoboy: -
+Forma Pagamento: Dinheiro
+
+Troco: R$ 1,00
+
+Vendedor: Gerente 
+Cliente: DOUGLAS
+End.: PONTAL, 22 - JD FELICIDADE
+Telefone: 930143005
+Motoboy: Gerente 
 --
