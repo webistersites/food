@@ -1,5 +1,87 @@
 <?php
   include 'conecta.php';
+
+  // CLIENTES ONLINE
+  //$url = file_get_contents('http://webister.com.br/clientes_webister/pde_jadson.php'); 
+
+  // CLIENTES OFFLINE
+  date_default_timezone_set('America/Sao_Paulo');
+  $date = date('d/m/Y');
+    $q_ult_data = mysql_query("SELECT data FROM datas_validadas where id = (select max(id) from datas_validadas)");
+    $ult_data = mysql_result($q_ult_data, 0);
+    if ($date == $ult_data) 
+    {
+      $q_cod_vigente  = mysql_query("SELECT codigo FROM codigo_offline_vigente");
+        $codigo_vigente = mysql_result($q_cod_vigente, 0);
+        $q_range        = mysql_query("select 
+                                        codigo 
+                                      from 
+                                        codigos_offline 
+                                      where 
+                                        STR_TO_DATE('$date', '%d/%m/%Y') 
+                                      BETWEEN 
+                                        STR_TO_DATE(data_inicial,'%d/%m/%Y') 
+                                      AND 
+                                        STR_TO_DATE(data_final, '%d/%m/%Y')");
+        $range          = mysql_result($q_range, 0);
+        if ($codigo_vigente == $range) 
+        {
+          echo "Sistema validado!";
+          include 'login_ativo.php';
+
+        }
+        else
+        {
+          echo "Sistema invalido!";
+          include 'login_inativo.php';
+
+        }
+    }
+    else
+    {
+      $q_consulta_data = mysql_query("SELECT count(data) FROM datas_validadas WHERE data = '$date'");
+      $consulta_data  = mysql_result($q_consulta_data, 0);
+
+      if ($consulta_data == 0) 
+      {
+        mysql_query("INSERT datas_validadas SELECT '','$date'");
+        $q_cod_vigente  = mysql_query("SELECT codigo FROM codigo_offline_vigente");
+        $codigo_vigente = mysql_result($q_cod_vigente, 0);
+        $q_range        = mysql_query("select 
+                                        codigo 
+                                      from 
+                                        codigos_offline 
+                                      where 
+                                        STR_TO_DATE('$date', '%d/%m/%Y') 
+                                      BETWEEN 
+                                        STR_TO_DATE(data_inicial,'%d/%m/%Y') 
+                                      AND 
+                                        STR_TO_DATE(data_final, '%d/%m/%Y')");
+        $range          = mysql_result($q_range, 0);
+        if ($codigo_vigente == $range) 
+        {
+          echo "Sistema validado!";
+          include 'login_ativo.php';
+
+        }
+        else
+        {
+          echo "Sistema invalido!";
+          include 'login_inativo.php';
+
+        }
+      }
+      else
+      {
+        echo "<script>alert('Verifique a data do computador')</script>";
+        echo "Verifique a data do seu computador e reinicie o sistema!";       
+        exit();
+      }
+    }
+  
+
+  
+
 ?>
 <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/semantic.css">
 
@@ -103,56 +185,16 @@
 </head>
 <body>
 <?php 
-  $consulta_pagamento = mysql_query("SELECT * FROM ")
+  //   if ($url == 0) 
+  // {
+  //   include 'login_ativo.php';
+  // }
+  // else
+  // {
+  //   include 'login_inativo.php';
+  // }
  ?>
-<div class="ui middle aligned center aligned grid">
-  <div class="column">
-    <h2 class="ui yellow image header">        
-      <div class="content">
-       Efetuar Login
-      </div>
-        <img src="images/logo-sf.png" class="image">
-    </h2>
-    <form class="ui large form" method="post" action="valida.php">
-      <div class="ui stacked segment">
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="user icon"></i>
-            <input type="text" name="usuario" placeholder="Usuario" autofocus="">
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="lock icon"></i>
-            <input type="password" name="senha" placeholder="Senha">
-          </div>
-            <?php 
-                
-                if (isset($_GET['error'])) {
-                    echo '<div class="ui negative mini message">
-                            <div class="header">
-                              Login ou Senha incorretos!
-                            </div>
-                            </div>';
-                }
-                else {
-                    
-                }
-            
-            ?>
-        </div>
-        <div class="ui fluid large yellow submit button">Login</div>
-      </div>
 
-      <div class="ui error message"></div>
-
-    </form>
-
-    <div class="ui message">
-      Esqueceu a senha? <a href="#">Resgatar</a>
-    </div>
-  </div>
-</div>
 
 </body>
 
