@@ -193,6 +193,81 @@ INSERT INTO `clientes` VALUES (1,'Cliente Padrão','123','','1122222222','',3.00
 UNLOCK TABLES;
 
 --
+-- Table structure for table `codigo_offline_vigente`
+--
+
+DROP TABLE IF EXISTS `codigo_offline_vigente`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `codigo_offline_vigente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `codigo_offline_vigente`
+--
+
+LOCK TABLES `codigo_offline_vigente` WRITE;
+/*!40000 ALTER TABLE `codigo_offline_vigente` DISABLE KEYS */;
+INSERT INTO `codigo_offline_vigente` VALUES (1,'nRcVcZQjEvUHBn8r');
+/*!40000 ALTER TABLE `codigo_offline_vigente` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `codigos_offline`
+--
+
+DROP TABLE IF EXISTS `codigos_offline`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `codigos_offline` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `data_inicial` varchar(50) NOT NULL,
+  `data_final` varchar(50) NOT NULL,
+  `codigo` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `codigos_offline`
+--
+
+LOCK TABLES `codigos_offline` WRITE;
+/*!40000 ALTER TABLE `codigos_offline` DISABLE KEYS */;
+INSERT INTO `codigos_offline` VALUES (1,'01/04/2017','30/06/2017','nRcVcZQjEvUHBn8r'),(2,'01/07/2017','30/09/2017','tXxFnjmvcuFxK5xE');
+/*!40000 ALTER TABLE `codigos_offline` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `codigos_sistema`
+--
+
+DROP TABLE IF EXISTS `codigos_sistema`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `codigos_sistema` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `mês` varchar(45) NOT NULL,
+  `codigo` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `codigos_sistema`
+--
+
+LOCK TABLES `codigos_sistema` WRITE;
+/*!40000 ALTER TABLE `codigos_sistema` DISABLE KEYS */;
+INSERT INTO `codigos_sistema` VALUES (1,'05/2017','9cgWpkmH44445vZW');
+/*!40000 ALTER TABLE `codigos_sistema` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `contato`
 --
 
@@ -265,6 +340,30 @@ CREATE TABLE `cpf_nota` (
 LOCK TABLES `cpf_nota` WRITE;
 /*!40000 ALTER TABLE `cpf_nota` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cpf_nota` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `datas_validadas`
+--
+
+DROP TABLE IF EXISTS `datas_validadas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `datas_validadas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `data` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `datas_validadas`
+--
+
+LOCK TABLES `datas_validadas` WRITE;
+/*!40000 ALTER TABLE `datas_validadas` DISABLE KEYS */;
+INSERT INTO `datas_validadas` VALUES (1,'04/05/2017'),(2,'05/05/2017'),(3,'08/05/2017');
+/*!40000 ALTER TABLE `datas_validadas` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1962,4 +2061,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-28 15:51:58
+-- Dump completed on 2017-05-09 16:40:17
